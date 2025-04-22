@@ -143,11 +143,13 @@
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Caption_Headline_DE
-<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Caption_Headline_DE> rdf:type owl:DatatypeProperty .
+<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Caption_Headline_DE> rdf:type owl:DatatypeProperty ;
+                                                                                                    rdfs:label "Caption Headline DE" .
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Caption_Headline_EN
-<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Caption_Headline_EN> rdf:type owl:DatatypeProperty .
+<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Caption_Headline_EN> rdf:type owl:DatatypeProperty ;
+                                                                                                    rdfs:label "Caption Headline EN" .
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Concrete_volume_m3.1
@@ -176,27 +178,33 @@
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Copyrightnotice
-<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Copyrightnotice> rdf:type owl:DatatypeProperty .
+<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Copyrightnotice> rdf:type owl:DatatypeProperty ;
+                                                                                                rdfs:label "Copyrightnotice" .
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Copyrightnotice_URL
-<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Copyrightnotice_URL> rdf:type owl:DatatypeProperty .
+<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Copyrightnotice_URL> rdf:type owl:DatatypeProperty ;
+                                                                                                    rdfs:label "Copyrightnotice URL" .
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Credit_Line
-<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Credit_Line> rdf:type owl:DatatypeProperty .
+<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Credit_Line> rdf:type owl:DatatypeProperty ;
+                                                                                            rdfs:label "Credit Line" .
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Date_Day
-<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Date_Day> rdf:type owl:DatatypeProperty .
+<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Date_Day> rdf:type owl:DatatypeProperty ;
+                                                                                         rdfs:label "Date Day" .
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Date_Month
-<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Date_Month> rdf:type owl:DatatypeProperty .
+<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Date_Month> rdf:type owl:DatatypeProperty ;
+                                                                                           rdfs:label "Date Month" .
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Date_Year
-<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Date_Year> rdf:type owl:DatatypeProperty .
+<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Date_Year> rdf:type owl:DatatypeProperty ;
+                                                                                          rdfs:label "Date Year" .
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Deck_Post_tensioned
@@ -275,15 +283,18 @@
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/MediaID
-<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/MediaID> rdf:type owl:DatatypeProperty .
+<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/MediaID> rdf:type owl:DatatypeProperty ;
+                                                                                        rdfs:label "MediaID" .
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Media_Type
-<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Media_Type> rdf:type owl:DatatypeProperty .
+<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Media_Type> rdf:type owl:DatatypeProperty ;
+                                                                                           rdfs:label "Media Type" .
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Medua_URL
-<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Medua_URL> rdf:type owl:DatatypeProperty .
+<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Medua_URL> rdf:type owl:DatatypeProperty ;
+                                                                                          rdfs:label "Medua URL" .
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Name
@@ -307,7 +318,8 @@
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Photographer
-<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Photographer> rdf:type owl:DatatypeProperty .
+<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Photographer> rdf:type owl:DatatypeProperty ;
+                                                                                             rdfs:label "Photographer" .
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Pier_height_m
@@ -331,11 +343,13 @@
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Pixel_Height
-<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Pixel_Height> rdf:type owl:DatatypeProperty .
+<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Pixel_Height> rdf:type owl:DatatypeProperty ;
+                                                                                             rdfs:label "Pixel Height" .
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Pixel_Width
-<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Pixel_Width> rdf:type owl:DatatypeProperty .
+<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Pixel_Width> rdf:type owl:DatatypeProperty ;
+                                                                                            rdfs:label "Pixel Width" .
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Prestressing_t.1
@@ -379,7 +393,8 @@
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Source_External_URL
-<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Source_External_URL> rdf:type owl:DatatypeProperty .
+<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Source_External_URL> rdf:type owl:DatatypeProperty ;
+                                                                                                    rdfs:label "Source External URL" .
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Span_arrangment_data_Approaches
@@ -428,11 +443,13 @@
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/StructureID
-<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/StructureID> rdf:type owl:DatatypeProperty .
+<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/StructureID> rdf:type owl:DatatypeProperty ;
+                                                                                            rdfs:label "StructureID" .
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Structure_URL
-<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Structure_URL> rdf:type owl:DatatypeProperty .
+<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Structure_URL> rdf:type owl:DatatypeProperty ;
+                                                                                              rdfs:label "Structure URL" .
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Total_Length_Approaches_m
@@ -466,7 +483,8 @@
 
 
 ###  http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/image_path
-<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/image_path> rdf:type owl:DatatypeProperty .
+<http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/image_path> rdf:type owl:DatatypeProperty ;
+                                                                                           rdfs:label "image path" .
 
 
 #################################################################

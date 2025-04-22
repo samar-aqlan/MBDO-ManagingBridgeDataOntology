@@ -1715,10 +1715,16 @@
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Caption_Headline_DE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Caption Headline DE"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Caption_Headline_EN",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Caption Headline EN"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/City",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -1795,10 +1801,16 @@
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Copyrightnotice",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Copyrightnotice"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Copyrightnotice_URL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Copyrightnotice URL"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Country",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -1807,7 +1819,10 @@
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Credit_Line",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Credit Line"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Creek",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -1816,13 +1831,22 @@
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Date_Day",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Date Day"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Date_Month",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Date Month"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Date_Year",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Date Year"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Deck",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -2057,13 +2081,22 @@
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/MediaID",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "MediaID"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Media_Type",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Media Type"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Medua_URL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Medua URL"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Metal",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -2120,7 +2153,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Photographer",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Photographer"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Pier",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -2163,10 +2199,16 @@
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Pixel_Height",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Pixel Height"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Pixel_Width",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Pixel Width"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Prestressing_t.1",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
@@ -2319,7 +2361,10 @@
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Source_External_URL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Source External URL"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Span_arrangment_data_Approaches",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
@@ -2432,7 +2477,10 @@
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/StructureID",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "StructureID"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Structure_Protection",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -2441,7 +2489,10 @@
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Structure_URL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Structure URL"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/Substructure",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -2622,7 +2673,10 @@
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/image_path",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "image path"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/samar.aqlan/ontologies/2024/7/untitled-ontology-35/involved_with",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
