@@ -1,0 +1,2669 @@
+@prefix : <https://w3id.org/mbdo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/mbdo#> .
+
+<https://w3id.org/mbdo#> rdf:type owl:Ontology ;
+                          <http://purl.org/dc/terms/created> "2025-04-22" ;
+                          <http://purl.org/dc/terms/creator> "samar.aqlan" ;
+                          <http://purl.org/dc/terms/description> "The Managing Bridge Data Ontology (MBDO) provides a semantic framework for representing structural, spatial, and material information about bridges." ;
+                          <http://purl.org/dc/terms/hasVersion> "1.0" ;
+                          rdfs:label "Managing Bridge Data Ontology" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasVersion
+<http://purl.org/dc/terms/hasVersion> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.co-ode.org/ontologies/ont.owl#containszone
+<http://www.co-ode.org/ontologies/ont.owl#containszone> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:label "Contains Zone" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#is_contained_in
+<http://www.co-ode.org/ontologies/ont.owl#is_contained_in> rdf:type owl:ObjectProperty ;
+                                                           rdfs:label "Is Contained in" .
+
+
+###  https://w3id.org/mbdo#CrossedBy
+:CrossedBy rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           owl:inverseOf :Crossing ;
+           rdfs:domain [ rdf:type owl:Restriction ;
+                         owl:onProperty :CrossedBy ;
+                         owl:allValuesFrom :ObstacleCrossed
+                       ] ;
+           rdfs:range [ rdf:type owl:Restriction ;
+                        owl:onProperty :CrossedBy ;
+                        owl:allValuesFrom <https://w3id.org/brot#Bridge>
+                      ] ;
+           rdfs:label "Crossed by"@en .
+
+
+###  https://w3id.org/mbdo#Crossing
+:Crossing rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain [ rdf:type owl:Restriction ;
+                        owl:onProperty :Crossing ;
+                        owl:allValuesFrom <https://w3id.org/brot#Bridge>
+                      ] ;
+          rdfs:range [ rdf:type owl:Restriction ;
+                       owl:onProperty :Crossing ;
+                       owl:allValuesFrom :ObstacleCrossed
+                     ] ;
+          rdfs:label "Crossing"@en .
+
+
+###  https://w3id.org/mbdo#HasBridge
+:HasBridge rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           owl:inverseOf :LocatedIn ;
+           rdfs:domain [ rdf:type owl:Restriction ;
+                         owl:onProperty :HasBridge ;
+                         owl:allValuesFrom <https://w3id.org/brot#SpatialZone>
+                       ] ;
+           rdfs:range [ rdf:type owl:Restriction ;
+                        owl:onProperty :HasBridge ;
+                        owl:allValuesFrom <https://w3id.org/brot#Bridge>
+                      ] ;
+           rdfs:label "Has Bridge"@en .
+
+
+###  https://w3id.org/mbdo#HasComponent
+:HasComponent rdf:type owl:ObjectProperty ;
+              owl:inverseOf :IsComponentOf ;
+              rdfs:domain [ rdf:type owl:Restriction ;
+                            owl:onProperty :HasComponent ;
+                            owl:allValuesFrom <https://w3id.org/brot#Bridge>
+                          ] ;
+              rdfs:range [ rdf:type owl:Restriction ;
+                           owl:onProperty :HasComponent ;
+                           owl:allValuesFrom <https://w3id.org/brot#Component>
+                         ] ;
+              rdfs:label "Has Component"@en .
+
+
+###  https://w3id.org/mbdo#HasImage
+:HasImage rdf:type owl:ObjectProperty ;
+          owl:inverseOf :ImageOf ;
+          rdfs:domain [ rdf:type owl:Restriction ;
+                        owl:onProperty :HasImage ;
+                        owl:allValuesFrom <https://w3id.org/brot#Bridge>
+                      ] ;
+          rdfs:range [ rdf:type owl:Restriction ;
+                       owl:onProperty :HasImage ;
+                       owl:allValuesFrom :Image
+                     ] ;
+          rdfs:label "Has Image"@en .
+
+
+###  https://w3id.org/mbdo#HasMaterial
+:HasMaterial rdf:type owl:ObjectProperty ;
+             owl:inverseOf :MaterialOf ;
+             rdfs:domain [ rdf:type owl:Restriction ;
+                           owl:onProperty :HasMaterial ;
+                           owl:allValuesFrom <https://w3id.org/brot#Bridge>
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :HasMaterial ;
+                           owl:allValuesFrom <https://w3id.org/brot#Component>
+                         ] ;
+             rdfs:range [ rdf:type owl:Restriction ;
+                          owl:onProperty :HasMaterial ;
+                          owl:allValuesFrom <https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material>
+                        ] ;
+             rdfs:label "Has Material"@en .
+
+
+###  https://w3id.org/mbdo#HasParticipant
+:HasParticipant rdf:type owl:ObjectProperty ;
+                owl:inverseOf :InvolvedWith ;
+                rdfs:domain [ rdf:type owl:Restriction ;
+                              owl:onProperty :HasParticipant ;
+                              owl:allValuesFrom <https://w3id.org/brot#Bridge>
+                            ] ;
+                rdfs:range [ rdf:type owl:Restriction ;
+                             owl:onProperty :HasParticipant ;
+                             owl:allValuesFrom :Participants
+                           ] ;
+                rdfs:label "Has Participant"@en .
+
+
+###  https://w3id.org/mbdo#ImageOf
+:ImageOf rdf:type owl:ObjectProperty ;
+         rdfs:domain [ rdf:type owl:Restriction ;
+                       owl:onProperty :ImageOf ;
+                       owl:allValuesFrom :Image
+                     ] ;
+         rdfs:range [ rdf:type owl:Restriction ;
+                      owl:onProperty :ImageOf ;
+                      owl:allValuesFrom <https://w3id.org/brot#Bridge>
+                    ] ;
+         rdfs:label "Image of"@en .
+
+
+###  https://w3id.org/mbdo#InvolvedWith
+:InvolvedWith rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain [ rdf:type owl:Restriction ;
+                            owl:onProperty :InvolvedWith ;
+                            owl:allValuesFrom :Participants
+                          ] ;
+              rdfs:range [ rdf:type owl:Restriction ;
+                           owl:onProperty :InvolvedWith ;
+                           owl:allValuesFrom <https://w3id.org/brot#Bridge>
+                         ] ;
+              rdfs:label "Involved with"@en .
+
+
+###  https://w3id.org/mbdo#IsComponentOf
+:IsComponentOf rdf:type owl:ObjectProperty ;
+               rdfs:domain [ rdf:type owl:Restriction ;
+                             owl:onProperty :IsComponentOf ;
+                             owl:allValuesFrom <https://w3id.org/brot#Component>
+                           ] ;
+               rdfs:range [ rdf:type owl:Restriction ;
+                            owl:onProperty :IsComponentOf ;
+                            owl:allValuesFrom <https://w3id.org/brot#Bridge>
+                          ] ;
+               rdfs:label "Is Component of"@en .
+
+
+###  https://w3id.org/mbdo#LocatedIn
+:LocatedIn rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain [ rdf:type owl:Restriction ;
+                         owl:onProperty :LocatedIn ;
+                         owl:allValuesFrom <https://w3id.org/brot#Bridge>
+                       ] ;
+           rdfs:range [ rdf:type owl:Restriction ;
+                        owl:onProperty :LocatedIn ;
+                        owl:allValuesFrom <https://w3id.org/brot#SpatialZone>
+                      ] ;
+           rdfs:label "Located in"@en .
+
+
+###  https://w3id.org/mbdo#MaterialOf
+:MaterialOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain [ rdf:type owl:Restriction ;
+                          owl:onProperty :MaterialOf ;
+                          owl:allValuesFrom <https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material>
+                        ] ;
+            rdfs:range [ rdf:type owl:Restriction ;
+                         owl:onProperty :MaterialOf ;
+                         owl:allValuesFrom <https://w3id.org/brot#Bridge>
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :MaterialOf ;
+                         owl:allValuesFrom <https://w3id.org/brot#Component>
+                       ] ;
+            rdfs:label "Material of"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/mbdo#AbutmentNumber
+:AbutmentNumber rdf:type owl:DatatypeProperty ;
+                rdfs:label "Abutment Number"@en .
+
+
+###  https://w3id.org/mbdo#AestheticImportance
+:AestheticImportance rdf:type owl:DatatypeProperty ;
+                     rdfs:label "Aesthetic Importance"@en .
+
+
+###  https://w3id.org/mbdo#AlignmentToFglMax
+:AlignmentToFglMax rdf:type owl:DatatypeProperty ;
+                   rdfs:label "Alignment To FGL Max"@en .
+
+
+###  https://w3id.org/mbdo#AlignmentType
+:AlignmentType rdf:type owl:DatatypeProperty ;
+               rdfs:label "Alignment Type"@en .
+
+
+###  https://w3id.org/mbdo#BearingType
+:BearingType rdf:type owl:DatatypeProperty ;
+             rdfs:label "Bearing Type"@en .
+
+
+###  https://w3id.org/mbdo#BridgeSurface
+:BridgeSurface rdf:type owl:DatatypeProperty ;
+               rdfs:label "Bridge Surface"@en .
+
+
+###  https://w3id.org/mbdo#BridgeType
+:BridgeType rdf:type owl:DatatypeProperty ;
+            rdfs:label "Bridge Type"@en .
+
+
+###  https://w3id.org/mbdo#CablePlanes
+:CablePlanes rdf:type owl:DatatypeProperty ;
+             rdfs:label "Cable Planes"@en .
+
+
+###  https://w3id.org/mbdo#CaptionHeadlineDe
+:CaptionHeadlineDe rdf:type owl:DatatypeProperty ;
+                   rdfs:label "Caption Headline DE"@en .
+
+
+###  https://w3id.org/mbdo#CaptionHeadlineEn
+:CaptionHeadlineEn rdf:type owl:DatatypeProperty ;
+                   rdfs:label "Caption Headline EN"@en .
+
+
+###  https://w3id.org/mbdo#ConcreteVolume
+:ConcreteVolume rdf:type owl:DatatypeProperty ;
+                rdfs:label "Concrete Volume"@en .
+
+
+###  https://w3id.org/mbdo#ConstructionDurationMonths
+:ConstructionDurationMonths rdf:type owl:DatatypeProperty ;
+                            rdfs:label "Construction Duration Months"@en .
+
+
+###  https://w3id.org/mbdo#ConstructionFrom
+:ConstructionFrom rdf:type owl:DatatypeProperty ;
+                  rdfs:label "Construction from"@en .
+
+
+###  https://w3id.org/mbdo#ConstructionTo
+:ConstructionTo rdf:type owl:DatatypeProperty ;
+                rdfs:label "Construction to"@en .
+
+
+###  https://w3id.org/mbdo#Coordinates
+:Coordinates rdf:type owl:DatatypeProperty ;
+             rdfs:label "Coordinates"@en .
+
+
+###  https://w3id.org/mbdo#Copyrightnotice
+:Copyrightnotice rdf:type owl:DatatypeProperty ;
+                 rdfs:label "Copyrightnotice"@en .
+
+
+###  https://w3id.org/mbdo#CopyrightnoticeUrl
+:CopyrightnoticeUrl rdf:type owl:DatatypeProperty ;
+                    rdfs:label "Copyrightnotice URL"@en .
+
+
+###  https://w3id.org/mbdo#CreditLine
+:CreditLine rdf:type owl:DatatypeProperty ;
+            rdfs:label "Credit Line"@en .
+
+
+###  https://w3id.org/mbdo#DateDay
+:DateDay rdf:type owl:DatatypeProperty ;
+         rdfs:label "Date Day"@en .
+
+
+###  https://w3id.org/mbdo#DateMonth
+:DateMonth rdf:type owl:DatatypeProperty ;
+           rdfs:label "Date Month"@en .
+
+
+###  https://w3id.org/mbdo#DateYear
+:DateYear rdf:type owl:DatatypeProperty ;
+          rdfs:label "Date Year"@en .
+
+
+###  https://w3id.org/mbdo#DeckConstructionMethod
+:DeckConstructionMethod rdf:type owl:DatatypeProperty ;
+                        rdfs:label "Deck Construction Method"@en .
+
+
+###  https://w3id.org/mbdo#DeckDepthRange
+:DeckDepthRange rdf:type owl:DatatypeProperty ;
+                rdfs:label "Deck Depth Range"@en .
+
+
+###  https://w3id.org/mbdo#DeckDepthTypeConstVar
+:DeckDepthTypeConstVar rdf:type owl:DatatypeProperty ;
+                       rdfs:label "Deck Depth Type Const Var"@en .
+
+
+###  https://w3id.org/mbdo#DeckPostTensioned
+:DeckPostTensioned rdf:type owl:DatatypeProperty ;
+                   rdfs:label "Deck Post Tensioned"@en .
+
+
+###  https://w3id.org/mbdo#DeckStrSteelSummary
+:DeckStrSteelSummary rdf:type owl:DatatypeProperty ;
+                     rdfs:label "Deck Str Steel Summary"@en .
+
+
+###  https://w3id.org/mbdo#DeckType
+:DeckType rdf:type owl:DatatypeProperty ;
+          rdfs:label "Deck Type"@en .
+
+
+###  https://w3id.org/mbdo#DeckWidth
+:DeckWidth rdf:type owl:DatatypeProperty ;
+           rdfs:label "Deck Width"@en .
+
+
+###  https://w3id.org/mbdo#DesignCode
+:DesignCode rdf:type owl:DatatypeProperty ;
+            rdfs:label "Design Code"@en .
+
+
+###  https://w3id.org/mbdo#Entered
+:Entered rdf:type owl:DatatypeProperty ;
+         rdfs:label "Entered"@en .
+
+
+###  https://w3id.org/mbdo#ExpansionJointType
+:ExpansionJointType rdf:type owl:DatatypeProperty ;
+                    rdfs:label "Expansion Joint Type"@en .
+
+
+###  https://w3id.org/mbdo#FunctionalSectionWidthRoad
+:FunctionalSectionWidthRoad rdf:type owl:DatatypeProperty ;
+                            rdfs:label "Functional Section Width Road"@en .
+
+
+###  https://w3id.org/mbdo#FunctionalSectionWidthWalk
+:FunctionalSectionWidthWalk rdf:type owl:DatatypeProperty ;
+                            rdfs:label "Functional Section Width Walk"@en .
+
+
+###  https://w3id.org/mbdo#HorizontalAlignmentType
+:HorizontalAlignmentType rdf:type owl:DatatypeProperty ;
+                         rdfs:label "Horizontal Alignment Type"@en .
+
+
+###  https://w3id.org/mbdo#Id
+:Id rdf:type owl:DatatypeProperty ;
+    rdfs:label "ID"@en .
+
+
+###  https://w3id.org/mbdo#ImagePath
+:ImagePath rdf:type owl:DatatypeProperty ;
+           rdfs:label "Image Path"@en .
+
+
+###  https://w3id.org/mbdo#MainSpan
+:MainSpan rdf:type owl:DatatypeProperty ;
+          rdfs:label "Main Span"@en .
+
+
+###  https://w3id.org/mbdo#MediaType
+:MediaType rdf:type owl:DatatypeProperty ;
+           rdfs:label "Media Type"@en .
+
+
+###  https://w3id.org/mbdo#Mediaid
+:Mediaid rdf:type owl:DatatypeProperty ;
+         rdfs:label "Mediaid"@en .
+
+
+###  https://w3id.org/mbdo#MeduaUrl
+:MeduaUrl rdf:type owl:DatatypeProperty ;
+          rdfs:label "Medua URL"@en .
+
+
+###  https://w3id.org/mbdo#Name
+:Name rdf:type owl:DatatypeProperty ;
+      rdfs:label "Name"@en .
+
+
+###  https://w3id.org/mbdo#NumberOfGirdersCells
+:NumberOfGirdersCells rdf:type owl:DatatypeProperty ;
+                      rdfs:label "Number of Girders Cells"@en .
+
+
+###  https://w3id.org/mbdo#NumberOfLanes
+:NumberOfLanes rdf:type owl:DatatypeProperty ;
+               rdfs:label "Number of Lanes"@en .
+
+
+###  https://w3id.org/mbdo#NumberOfTracks
+:NumberOfTracks rdf:type owl:DatatypeProperty ;
+                rdfs:label "Number of Tracks"@en .
+
+
+###  https://w3id.org/mbdo#Photographer
+:Photographer rdf:type owl:DatatypeProperty ;
+              rdfs:label "Photographer"@en .
+
+
+###  https://w3id.org/mbdo#PierHeight
+:PierHeight rdf:type owl:DatatypeProperty ;
+            rdfs:label "Pier Height"@en .
+
+
+###  https://w3id.org/mbdo#PierType
+:PierType rdf:type owl:DatatypeProperty ;
+          rdfs:label "Pier Type"@en .
+
+
+###  https://w3id.org/mbdo#PiersNumber
+:PiersNumber rdf:type owl:DatatypeProperty ;
+             rdfs:label "Piers Number"@en .
+
+
+###  https://w3id.org/mbdo#PileLengthSummary
+:PileLengthSummary rdf:type owl:DatatypeProperty ;
+                   rdfs:label "Pile Length Summary"@en .
+
+
+###  https://w3id.org/mbdo#PixelHeight
+:PixelHeight rdf:type owl:DatatypeProperty ;
+             rdfs:label "Pixel Height"@en .
+
+
+###  https://w3id.org/mbdo#PixelWidth
+:PixelWidth rdf:type owl:DatatypeProperty ;
+            rdfs:label "Pixel Width"@en .
+
+
+###  https://w3id.org/mbdo#Prestressing
+:Prestressing rdf:type owl:DatatypeProperty ;
+              rdfs:label "Prestressing"@en .
+
+
+###  https://w3id.org/mbdo#ProjectValueCostType
+:ProjectValueCostType rdf:type owl:DatatypeProperty ;
+                      rdfs:label "Project Value Cost Type"@en .
+
+
+###  https://w3id.org/mbdo#ProjectValueValue
+:ProjectValueValue rdf:type owl:DatatypeProperty ;
+                   rdfs:label "Project Value Value"@en .
+
+
+###  https://w3id.org/mbdo#PylonHeight
+:PylonHeight rdf:type owl:DatatypeProperty ;
+             rdfs:label "Pylon Height"@en .
+
+
+###  https://w3id.org/mbdo#PylonMaterial
+:PylonMaterial rdf:type owl:DatatypeProperty ;
+               rdfs:label "Pylon Material"@en .
+
+
+###  https://w3id.org/mbdo#PylonNumber
+:PylonNumber rdf:type owl:DatatypeProperty ;
+             rdfs:label "Pylon Number"@en .
+
+
+###  https://w3id.org/mbdo#PylonType
+:PylonType rdf:type owl:DatatypeProperty ;
+           rdfs:label "Pylon Type"@en .
+
+
+###  https://w3id.org/mbdo#Reinforcement
+:Reinforcement rdf:type owl:DatatypeProperty ;
+               rdfs:label "Reinforcement"@en .
+
+
+###  https://w3id.org/mbdo#SourceExternalUrl
+:SourceExternalUrl rdf:type owl:DatatypeProperty ;
+                   rdfs:label "Source External URL"@en .
+
+
+###  https://w3id.org/mbdo#SpanArrangmentDataApproaches
+:SpanArrangmentDataApproaches rdf:type owl:DatatypeProperty ;
+                              rdfs:label "Span Arrangment Data Approaches"@en .
+
+
+###  https://w3id.org/mbdo#SpanArrangmentDataMain
+:SpanArrangmentDataMain rdf:type owl:DatatypeProperty ;
+                        rdfs:label "Span Arrangment Data Main"@en .
+
+
+###  https://w3id.org/mbdo#SpanArrangmentDataOverall
+:SpanArrangmentDataOverall rdf:type owl:DatatypeProperty ;
+                           rdfs:label "Span Arrangment Data Overall"@en .
+
+
+###  https://w3id.org/mbdo#SpanNumber
+:SpanNumber rdf:type owl:DatatypeProperty ;
+            rdfs:label "Span Number"@en .
+
+
+###  https://w3id.org/mbdo#SpecialDevices
+:SpecialDevices rdf:type owl:DatatypeProperty ;
+                rdfs:label "Special Devices"@en .
+
+
+###  https://w3id.org/mbdo#SpecialEquipment
+:SpecialEquipment rdf:type owl:DatatypeProperty ;
+                  rdfs:label "Special Equipment"@en .
+
+
+###  https://w3id.org/mbdo#Status
+:Status rdf:type owl:DatatypeProperty ;
+        rdfs:label "Status"@en .
+
+
+###  https://w3id.org/mbdo#StructuralSteel
+:StructuralSteel rdf:type owl:DatatypeProperty ;
+                 rdfs:label "Structural Steel"@en .
+
+
+###  https://w3id.org/mbdo#StructuralSteelIronAluminium
+:StructuralSteelIronAluminium rdf:type owl:DatatypeProperty ;
+                              rdfs:label "Structural Steel Iron Aluminium"@en .
+
+
+###  https://w3id.org/mbdo#StructureUrl
+:StructureUrl rdf:type owl:DatatypeProperty ;
+              rdfs:label "Structure URL"@en .
+
+
+###  https://w3id.org/mbdo#Structureid
+:Structureid rdf:type owl:DatatypeProperty ;
+             rdfs:label "Structureid"@en .
+
+
+###  https://w3id.org/mbdo#TotalLengthApproaches
+:TotalLengthApproaches rdf:type owl:DatatypeProperty ;
+                       rdfs:label "Total Length Approaches"@en .
+
+
+###  https://w3id.org/mbdo#TotalLengthMain
+:TotalLengthMain rdf:type owl:DatatypeProperty ;
+                 rdfs:label "Total Length Main"@en .
+
+
+###  https://w3id.org/mbdo#TotalLengthOverall
+:TotalLengthOverall rdf:type owl:DatatypeProperty ;
+                    rdfs:label "Total Length Overall"@en .
+
+
+###  https://w3id.org/mbdo#TypeOfSuspension
+:TypeOfSuspension rdf:type owl:DatatypeProperty ;
+                  rdfs:label "Type of Suspension"@en .
+
+
+###  https://w3id.org/mbdo#Updated
+:Updated rdf:type owl:DatatypeProperty ;
+         rdfs:label "Updated"@en .
+
+
+###  https://w3id.org/mbdo#VerticalAlignmentType
+:VerticalAlignmentType rdf:type owl:DatatypeProperty ;
+                       rdfs:label "Vertical Alignment Type"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.co-ode.org/ontologies/ont.owl#Crack
+<http://www.co-ode.org/ontologies/ont.owl#Crack> rdf:type owl:Class ;
+                                                 rdfs:label "Crack" .
+
+
+###  https://w3id.org/brot#Bridge
+<https://w3id.org/brot#Bridge> rdf:type owl:Class ;
+                               rdfs:comment "An engineering structure which guides traffic routes (such as roads, railway lines, footpaths and cycle paths, waterways, taxiways for aircraft) or supply facilities (such as pipelines, cable routes, conveyor belts) on an elevated, suspended or free-floating structure over obstacles or over the surface of the terrain in such a way that there is a distance between the route and the surface of the terrain and thus often a possibility of undercrossing by another traffic or supply route is made possible. Bridges can be cantilevered between two abutments (single span bridge) or rest between them on several supports (multi span bridge). However, they can also be suspended from pylons by using ropes."@en ;
+                               rdfs:label "Bridge" .
+
+
+###  https://w3id.org/brot#BridgeType
+<https://w3id.org/brot#BridgeType> rdf:type owl:Class ;
+                                   rdfs:label "Bridge Type" .
+
+
+###  https://w3id.org/brot#Component
+<https://w3id.org/brot#Component> rdf:type owl:Class ;
+                                  rdfs:label "Bridge Component" .
+
+
+###  https://w3id.org/brot#SpatialZone
+<https://w3id.org/brot#SpatialZone> rdf:type owl:Class ;
+                                    rdfs:label "Spatial Zone" .
+
+
+###  https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Concrete
+<https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Concrete> rdf:type owl:Class ;
+                                                                      rdfs:label "Concrete" .
+
+
+###  https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material
+<https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material> rdf:type owl:Class ;
+                                                                      rdfs:label "Buidling Material"@en .
+
+
+###  https://w3id.org/mbdo#Abutment
+:Abutment rdf:type owl:Class ;
+          rdfs:subClassOf :Substructure ;
+          rdfs:label "Abutment"@en .
+
+
+###  https://w3id.org/mbdo#AllanTrussBridge
+:AllanTrussBridge rdf:type owl:Class ;
+                  rdfs:subClassOf :TrussBridge ;
+                  rdfs:label "Allan Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Aluminum
+:Aluminum rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material> ;
+          rdfs:label "Aluminum"@en .
+
+
+###  https://w3id.org/mbdo#AluminumBridge
+:AluminumBridge rdf:type owl:Class ;
+                rdfs:subClassOf :MetalBridge ;
+                rdfs:label "Aluminum Bridge"@en .
+
+
+###  https://w3id.org/mbdo#AnnularBridge
+:AnnularBridge rdf:type owl:Class ;
+               rdfs:subClassOf :CurvedBridge ;
+               rdfs:label "Annular Bridge"@en .
+
+
+###  https://w3id.org/mbdo#ApproachSlab
+:ApproachSlab rdf:type owl:Class ;
+              rdfs:subClassOf :Abutment ;
+              rdfs:label "Approach Slab"@en .
+
+
+###  https://w3id.org/mbdo#Arch
+:Arch rdf:type owl:Class ;
+      rdfs:subClassOf :Ribs ;
+      rdfs:label "Arch"@en .
+
+
+###  https://w3id.org/mbdo#ArchBridge
+:ArchBridge rdf:type owl:Class ;
+            rdfs:subClassOf :BridgeByStructure ;
+            rdfs:label "Arch Bridge"@en .
+
+
+###  https://w3id.org/mbdo#AssetOwner
+:AssetOwner rdf:type owl:Class ;
+            rdfs:subClassOf :Participants ;
+            rdfs:label "Asset Owner"@en .
+
+
+###  https://w3id.org/mbdo#BaileyBridge
+:BaileyBridge rdf:type owl:Class ;
+              rdfs:subClassOf :TrussBridge ;
+              rdfs:label "Bailey Bridge"@en .
+
+
+###  https://w3id.org/mbdo#BaltimoreTrussBridge
+:BaltimoreTrussBridge rdf:type owl:Class ;
+                      rdfs:subClassOf :TrussBridge ;
+                      rdfs:label "Baltimore Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Barriers
+:Barriers rdf:type owl:Class ;
+          rdfs:subClassOf :TrafficProtection ;
+          rdfs:label "Barriers"@en .
+
+
+###  https://w3id.org/mbdo#BasculeBridge
+:BasculeBridge rdf:type owl:Class ;
+               rdfs:subClassOf :MovableBridge ;
+               rdfs:label "Bascule Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Bay
+:Bay rdf:type owl:Class ;
+     rdfs:subClassOf :ObstacleCrossed ;
+     rdfs:label "Bay"@en .
+
+
+###  https://w3id.org/mbdo#Beam
+:Beam rdf:type owl:Class ;
+      rdfs:subClassOf :Deck ;
+      rdfs:label "Beam"@en .
+
+
+###  https://w3id.org/mbdo#Bearings
+:Bearings rdf:type owl:Class ;
+          rdfs:subClassOf :ShortSpanStructure ;
+          rdfs:label "Bearings"@en .
+
+
+###  https://w3id.org/mbdo#BiLevelBridge
+:BiLevelBridge rdf:type owl:Class ;
+               rdfs:subClassOf :BridgesByElevation ;
+               rdfs:label "Bi-level Bridge"@en .
+
+
+###  https://w3id.org/mbdo#BiLevelBridgeWithIntersectingLevels
+:BiLevelBridgeWithIntersectingLevels rdf:type owl:Class ;
+                                     rdfs:subClassOf :TriLevelBridge ;
+                                     rdfs:label "Bi-level Bridge with Intersecting Levels"@en .
+
+
+###  https://w3id.org/mbdo#BiLevelBridgeWithOffsetLevels
+:BiLevelBridgeWithOffsetLevels rdf:type owl:Class ;
+                               rdfs:subClassOf :TriLevelBridge ;
+                               rdfs:label "Bi-level Bridge with Offset Levels"@en .
+
+
+###  https://w3id.org/mbdo#BiLevelBridgeWithSuperposedLevels
+:BiLevelBridgeWithSuperposedLevels rdf:type owl:Class ;
+                                   rdfs:subClassOf :TriLevelBridge ;
+                                   rdfs:label "Bi-level Bridge with Superposed Levels"@en .
+
+
+###  https://w3id.org/mbdo#BollmannTrussBridge
+:BollmannTrussBridge rdf:type owl:Class ;
+                     rdfs:subClassOf :TrussBridge ;
+                     rdfs:label "Bollmann Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#BowstringArchTrussBridge
+:BowstringArchTrussBridge rdf:type owl:Class ;
+                          rdfs:subClassOf :NonParallelChordTrussBridge ;
+                          rdfs:label "Bowstring Arch Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#BoxGirderBridge
+:BoxGirderBridge rdf:type owl:Class ;
+                 rdfs:subClassOf :GirderBridge ;
+                 rdfs:label "Box Girder Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Bracings
+:Bracings rdf:type owl:Class ;
+          rdfs:subClassOf :ShortSpanStructure ;
+          rdfs:label "Bracings"@en .
+
+
+###  https://w3id.org/mbdo#BridgeByCrossSection
+:BridgeByCrossSection rdf:type owl:Class ;
+                      rdfs:subClassOf :BridgesByAlignment ;
+                      rdfs:label "Bridge by Cross Section"@en .
+
+
+###  https://w3id.org/mbdo#BridgeByFunction
+:BridgeByFunction rdf:type owl:Class ;
+                  rdfs:subClassOf :BridgeClassification ;
+                  rdfs:label "Bridge by Function"@en .
+
+
+###  https://w3id.org/mbdo#BridgeByLongitudinalSystem
+:BridgeByLongitudinalSystem rdf:type owl:Class ;
+                            rdfs:subClassOf :BridgeClassification ;
+                            rdfs:label "Bridge by Longitudinal System"@en .
+
+
+###  https://w3id.org/mbdo#BridgeByStructure
+:BridgeByStructure rdf:type owl:Class ;
+                   rdfs:subClassOf :BridgeClassification ;
+                   rdfs:label "Bridge by Structure"@en .
+
+
+###  https://w3id.org/mbdo#BridgeClassification
+:BridgeClassification rdf:type owl:Class ;
+                      rdfs:label "Bridge Classification"@en .
+
+
+###  https://w3id.org/mbdo#BridgesByAlignment
+:BridgesByAlignment rdf:type owl:Class ;
+                    rdfs:subClassOf :BridgeClassification ;
+                    rdfs:label "Bridges by Alignment"@en .
+
+
+###  https://w3id.org/mbdo#BridgesByConstructionMaterial
+:BridgesByConstructionMaterial rdf:type owl:Class ;
+                               rdfs:subClassOf :BridgeClassification ;
+                               rdfs:label "Bridges by Construction Material"@en .
+
+
+###  https://w3id.org/mbdo#BridgesByElevation
+:BridgesByElevation rdf:type owl:Class ;
+                    rdfs:subClassOf :BridgeClassification ;
+                    rdfs:label "Bridges by Elevation"@en .
+
+
+###  https://w3id.org/mbdo#BridgesByHorizontalAlighnment
+:BridgesByHorizontalAlighnment rdf:type owl:Class ;
+                               rdfs:subClassOf :BridgesByAlignment ;
+                               rdfs:label "Bridges by Horizontal Alighnment"@en .
+
+
+###  https://w3id.org/mbdo#BridgesBySupportConditions
+:BridgesBySupportConditions rdf:type owl:Class ;
+                            rdfs:subClassOf :BridgeClassification ;
+                            rdfs:label "Bridges by Support Conditions"@en .
+
+
+###  https://w3id.org/mbdo#BridgesByVerticalAlignment
+:BridgesByVerticalAlignment rdf:type owl:Class ;
+                            rdfs:subClassOf :BridgesByAlignment ;
+                            rdfs:label "Bridges by Vertical Alignment"@en .
+
+
+###  https://w3id.org/mbdo#BrownTrussBridge
+:BrownTrussBridge rdf:type owl:Class ;
+                  rdfs:subClassOf :TrussBridge ;
+                  rdfs:label "Brown Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#BurrArchTypeTrussBridge
+:BurrArchTypeTrussBridge rdf:type owl:Class ;
+                         rdfs:subClassOf :TrussBridge ;
+                         rdfs:label "Burr Arch Type Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#CableNetBridge
+:CableNetBridge rdf:type owl:Class ;
+                rdfs:subClassOf :BridgeByLongitudinalSystem ;
+                rdfs:label "Cable Net Bridge"@en .
+
+
+###  https://w3id.org/mbdo#CableStayedBridge
+:CableStayedBridge rdf:type owl:Class ;
+                   rdfs:subClassOf :BridgeByLongitudinalSystem ;
+                   rdfs:label "Cable-stayed Bridge"@en .
+
+
+###  https://w3id.org/mbdo#CableStayedBridgeWithCurvedDeck
+:CableStayedBridgeWithCurvedDeck rdf:type owl:Class ;
+                                 rdfs:subClassOf :CableStayedBridge ;
+                                 rdfs:label "Cable-stayed Bridge with Curved Deck"@en .
+
+
+###  https://w3id.org/mbdo#CableStayedBridgeWithFanSystem
+:CableStayedBridgeWithFanSystem rdf:type owl:Class ;
+                                rdfs:subClassOf :CableStayedBridge ;
+                                rdfs:label "Cable-stayed Bridge with Fan System"@en .
+
+
+###  https://w3id.org/mbdo#CableStayedBridgeWithHarpSystem
+:CableStayedBridgeWithHarpSystem rdf:type owl:Class ;
+                                 rdfs:subClassOf :CableStayedBridge ;
+                                 rdfs:label "Cable-stayed Bridge with Harp System"@en .
+
+
+###  https://w3id.org/mbdo#CableStayedBridgeWithSemiFanSystem
+:CableStayedBridgeWithSemiFanSystem rdf:type owl:Class ;
+                                    rdfs:subClassOf :CableStayedBridge ;
+                                    rdfs:label "Cable-stayed Bridge with Semi-fan System"@en .
+
+
+###  https://w3id.org/mbdo#CableStayedBridgeWithoutBackstays
+:CableStayedBridgeWithoutBackstays rdf:type owl:Class ;
+                                   rdfs:subClassOf :CableStayedBridge ;
+                                   rdfs:label "Cable-stayed Bridge without Backstays"@en .
+
+
+###  https://w3id.org/mbdo#Cables
+:Cables rdf:type owl:Class ;
+        rdfs:subClassOf :LongSpanStructures ;
+        rdfs:label "Cables"@en .
+
+
+###  https://w3id.org/mbdo#CallenderHamiltonBridge
+:CallenderHamiltonBridge rdf:type owl:Class ;
+                         rdfs:subClassOf :TrussBridge ;
+                         rdfs:label "Callender Hamilton Bridge"@en .
+
+
+###  https://w3id.org/mbdo#CamelbackTrussBridge
+:CamelbackTrussBridge rdf:type owl:Class ;
+                      rdfs:subClassOf :ParkerTypeTrussBridge ;
+                      rdfs:label "Camelback Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Canal
+:Canal rdf:type owl:Class ;
+       rdfs:subClassOf :ObstacleCrossed ;
+       rdfs:label "Canal"@en .
+
+
+###  https://w3id.org/mbdo#CanalBridge
+:CanalBridge rdf:type owl:Class ;
+             rdfs:subClassOf :BridgeByFunction ;
+             rdfs:label "Canal Bridge"@en .
+
+
+###  https://w3id.org/mbdo#CantileverTrussBridge
+:CantileverTrussBridge rdf:type owl:Class ;
+                       rdfs:subClassOf :TrussBridge ;
+                       rdfs:label "Cantilever Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#CapBeam
+:CapBeam rdf:type owl:Class ;
+         rdfs:subClassOf :Tower ;
+         rdfs:label "Cap Beam"@en .
+
+
+###  https://w3id.org/mbdo#CapBeams
+:CapBeams rdf:type owl:Class ;
+          rdfs:subClassOf :Pier ;
+          rdfs:label "Cap Beams"@en .
+
+
+###  https://w3id.org/mbdo#ChainSuspensionBridge
+:ChainSuspensionBridge rdf:type owl:Class ;
+                       rdfs:subClassOf :SuspensionBridge ;
+                       rdfs:label "Chain Suspension Bridge"@en .
+
+
+###  https://w3id.org/mbdo#City
+:City rdf:type owl:Class ;
+      rdfs:subClassOf <https://w3id.org/brot#SpatialZone> ;
+      rdfs:label "City"@en .
+
+
+###  https://w3id.org/mbdo#Column
+:Column rdf:type owl:Class ;
+        rdfs:subClassOf :Tower ;
+        rdfs:label "Column"@en .
+
+
+###  https://w3id.org/mbdo#Columns
+:Columns rdf:type owl:Class ;
+         rdfs:subClassOf :Pier ;
+         rdfs:label "Columns"@en .
+
+
+###  https://w3id.org/mbdo#CompositeBridge
+:CompositeBridge rdf:type owl:Class ;
+                 rdfs:subClassOf :BridgesByConstructionMaterial ;
+                 rdfs:label "Composite Bridge"@en .
+
+
+###  https://w3id.org/mbdo#CompositeMaterial
+:CompositeMaterial rdf:type owl:Class ;
+                   rdfs:subClassOf <https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material> ;
+                   rdfs:label "Composite Material"@en .
+
+
+###  https://w3id.org/mbdo#ConcaveConvexBridge
+:ConcaveConvexBridge rdf:type owl:Class ;
+                     rdfs:subClassOf :VariableWidthBridge ;
+                     rdfs:label "Concave Convex Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Concrete
+:Concrete rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material> ;
+          rdfs:label "Concrete"@en .
+
+
+###  https://w3id.org/mbdo#ConcreteBridge
+:ConcreteBridge rdf:type owl:Class ;
+                rdfs:subClassOf :BridgesByConstructionMaterial ;
+                rdfs:label "Concrete Bridge"@en .
+
+
+###  https://w3id.org/mbdo#ConstantWidthBridge
+:ConstantWidthBridge rdf:type owl:Class ;
+                     rdfs:subClassOf :BridgeByCrossSection ;
+                     rdfs:label "Constant Width Bridge"@en .
+
+
+###  https://w3id.org/mbdo#ConstantlyCurvedBridge
+:ConstantlyCurvedBridge rdf:type owl:Class ;
+                        rdfs:subClassOf :CurvedBridge ;
+                        rdfs:label "Constantly Curved Bridge"@en .
+
+
+###  https://w3id.org/mbdo#ContinuousTrussBridge
+:ContinuousTrussBridge rdf:type owl:Class ;
+                       rdfs:subClassOf :TrussBridge ;
+                       rdfs:label "Continuous Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Contractor
+:Contractor rdf:type owl:Class ;
+            rdfs:subClassOf :Participants ;
+            rdfs:label "Contractor"@en .
+
+
+###  https://w3id.org/mbdo#ConventiallySupportedBridge
+:ConventiallySupportedBridge rdf:type owl:Class ;
+                             rdfs:subClassOf :BridgesBySupportConditions ;
+                             rdfs:label "Conventially Supported Bridge"@en .
+
+
+###  https://w3id.org/mbdo#ConvexConcaveBridge
+:ConvexConcaveBridge rdf:type owl:Class ;
+                     rdfs:subClassOf :VariableWidthBridge ;
+                     rdfs:label "Convex Concave Bridge"@en .
+
+
+###  https://w3id.org/mbdo#CorbelArchBridge
+:CorbelArchBridge rdf:type owl:Class ;
+                  rdfs:subClassOf :ArchBridge ;
+                  rdfs:label "Corbel Arch Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Country
+:Country rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/brot#SpatialZone> ;
+         rdfs:label "Country"@en .
+
+
+###  https://w3id.org/mbdo#CoveredBridge
+:CoveredBridge rdf:type owl:Class ;
+               rdfs:subClassOf :BridgeByLongitudinalSystem ;
+               rdfs:label "Covered Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Creek
+:Creek rdf:type owl:Class ;
+       rdfs:subClassOf :ObstacleCrossed ;
+       rdfs:label "Creek"@en .
+
+
+###  https://w3id.org/mbdo#CurvedBridge
+:CurvedBridge rdf:type owl:Class ;
+              rdfs:subClassOf :BridgesByVerticalAlignment ;
+              rdfs:label "Curved Bridge"@en .
+
+
+###  https://w3id.org/mbdo#DareTypeTrussBridge
+:DareTypeTrussBridge rdf:type owl:Class ;
+                     rdfs:subClassOf :TrussBridge ;
+                     rdfs:label "Dare Type Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#DeburghTypeTrussBridge
+:DeburghTypeTrussBridge rdf:type owl:Class ;
+                        rdfs:subClassOf :TrussBridge ;
+                        rdfs:label "Deburgh Type Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Deck
+:Deck rdf:type owl:Class ;
+      rdfs:subClassOf :Superstructure ;
+      rdfs:label "Deck"@en .
+
+
+###  https://w3id.org/mbdo#DeckArchBridge
+:DeckArchBridge rdf:type owl:Class ;
+                rdfs:subClassOf :ArchBridge ;
+                rdfs:label "Deck Arch Bridge"@en .
+
+
+###  https://w3id.org/mbdo#DeckTrussBridge
+:DeckTrussBridge rdf:type owl:Class ;
+                 rdfs:subClassOf :TrussBridge ;
+                 rdfs:label "Deck Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#DesignOrPlanning
+:DesignOrPlanning rdf:type owl:Class ;
+                  rdfs:subClassOf :Participants ;
+                  rdfs:label "Design or Planning"@en .
+
+
+###  https://w3id.org/mbdo#Diaphragms
+:Diaphragms rdf:type owl:Class ;
+            rdfs:subClassOf :ShortSpanStructure ;
+            rdfs:label "Diaphragms"@en .
+
+
+###  https://w3id.org/mbdo#DoubleCellBoxGriderBridge
+:DoubleCellBoxGriderBridge rdf:type owl:Class ;
+                           rdfs:subClassOf :BoxGirderBridge ;
+                           rdfs:label "Double-cell Box Grider Bridge"@en .
+
+
+###  https://w3id.org/mbdo#DoubleConcaveBridge
+:DoubleConcaveBridge rdf:type owl:Class ;
+                     rdfs:subClassOf :VariableWidthBridge ;
+                     rdfs:label "Double Concave Bridge"@en .
+
+
+###  https://w3id.org/mbdo#DoubleConvexBridge
+:DoubleConvexBridge rdf:type owl:Class ;
+                    rdfs:subClassOf :VariableWidthBridge ;
+                    rdfs:label "Double Convex Bridge"@en .
+
+
+###  https://w3id.org/mbdo#DoubleIntersectionWarrenTrussBridge
+:DoubleIntersectionWarrenTrussBridge rdf:type owl:Class ;
+                                     rdfs:subClassOf :WarrenTypeTrussBridge ;
+                                     rdfs:label "Double Intersection Warren Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#DoubleTSectionGirderBridge
+:DoubleTSectionGirderBridge rdf:type owl:Class ;
+                            rdfs:subClassOf :TSectionGirderBridge ;
+                            rdfs:label "Double T-Section Girder Bridge"@en .
+
+
+###  https://w3id.org/mbdo#DoubleThreeSpanSuspensionBridge
+:DoubleThreeSpanSuspensionBridge rdf:type owl:Class ;
+                                 rdfs:subClassOf :SuspensionBridge ;
+                                 rdfs:label "Double Three-span Suspension Bridge"@en .
+
+
+###  https://w3id.org/mbdo#DrawBridge
+:DrawBridge rdf:type owl:Class ;
+            rdfs:subClassOf :MovableBridge ;
+            rdfs:label "Draw Bridge"@en .
+
+
+###  https://w3id.org/mbdo#DrilledShafts
+:DrilledShafts rdf:type owl:Class ;
+               rdfs:subClassOf :Foundations ;
+               rdfs:label "Drilled Shafts"@en .
+
+
+###  https://w3id.org/mbdo#EngesserTrussBridge
+:EngesserTrussBridge rdf:type owl:Class ;
+                     rdfs:subClassOf :TrussBridge ;
+                     rdfs:label "Engesser Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#ExpansionJoints
+:ExpansionJoints rdf:type owl:Class ;
+                 rdfs:subClassOf :StructureProtection ;
+                 rdfs:label "Expansion Joints"@en .
+
+
+###  https://w3id.org/mbdo#ExtradosedBridge
+:ExtradosedBridge rdf:type owl:Class ;
+                  rdfs:subClassOf :CableStayedBridge ;
+                  rdfs:label "Extradosed Bridge"@en .
+
+
+###  https://w3id.org/mbdo#FiberReinforcedConcreteBridge
+:FiberReinforcedConcreteBridge rdf:type owl:Class ;
+                               rdfs:subClassOf :ConcreteBridge ;
+                               rdfs:label "Fiber Reinforced Concrete Bridge"@en .
+
+
+###  https://w3id.org/mbdo#FinkTypeTrussBridge
+:FinkTypeTrussBridge rdf:type owl:Class ;
+                     rdfs:subClassOf :TrussBridge ;
+                     rdfs:label "Fink Type Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#FlexuralMembers
+:FlexuralMembers rdf:type owl:Class ;
+                 rdfs:subClassOf :ShortSpanStructure ;
+                 rdfs:label "Flexural Members"@en .
+
+
+###  https://w3id.org/mbdo#FoldableBridge
+:FoldableBridge rdf:type owl:Class ;
+                rdfs:subClassOf :MovableBridge ;
+                rdfs:label "Foldable Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Foundation
+:Foundation rdf:type owl:Class ;
+            rdfs:subClassOf :Abutment ;
+            rdfs:label "Foundation"@en .
+
+
+###  https://w3id.org/mbdo#Foundations
+:Foundations rdf:type owl:Class ;
+             rdfs:subClassOf :Pier ;
+             rdfs:label "Foundations"@en .
+
+
+###  https://w3id.org/mbdo#FourHingedArchBridge
+:FourHingedArchBridge rdf:type owl:Class ;
+                      rdfs:subClassOf :ArchBridge ;
+                      rdfs:label "Four-hinged Arch Bridge"@en .
+
+
+###  https://w3id.org/mbdo#FourSpanExtradosedBridge
+:FourSpanExtradosedBridge rdf:type owl:Class ;
+                          rdfs:subClassOf :ExtradosedBridge ;
+                          rdfs:label "Four-span Extradosed Bridge"@en .
+
+
+###  https://w3id.org/mbdo#FourWayBridge
+:FourWayBridge rdf:type owl:Class ;
+               rdfs:subClassOf :BridgesByHorizontalAlighnment ;
+               rdfs:label "Four-way Bridge"@en .
+
+
+###  https://w3id.org/mbdo#FreeCantileverGirderBridge
+:FreeCantileverGirderBridge rdf:type owl:Class ;
+                            rdfs:subClassOf :GirderBridge ;
+                            rdfs:label "Free Cantilever Girder Bridge"@en .
+
+
+###  https://w3id.org/mbdo#GerberTrussBridge
+:GerberTrussBridge rdf:type owl:Class ;
+                   rdfs:subClassOf :CantileverTrussBridge ;
+                   rdfs:label "Gerber Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Girder
+:Girder rdf:type owl:Class ;
+        rdfs:subClassOf :Deck ;
+        rdfs:label "Girder"@en .
+
+
+###  https://w3id.org/mbdo#GirderBridge
+:GirderBridge rdf:type owl:Class ;
+              rdfs:subClassOf :BridgeByStructure ;
+              rdfs:label "Girder Bridge"@en .
+
+
+###  https://w3id.org/mbdo#GirderBridgeWithSuspendedDeck
+:GirderBridgeWithSuspendedDeck rdf:type owl:Class ;
+                               rdfs:subClassOf :GirderBridge ;
+                               rdfs:label "Girder Bridge With Suspended Deck"@en .
+
+
+###  https://w3id.org/mbdo#GisclardBridge
+:GisclardBridge rdf:type owl:Class ;
+                rdfs:subClassOf :CableStayedBridge ;
+                rdfs:label "Gisclard Bridge"@en .
+
+
+###  https://w3id.org/mbdo#GlassBridge
+:GlassBridge rdf:type owl:Class ;
+             rdfs:subClassOf :BridgesByConstructionMaterial ;
+             rdfs:label "Glass Bridge"@en .
+
+
+###  https://w3id.org/mbdo#GreinerTrussBridge
+:GreinerTrussBridge rdf:type owl:Class ;
+                    rdfs:subClassOf :TrussBridge ;
+                    rdfs:label "Greiner Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Guardrails
+:Guardrails rdf:type owl:Class ;
+            rdfs:subClassOf :Barriers ;
+            rdfs:label "Guardrails"@en .
+
+
+###  https://w3id.org/mbdo#HalfThroughArchBridge
+:HalfThroughArchBridge rdf:type owl:Class ;
+                       rdfs:subClassOf :ArchBridge ;
+                       rdfs:label "Half-through Arch Bridge"@en .
+
+
+###  https://w3id.org/mbdo#HalfThroughTrussBridge
+:HalfThroughTrussBridge rdf:type owl:Class ;
+                        rdfs:subClassOf :TrussBridge ;
+                        rdfs:label "Half Through Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Hangers
+:Hangers rdf:type owl:Class ;
+         rdfs:subClassOf :LongSpanStructures ;
+         rdfs:label "Hangers"@en .
+
+
+###  https://w3id.org/mbdo#HaunchedGirderBridge
+:HaunchedGirderBridge rdf:type owl:Class ;
+                      rdfs:subClassOf :GirderBridge ;
+                      rdfs:label "Haunched Girder Bridge"@en .
+
+
+###  https://w3id.org/mbdo#HauptTypeTrussBridge
+:HauptTypeTrussBridge rdf:type owl:Class ;
+                      rdfs:subClassOf :TrussBridge ;
+                      rdfs:label "Haupt Type Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#HelicalBridge
+:HelicalBridge rdf:type owl:Class ;
+               rdfs:subClassOf :TrussBridge ;
+               rdfs:label "Helical Bridge"@en .
+
+
+###  https://w3id.org/mbdo#HoweTypeTrussBridge
+:HoweTypeTrussBridge rdf:type owl:Class ;
+                     rdfs:subClassOf :TrussBridge ;
+                     rdfs:label "Howe Type Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#HybridSimpleSuspensionBridge
+:HybridSimpleSuspensionBridge rdf:type owl:Class ;
+                              rdfs:subClassOf :SuspensionBridge ;
+                              rdfs:label "Hybrid Simple Suspension Bridge"@en .
+
+
+###  https://w3id.org/mbdo#HydraulicBridge
+:HydraulicBridge rdf:type owl:Class ;
+                 rdfs:subClassOf :MovableBridge ;
+                 rdfs:label "Hydraulic Bridge"@en .
+
+
+###  https://w3id.org/mbdo#HyperbolicBridge
+:HyperbolicBridge rdf:type owl:Class ;
+                  rdfs:subClassOf :BridgeByLongitudinalSystem ;
+                  rdfs:label "Hyperbolic Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Image
+:Image rdf:type owl:Class ;
+       rdfs:label "Image"@en .
+
+
+###  https://w3id.org/mbdo#IntegralBridge
+:IntegralBridge rdf:type owl:Class ;
+                rdfs:subClassOf :BridgesBySupportConditions ;
+                rdfs:label "Integral Bridge"@en .
+
+
+###  https://w3id.org/mbdo#IntersectingLevelsBridge
+:IntersectingLevelsBridge rdf:type owl:Class ;
+                          rdfs:subClassOf :BiLevelBridge ;
+                          rdfs:label "Intersecting Levels Bridge"@en .
+
+
+###  https://w3id.org/mbdo#InvertedFinkTrussBridge
+:InvertedFinkTrussBridge rdf:type owl:Class ;
+                         rdfs:subClassOf :CableStayedBridge ;
+                         rdfs:label "Inverted Fink Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Iron
+:Iron rdf:type owl:Class ;
+      rdfs:subClassOf <https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material> ;
+      rdfs:label "Iron"@en .
+
+
+###  https://w3id.org/mbdo#IronBridge
+:IronBridge rdf:type owl:Class ;
+            rdfs:subClassOf :MetalBridge ;
+            rdfs:label "Iron Bridge"@en .
+
+
+###  https://w3id.org/mbdo#IronConcreteComposite
+:IronConcreteComposite rdf:type owl:Class ;
+                       rdfs:subClassOf :CompositeMaterial ;
+                       rdfs:label "Iron Concrete Composite"@en .
+
+
+###  https://w3id.org/mbdo#KTrussBridge
+:KTrussBridge rdf:type owl:Class ;
+              rdfs:subClassOf :TrussBridge ;
+              rdfs:label "KTruss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#KelloggTrussBridge
+:KelloggTrussBridge rdf:type owl:Class ;
+                    rdfs:subClassOf :TrussBridge ;
+                    rdfs:label "Kellogg Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#KingpostTrussBridge
+:KingpostTrussBridge rdf:type owl:Class ;
+                     rdfs:subClassOf :TrussBridge ;
+                     rdfs:label "Kingpost Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#KinkedBridge
+:KinkedBridge rdf:type owl:Class ;
+              rdfs:subClassOf :BridgeByCrossSection ;
+              rdfs:label "Kinked Bridge"@en .
+
+
+###  https://w3id.org/mbdo#LShapedBridge
+:LShapedBridge rdf:type owl:Class ;
+               rdfs:subClassOf :KinkedBridge ;
+               rdfs:label "L-shaped Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Lakes
+:Lakes rdf:type owl:Class ;
+       rdfs:subClassOf :ObstacleCrossed ;
+       rdfs:label "Lakes"@en .
+
+
+###  https://w3id.org/mbdo#LaneTrussBridge
+:LaneTrussBridge rdf:type owl:Class ;
+                 rdfs:subClassOf :TrussBridge ;
+                 rdfs:label "Lane Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#LatticeTrussBridge
+:LatticeTrussBridge rdf:type owl:Class ;
+                    rdfs:subClassOf :TrussBridge ;
+                    rdfs:label "Lattice Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#LenticularBridge
+:LenticularBridge rdf:type owl:Class ;
+                  rdfs:subClassOf :NonParallelChordTrussBridge ;
+                  rdfs:label "Lenticular Bridge"@en .
+
+
+###  https://w3id.org/mbdo#LenticularTrussBridgeWithPenticularWeb
+:LenticularTrussBridgeWithPenticularWeb rdf:type owl:Class ;
+                                        rdfs:subClassOf :LenticularBridge ;
+                                        rdfs:label "Lenticular Truss Bridge with Penticular Web"@en .
+
+
+###  https://w3id.org/mbdo#LightweightConcreteBridge
+:LightweightConcreteBridge rdf:type owl:Class ;
+                           rdfs:subClassOf :ConcreteBridge ;
+                           rdfs:label "Lightweight Concrete Bridge"@en .
+
+
+###  https://w3id.org/mbdo#LongSpanStructures
+:LongSpanStructures rdf:type owl:Class ;
+                    rdfs:subClassOf :Superstructure ;
+                    rdfs:label "Long Span Structures"@en .
+
+
+###  https://w3id.org/mbdo#LongTypeTrussBridge
+:LongTypeTrussBridge rdf:type owl:Class ;
+                     rdfs:subClassOf :TrussBridge ;
+                     rdfs:label "Long Type Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Masonary
+:Masonary rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material> ;
+          rdfs:label "Masonary"@en .
+
+
+###  https://w3id.org/mbdo#MasonryBridge
+:MasonryBridge rdf:type owl:Class ;
+               rdfs:subClassOf :BridgesByConstructionMaterial ;
+               rdfs:label "Masonry Bridge"@en .
+
+
+###  https://w3id.org/mbdo#MccallumTrussBridge
+:MccallumTrussBridge rdf:type owl:Class ;
+                     rdfs:subClassOf :TrussBridge ;
+                     rdfs:label "Mccallum Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#McdonaldTrussBridge
+:McdonaldTrussBridge rdf:type owl:Class ;
+                     rdfs:subClassOf :TrussBridge ;
+                     rdfs:label "Mcdonald Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Metal
+:Metal rdf:type owl:Class ;
+       rdfs:subClassOf <https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material> ;
+       rdfs:label "Metal"@en .
+
+
+###  https://w3id.org/mbdo#MetalBridge
+:MetalBridge rdf:type owl:Class ;
+             rdfs:subClassOf :BridgesByConstructionMaterial ;
+             rdfs:label "Metal Bridge"@en .
+
+
+###  https://w3id.org/mbdo#MohniéLatticeTrussBridge
+:MohniéLatticeTrussBridge rdf:type owl:Class ;
+                          rdfs:subClassOf :TrussBridge ;
+                          rdfs:label "Mohnié Lattice Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#MonoCableSuspensionBridge
+:MonoCableSuspensionBridge rdf:type owl:Class ;
+                           rdfs:subClassOf :SuspensionBridge ;
+                           rdfs:label "Mono-cable Suspension Bridge"@en .
+
+
+###  https://w3id.org/mbdo#MoonBridge
+:MoonBridge rdf:type owl:Class ;
+            rdfs:subClassOf :ArchBridge ;
+            rdfs:label "Moon Bridge"@en .
+
+
+###  https://w3id.org/mbdo#MovableBridge
+:MovableBridge rdf:type owl:Class ;
+               rdfs:subClassOf :BridgeByLongitudinalSystem ;
+               rdfs:label "Movable Bridge"@en .
+
+
+###  https://w3id.org/mbdo#MultiSpanContinuousGirderBridge
+:MultiSpanContinuousGirderBridge rdf:type owl:Class ;
+                                 rdfs:subClassOf :GirderBridge ;
+                                 rdfs:label "Multi-span Continuous Girder Bridge"@en .
+
+
+###  https://w3id.org/mbdo#MultiSpanExtradosedBridge
+:MultiSpanExtradosedBridge rdf:type owl:Class ;
+                           rdfs:subClassOf :ExtradosedBridge ;
+                           rdfs:label "Multi-span Extradosed Bridge"@en .
+
+
+###  https://w3id.org/mbdo#MultiSpanSuspensionBridge
+:MultiSpanSuspensionBridge rdf:type owl:Class ;
+                           rdfs:subClassOf :SuspensionBridge ;
+                           rdfs:label "Multi-span Suspension Bridge"@en .
+
+
+###  https://w3id.org/mbdo#MultipleGirderBridge
+:MultipleGirderBridge rdf:type owl:Class ;
+                      rdfs:subClassOf :GirderBridge ;
+                      rdfs:label "Multiple Girder Bridge"@en .
+
+
+###  https://w3id.org/mbdo#MultipleKingpostTrussBridge
+:MultipleKingpostTrussBridge rdf:type owl:Class ;
+                             rdfs:subClassOf :KingpostTrussBridge ;
+                             rdfs:label "Multiple Kingpost Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#MultipleSpanCableStayedBridge
+:MultipleSpanCableStayedBridge rdf:type owl:Class ;
+                               rdfs:subClassOf :CableStayedBridge ;
+                               rdfs:label "Multiple-span Cable-stayed Bridge"@en .
+
+
+###  https://w3id.org/mbdo#MultipleTSectionGirderBridge
+:MultipleTSectionGirderBridge rdf:type owl:Class ;
+                              rdfs:subClassOf :TSectionGirderBridge ;
+                              rdfs:label "Multiple T-Section Girder Bridge"@en .
+
+
+###  https://w3id.org/mbdo#MultiwayBridge
+:MultiwayBridge rdf:type owl:Class ;
+                rdfs:subClassOf :BridgesByHorizontalAlighnment ;
+                rdfs:label "Multiway Bridge"@en .
+
+
+###  https://w3id.org/mbdo#NonParallelChordTrussBridge
+:NonParallelChordTrussBridge rdf:type owl:Class ;
+                             rdfs:subClassOf :TrussBridge ;
+                             rdfs:label "Non Parallel Chord Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#ObliqueBridge
+:ObliqueBridge rdf:type owl:Class ;
+               rdfs:subClassOf :BridgesBySupportConditions ;
+               rdfs:label "Oblique Bridge"@en .
+
+
+###  https://w3id.org/mbdo#ObstacleCrossed
+:ObstacleCrossed rdf:type owl:Class ;
+                 rdfs:label "Obstacle Crossed"@en .
+
+
+###  https://w3id.org/mbdo#OffsetLevelsBridge
+:OffsetLevelsBridge rdf:type owl:Class ;
+                    rdfs:subClassOf :BiLevelBridge ;
+                    rdfs:label "Offset Levels Bridge"@en .
+
+
+###  https://w3id.org/mbdo#PaddlefordTypeTrussBridge
+:PaddlefordTypeTrussBridge rdf:type owl:Class ;
+                           rdfs:subClassOf :TrussBridge ;
+                           rdfs:label "Paddleford Type Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#ParallelChordTrussBridge
+:ParallelChordTrussBridge rdf:type owl:Class ;
+                          rdfs:subClassOf :TrussBridge ;
+                          rdfs:label "Parallel Chord Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Parapets
+:Parapets rdf:type owl:Class ;
+          rdfs:subClassOf :StructureProtection ;
+          rdfs:label "Parapets"@en .
+
+
+###  https://w3id.org/mbdo#ParkerTypeTrussBridge
+:ParkerTypeTrussBridge rdf:type owl:Class ;
+                       rdfs:subClassOf :NonParallelChordTrussBridge ;
+                       rdfs:label "Parker Type Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#PartiallyCurvedBridge
+:PartiallyCurvedBridge rdf:type owl:Class ;
+                       rdfs:subClassOf :BridgesByVerticalAlignment ;
+                       rdfs:label "Partially Curved Bridge"@en .
+
+
+###  https://w3id.org/mbdo#PartiallyObliqueBridge
+:PartiallyObliqueBridge rdf:type owl:Class ;
+                        rdfs:subClassOf :BridgesBySupportConditions ;
+                        rdfs:label "Partially Oblique Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Participants
+:Participants rdf:type owl:Class ;
+              rdfs:label "Participants"@en .
+
+
+###  https://w3id.org/mbdo#PauliTrussBridge
+:PauliTrussBridge rdf:type owl:Class ;
+                  rdfs:subClassOf :LenticularBridge ;
+                  rdfs:label "Pauli Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#PegramTrussBridge
+:PegramTrussBridge rdf:type owl:Class ;
+                   rdfs:subClassOf :NonParallelChordTrussBridge ;
+                   rdfs:label "Pegram Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#PendulumBridge
+:PendulumBridge rdf:type owl:Class ;
+                rdfs:subClassOf :MovableBridge ;
+                rdfs:label "Pendulum Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Pier
+:Pier rdf:type owl:Class ;
+      rdfs:subClassOf :Substructure ;
+      rdfs:label "Pier"@en .
+
+
+###  https://w3id.org/mbdo#PileBridge
+:PileBridge rdf:type owl:Class ;
+            rdfs:subClassOf :BridgeByLongitudinalSystem ;
+            rdfs:label "Pile Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Piles
+:Piles rdf:type owl:Class ;
+       rdfs:subClassOf :Foundations ;
+       rdfs:label "Piles"@en .
+
+
+###  https://w3id.org/mbdo#PinConnectedPrattTrussBridge
+:PinConnectedPrattTrussBridge rdf:type owl:Class ;
+                              rdfs:subClassOf :PrattTypeTrussBridge ;
+                              rdfs:label "Pin Connected Pratt Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#PistonStayedBridge
+:PistonStayedBridge rdf:type owl:Class ;
+                    rdfs:subClassOf :MovableBridge ;
+                    rdfs:label "Piston Stayed Bridge"@en .
+
+
+###  https://w3id.org/mbdo#PlanoConcaveBridge
+:PlanoConcaveBridge rdf:type owl:Class ;
+                    rdfs:subClassOf :VariableWidthBridge ;
+                    rdfs:label "Plano Concave Bridge"@en .
+
+
+###  https://w3id.org/mbdo#PlanoConvexBridge
+:PlanoConvexBridge rdf:type owl:Class ;
+                   rdfs:subClassOf :VariableWidthBridge ;
+                   rdfs:label "Plano Convex Bridge"@en .
+
+
+###  https://w3id.org/mbdo#PlateGirderBridge
+:PlateGirderBridge rdf:type owl:Class ;
+                   rdfs:subClassOf :GirderBridge ;
+                   rdfs:label "Plate Girder Bridge"@en .
+
+
+###  https://w3id.org/mbdo#PolygonalTrussBridge
+:PolygonalTrussBridge rdf:type owl:Class ;
+                      rdfs:subClassOf :NonParallelChordTrussBridge ;
+                      rdfs:label "Polygonal Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#PontoonBridge
+:PontoonBridge rdf:type owl:Class ;
+               rdfs:subClassOf :BridgeByLongitudinalSystem ;
+               rdfs:label "Pontoon Bridge"@en .
+
+
+###  https://w3id.org/mbdo#PonyTrussBridge
+:PonyTrussBridge rdf:type owl:Class ;
+                 rdfs:subClassOf :TrussBridge ;
+                 rdfs:label "Pony Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#PostTypeTrussBridge
+:PostTypeTrussBridge rdf:type owl:Class ;
+                     rdfs:subClassOf :TrussBridge ;
+                     rdfs:label "Post Type Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#PrattTypeTrussBridge
+:PrattTypeTrussBridge rdf:type owl:Class ;
+                      rdfs:subClassOf :TrussBridge ;
+                      rdfs:label "Pratt Type Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#PrestressedConcreteBridge
+:PrestressedConcreteBridge rdf:type owl:Class ;
+                           rdfs:subClassOf :ConcreteBridge ;
+                           rdfs:label "Prestressed Concrete Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Protection
+:Protection rdf:type owl:Class ;
+            rdfs:subClassOf <https://w3id.org/brot#Component> ;
+            rdfs:label "Protection"@en .
+
+
+###  https://w3id.org/mbdo#Pylon
+:Pylon rdf:type owl:Class ;
+       rdfs:subClassOf :Tower ;
+       rdfs:label "Pylon"@en .
+
+
+###  https://w3id.org/mbdo#QuadrupleGirderBridge
+:QuadrupleGirderBridge rdf:type owl:Class ;
+                       rdfs:subClassOf :GirderBridge ;
+                       rdfs:label "Quadruple Girder Bridge"@en .
+
+
+###  https://w3id.org/mbdo#QuadrupleTSectionGirderBridge
+:QuadrupleTSectionGirderBridge rdf:type owl:Class ;
+                               rdfs:subClassOf :TSectionGirderBridge ;
+                               rdfs:label "Quadruple T-Section Girder Bridge"@en .
+
+
+###  https://w3id.org/mbdo#QueenpostTrussBridge
+:QueenpostTrussBridge rdf:type owl:Class ;
+                      rdfs:subClassOf :TrussBridge ;
+                      rdfs:label "Queenpost Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Region
+:Region rdf:type owl:Class ;
+        rdfs:subClassOf <https://w3id.org/brot#SpatialZone> ;
+        rdfs:label "Region"@en .
+
+
+###  https://w3id.org/mbdo#ReinforcedConcrete
+:ReinforcedConcrete rdf:type owl:Class ;
+                    rdfs:subClassOf :CompositeMaterial ;
+                    rdfs:label "Reinforced Concrete"@en .
+
+
+###  https://w3id.org/mbdo#ReinforcedConcreteBridge
+:ReinforcedConcreteBridge rdf:type owl:Class ;
+                          rdfs:subClassOf :ConcreteBridge ;
+                          rdfs:label "Reinforced Concrete Bridge"@en .
+
+
+###  https://w3id.org/mbdo#RetractableBridge
+:RetractableBridge rdf:type owl:Class ;
+                   rdfs:subClassOf :MovableBridge ;
+                   rdfs:label "Retractable Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Ribs
+:Ribs rdf:type owl:Class ;
+      rdfs:subClassOf :LongSpanStructures ;
+      rdfs:label "Ribs"@en .
+
+
+###  https://w3id.org/mbdo#RigidFrameBridge
+:RigidFrameBridge rdf:type owl:Class ;
+                  rdfs:subClassOf :BridgeByLongitudinalSystem ;
+                  rdfs:label "Rigid Frame Bridge"@en .
+
+
+###  https://w3id.org/mbdo#RigidFrameBridgeWithInclinedLegs
+:RigidFrameBridgeWithInclinedLegs rdf:type owl:Class ;
+                                  rdfs:subClassOf :RigidFrameBridge ;
+                                  rdfs:label "Rigid Frame Bridge with Inclined Legs"@en .
+
+
+###  https://w3id.org/mbdo#RigidFrameBridgeWithTreeShapedLegs
+:RigidFrameBridgeWithTreeShapedLegs rdf:type owl:Class ;
+                                    rdfs:subClassOf :RigidFrameBridge ;
+                                    rdfs:label "Rigid Frame Bridge with Tree-shaped Legs"@en .
+
+
+###  https://w3id.org/mbdo#RigidFrameBridgeWithUnderslungMainSpan
+:RigidFrameBridgeWithUnderslungMainSpan rdf:type owl:Class ;
+                                        rdfs:subClassOf :RigidFrameBridge ;
+                                        rdfs:label "Rigid Frame Bridge with Underslung Main Span"@en .
+
+
+###  https://w3id.org/mbdo#RigidFrameBridgeWithVShapedLegs
+:RigidFrameBridgeWithVShapedLegs rdf:type owl:Class ;
+                                 rdfs:subClassOf :RigidFrameBridge ;
+                                 rdfs:label "Rigid Frame Bridge with V-shaped Legs"@en .
+
+
+###  https://w3id.org/mbdo#RigidHalfFrameBridge
+:RigidHalfFrameBridge rdf:type owl:Class ;
+                      rdfs:subClassOf :RigidFrameBridge ;
+                      rdfs:label "Rigid Half Frame Bridge"@en .
+
+
+###  https://w3id.org/mbdo#River
+:River rdf:type owl:Class ;
+       rdfs:subClassOf :ObstacleCrossed ;
+       rdfs:label "River"@en .
+
+
+###  https://w3id.org/mbdo#Road
+:Road rdf:type owl:Class ;
+      rdfs:subClassOf :ObstacleCrossed ;
+      rdfs:label "Road"@en .
+
+
+###  https://w3id.org/mbdo#RoadBridge
+:RoadBridge rdf:type owl:Class ;
+            rdfs:subClassOf :BridgeByFunction ;
+            rdfs:label "Road Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SCurvedBridge
+:SCurvedBridge rdf:type owl:Class ;
+               rdfs:subClassOf :CurvedBridge ;
+               rdfs:label "S-curved Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SchwedlerTrussBridge
+:SchwedlerTrussBridge rdf:type owl:Class ;
+                      rdfs:subClassOf :NonParallelChordTrussBridge ;
+                      rdfs:label "Schwedler Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Sea
+:Sea rdf:type owl:Class ;
+     rdfs:subClassOf :ObstacleCrossed ;
+     rdfs:label "Sea"@en .
+
+
+###  https://w3id.org/mbdo#SegmentalBoxGirders
+:SegmentalBoxGirders rdf:type owl:Class ;
+                     rdfs:subClassOf :LongSpanStructures ;
+                     rdfs:label "Segmental Box Girders"@en .
+
+
+###  https://w3id.org/mbdo#SelfAnchoredMonoCableSuspensionBridge
+:SelfAnchoredMonoCableSuspensionBridge rdf:type owl:Class ;
+                                       rdfs:subClassOf :SelfAnchoredSuspensionBridge ;
+                                       rdfs:label "Self-anchored Mono Cable Suspension Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SelfAnchoredSuspensionBridge
+:SelfAnchoredSuspensionBridge rdf:type owl:Class ;
+                              rdfs:subClassOf :SuspensionBridge ;
+                              rdfs:label "Self-anchored Suspension Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SelfAnchoredSuspensionBridgeWithCableStays
+:SelfAnchoredSuspensionBridgeWithCableStays rdf:type owl:Class ;
+                                            rdfs:subClassOf :SelfAnchoredSuspensionBridge ;
+                                            rdfs:label "Self-anchored Suspension Bridge With Cable Stays"@en .
+
+
+###  https://w3id.org/mbdo#SelfAnchoredSuspensionBridgeWithDiscontinuousCables
+:SelfAnchoredSuspensionBridgeWithDiscontinuousCables rdf:type owl:Class ;
+                                                     rdfs:subClassOf :SelfAnchoredSuspensionBridge ;
+                                                     rdfs:label "Self-anchored Suspension Bridge With Discontinuous Cables"@en .
+
+
+###  https://w3id.org/mbdo#SemiIntegralBridge
+:SemiIntegralBridge rdf:type owl:Class ;
+                    rdfs:subClassOf :BridgesBySupportConditions ;
+                    rdfs:label "Semi Integral Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SemiSelfAnchoredSuspensionBridge
+:SemiSelfAnchoredSuspensionBridge rdf:type owl:Class ;
+                                  rdfs:subClassOf :SuspensionBridge ;
+                                  rdfs:label "Semi-self-anchored Suspension Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SepareteSuperstructuresBridge
+:SepareteSuperstructuresBridge rdf:type owl:Class ;
+                               rdfs:subClassOf :BridgesByVerticalAlignment ;
+                               rdfs:label "Separete Superstructures Bridge"@en .
+
+
+###  https://w3id.org/mbdo#ShortSpanStructure
+:ShortSpanStructure rdf:type owl:Class ;
+                    rdfs:subClassOf :Superstructure ;
+                    rdfs:label "Short Span Structure"@en .
+
+
+###  https://w3id.org/mbdo#SimplySupportedBridge
+:SimplySupportedBridge rdf:type owl:Class ;
+                       rdfs:subClassOf :BridgesBySupportConditions ;
+                       rdfs:label "Simply Supported Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SingleCellBoxGirderBridge
+:SingleCellBoxGirderBridge rdf:type owl:Class ;
+                           rdfs:subClassOf :BoxGirderBridge ;
+                           rdfs:label "Single-cell Box Girder Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SingleLevelBridge
+:SingleLevelBridge rdf:type owl:Class ;
+                   rdfs:subClassOf :BridgesByElevation ;
+                   rdfs:label "Single-level Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SingleSpanCableStayedBridge
+:SingleSpanCableStayedBridge rdf:type owl:Class ;
+                             rdfs:subClassOf :CableStayedBridge ;
+                             rdfs:label "Single-span Cable-stayed Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SingleSpanExtradosedBridge
+:SingleSpanExtradosedBridge rdf:type owl:Class ;
+                            rdfs:subClassOf :ExtradosedBridge ;
+                            rdfs:label "Single-span Extradosed Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SingleSpanGirderBridge
+:SingleSpanGirderBridge rdf:type owl:Class ;
+                        rdfs:subClassOf :GirderBridge ;
+                        rdfs:label "Single-span Girder Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SingleSpanSinglePylonCableStayedBridge
+:SingleSpanSinglePylonCableStayedBridge rdf:type owl:Class ;
+                                        rdfs:subClassOf :SingleSpanCableStayedBridge ;
+                                        rdfs:label "Single-span Single-pylon Cable-stayed Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SingleSpanSingleTowerSemiSelfAnchoredSuspensionBridge
+:SingleSpanSingleTowerSemiSelfAnchoredSuspensionBridge rdf:type owl:Class ;
+                                                       rdfs:subClassOf :SemiSelfAnchoredSuspensionBridge ;
+                                                       rdfs:label "Single-span Single-tower Semi-self-anchored Suspension Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SingleSpanSingleTowerSuspensionBridge
+:SingleSpanSingleTowerSuspensionBridge rdf:type owl:Class ;
+                                       rdfs:subClassOf :SingleSpanSuspensionBridge ;
+                                       rdfs:label "Single-span Single-tower Suspension Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SingleSpanSuspensionBridge
+:SingleSpanSuspensionBridge rdf:type owl:Class ;
+                            rdfs:subClassOf :SuspensionBridge ;
+                            rdfs:label "Single-span Suspension Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SingleSpanTwoPylonCableStayedBridge
+:SingleSpanTwoPylonCableStayedBridge rdf:type owl:Class ;
+                                     rdfs:subClassOf :SingleSpanCableStayedBridge ;
+                                     rdfs:label "Single-span Two-pylon Cable-stayed Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SingleSpanTwoTowerSuspensionBridge
+:SingleSpanTwoTowerSuspensionBridge rdf:type owl:Class ;
+                                    rdfs:subClassOf :SingleSpanSuspensionBridge ;
+                                    rdfs:label "Single-span Two-tower Suspension Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SingleSuperstructureBridge
+:SingleSuperstructureBridge rdf:type owl:Class ;
+                            rdfs:subClassOf :BridgesByVerticalAlignment ;
+                            rdfs:label "Single Superstructure Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SingleTSectionGirderBridge
+:SingleTSectionGirderBridge rdf:type owl:Class ;
+                            rdfs:subClassOf :TSectionGirderBridge ;
+                            rdfs:label "Single T-Section Girder Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SingleTowerSelfAnchoredSuspensionBridge
+:SingleTowerSelfAnchoredSuspensionBridge rdf:type owl:Class ;
+                                         rdfs:subClassOf :SelfAnchoredSuspensionBridge ;
+                                         rdfs:label "Single-tower Self-anchored Suspension Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SinusoidalTrussBridge
+:SinusoidalTrussBridge rdf:type owl:Class ;
+                       rdfs:subClassOf :NonParallelChordTrussBridge ;
+                       rdfs:label "Sinusoidal Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Slab
+:Slab rdf:type owl:Class ;
+      rdfs:subClassOf :StructuralSurface ;
+      rdfs:label "Slab"@en .
+
+
+###  https://w3id.org/mbdo#SlabBridge
+:SlabBridge rdf:type owl:Class ;
+            rdfs:subClassOf :BridgeByStructure ,
+                            :GirderBridge ;
+            rdfs:label "Slab Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SlopeWalls
+:SlopeWalls rdf:type owl:Class ;
+            rdfs:subClassOf :StructureProtection ;
+            rdfs:label "Slope Walls"@en .
+
+
+###  https://w3id.org/mbdo#SmithTypeTrussBridge
+:SmithTypeTrussBridge rdf:type owl:Class ;
+                      rdfs:subClassOf :TrussBridge ;
+                      rdfs:label "Smith Type Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Spandrels
+:Spandrels rdf:type owl:Class ;
+           rdfs:subClassOf :LongSpanStructures ;
+           rdfs:label "Spandrels"@en .
+
+
+###  https://w3id.org/mbdo#SpiralBridge
+:SpiralBridge rdf:type owl:Class ;
+              rdfs:subClassOf :CurvedBridge ;
+              rdfs:label "Spiral Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SpreadFooting
+:SpreadFooting rdf:type owl:Class ;
+               rdfs:subClassOf :Foundations ;
+               rdfs:label "Spread Footing"@en .
+
+
+###  https://w3id.org/mbdo#StearnsTrussBridge
+:StearnsTrussBridge rdf:type owl:Class ;
+                    rdfs:subClassOf :TrussBridge ;
+                    rdfs:label "Stearns Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Steel
+:Steel rdf:type owl:Class ;
+       rdfs:subClassOf <https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material> ;
+       rdfs:label "Steel"@en .
+
+
+###  https://w3id.org/mbdo#SteelBridge
+:SteelBridge rdf:type owl:Class ;
+             rdfs:subClassOf :MetalBridge ;
+             rdfs:label "Steel Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SteelConcreteComposite
+:SteelConcreteComposite rdf:type owl:Class ;
+                        rdfs:subClassOf :CompositeMaterial ;
+                        rdfs:label "Steel Concrete Composite"@en .
+
+
+###  https://w3id.org/mbdo#Stem
+:Stem rdf:type owl:Class ;
+      rdfs:subClassOf :Abutment ;
+      rdfs:label "Stem"@en .
+
+
+###  https://w3id.org/mbdo#StraightBridge
+:StraightBridge rdf:type owl:Class ;
+                rdfs:subClassOf :BridgesByVerticalAlignment ;
+                rdfs:label "Straight Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Straits
+:Straits rdf:type owl:Class ;
+         rdfs:subClassOf :ObstacleCrossed ;
+         rdfs:label "Straits"@en .
+
+
+###  https://w3id.org/mbdo#StressedRibbonBridge
+:StressedRibbonBridge rdf:type owl:Class ;
+                      rdfs:subClassOf :BridgeByLongitudinalSystem ;
+                      rdfs:label "Stressed Ribbon Bridge"@en .
+
+
+###  https://w3id.org/mbdo#StructuralHybridBridge
+:StructuralHybridBridge rdf:type owl:Class ;
+                        rdfs:subClassOf :BridgeByStructure ;
+                        rdfs:label "Structural Hybrid Bridge"@en .
+
+
+###  https://w3id.org/mbdo#StructuralSurface
+:StructuralSurface rdf:type owl:Class ;
+                   rdfs:subClassOf :Deck ;
+                   rdfs:label "Structural Surface"@en .
+
+
+###  https://w3id.org/mbdo#StructureProtection
+:StructureProtection rdf:type owl:Class ;
+                     rdfs:subClassOf :Protection ;
+                     rdfs:label "Structure Protection"@en .
+
+
+###  https://w3id.org/mbdo#SubdividedWarrenTrussBridge
+:SubdividedWarrenTrussBridge rdf:type owl:Class ;
+                             rdfs:subClassOf :WarrenTypeTrussBridge ;
+                             rdfs:label "Subdivided Warren Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SubmersibleBridge
+:SubmersibleBridge rdf:type owl:Class ;
+                   rdfs:subClassOf :MovableBridge ;
+                   rdfs:label "Submersible Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Substructure
+:Substructure rdf:type owl:Class ;
+              rdfs:subClassOf <https://w3id.org/brot#Component> ;
+              rdfs:label "Substructure"@en .
+
+
+###  https://w3id.org/mbdo#SuperposedLevelsBridge
+:SuperposedLevelsBridge rdf:type owl:Class ;
+                        rdfs:subClassOf :BiLevelBridge ;
+                        rdfs:label "Superposed Levels Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Superstructure
+:Superstructure rdf:type owl:Class ;
+                rdfs:subClassOf <https://w3id.org/brot#Component> ;
+                rdfs:label "Superstructure"@en .
+
+
+###  https://w3id.org/mbdo#SuspensionBridge
+:SuspensionBridge rdf:type owl:Class ;
+                  rdfs:subClassOf :BridgeByStructure ;
+                  rdfs:label "Suspension Bridge"@en .
+
+
+###  https://w3id.org/mbdo#SuspensionBridgeWithCableStays
+:SuspensionBridgeWithCableStays rdf:type owl:Class ;
+                                rdfs:subClassOf :SuspensionBridge ;
+                                rdfs:label "Suspension Bridge With Cable Stays"@en .
+
+
+###  https://w3id.org/mbdo#SuspensionBridgeWithDiagonalHangers
+:SuspensionBridgeWithDiagonalHangers rdf:type owl:Class ;
+                                     rdfs:subClassOf :SuspensionBridge ;
+                                     rdfs:label "Suspension Bridge With Diagonal Hangers"@en .
+
+
+###  https://w3id.org/mbdo#SwingBridge
+:SwingBridge rdf:type owl:Class ;
+             rdfs:subClassOf :MovableBridge ;
+             rdfs:label "Swing Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TSectionGirderBridge
+:TSectionGirderBridge rdf:type owl:Class ;
+                      rdfs:subClassOf :GirderBridge ;
+                      rdfs:label "T-section Girder Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TensegrityBridge
+:TensegrityBridge rdf:type owl:Class ;
+                  rdfs:subClassOf :CableStayedBridge ;
+                  rdfs:label "Tensegrity Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TextileReinforcedConcreteBridge
+:TextileReinforcedConcreteBridge rdf:type owl:Class ;
+                                 rdfs:subClassOf :ConcreteBridge ;
+                                 rdfs:label "Textile Reinforced Concrete Bridge"@en .
+
+
+###  https://w3id.org/mbdo#ThacherTypeTrussBridge
+:ThacherTypeTrussBridge rdf:type owl:Class ;
+                        rdfs:subClassOf :TrussBridge ;
+                        rdfs:label "Thacher Type Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#ThreeHingedArchBridge
+:ThreeHingedArchBridge rdf:type owl:Class ;
+                       rdfs:subClassOf :ArchBridge ;
+                       rdfs:label "Three-hinged Arch Bridge"@en .
+
+
+###  https://w3id.org/mbdo#ThreeHingedRigidFrameBridgeWithInclinedLegs
+:ThreeHingedRigidFrameBridgeWithInclinedLegs rdf:type owl:Class ;
+                                             rdfs:subClassOf :RigidFrameBridgeWithInclinedLegs ;
+                                             rdfs:label "Three-hinged Rigid Frame Bridge with Inclined Legs"@en .
+
+
+###  https://w3id.org/mbdo#ThreeSpanCableStayedBridge
+:ThreeSpanCableStayedBridge rdf:type owl:Class ;
+                            rdfs:subClassOf :CableStayedBridge ;
+                            rdfs:label "Three-span Cable-stayed Bridge"@en .
+
+
+###  https://w3id.org/mbdo#ThreeSpanContinuousGirderBridge
+:ThreeSpanContinuousGirderBridge rdf:type owl:Class ;
+                                 rdfs:subClassOf :GirderBridge ;
+                                 rdfs:label "Three-span Continuous Girder Bridge"@en .
+
+
+###  https://w3id.org/mbdo#ThreeSpanExtradosedBridge
+:ThreeSpanExtradosedBridge rdf:type owl:Class ;
+                           rdfs:subClassOf :ExtradosedBridge ;
+                           rdfs:label "Three-span Extradosed Bridge"@en .
+
+
+###  https://w3id.org/mbdo#ThreeSpanSemiSelfAnchoredSuspensionBridge
+:ThreeSpanSemiSelfAnchoredSuspensionBridge rdf:type owl:Class ;
+                                           rdfs:subClassOf :SemiSelfAnchoredSuspensionBridge ;
+                                           rdfs:label "Three-span Semi-self-anchored Suspension Bridge"@en .
+
+
+###  https://w3id.org/mbdo#ThreeSpanSuspensionBridge
+:ThreeSpanSuspensionBridge rdf:type owl:Class ;
+                           rdfs:subClassOf :SuspensionBridge ;
+                           rdfs:label "Three-span Suspension Bridge"@en .
+
+
+###  https://w3id.org/mbdo#ThreeWayBridge
+:ThreeWayBridge rdf:type owl:Class ;
+                rdfs:subClassOf :BridgesByHorizontalAlighnment ;
+                rdfs:label "Three-way Bridge"@en .
+
+
+###  https://w3id.org/mbdo#ThroughArchBridge
+:ThroughArchBridge rdf:type owl:Class ;
+                   rdfs:subClassOf :ArchBridge ;
+                   rdfs:label "Through Arch Bridge"@en .
+
+
+###  https://w3id.org/mbdo#ThroughRigidFrameBridgeWithInclinedLegs
+:ThroughRigidFrameBridgeWithInclinedLegs rdf:type owl:Class ;
+                                         rdfs:subClassOf :RigidFrameBridgeWithInclinedLegs ;
+                                         rdfs:label "Through Rigid Frame Bridge with Inclined Legs"@en .
+
+
+###  https://w3id.org/mbdo#ThroughRigidFrameBridgeWithTreeShapedLegs
+:ThroughRigidFrameBridgeWithTreeShapedLegs rdf:type owl:Class ;
+                                           rdfs:subClassOf :RigidFrameBridgeWithTreeShapedLegs ;
+                                           rdfs:label "Through Rigid Frame Bridge with Tree-shaped Legs"@en .
+
+
+###  https://w3id.org/mbdo#ThroughTrussBridge
+:ThroughTrussBridge rdf:type owl:Class ;
+                    rdfs:subClassOf :TrussBridge ;
+                    rdfs:label "Through Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TiedArchBridge
+:TiedArchBridge rdf:type owl:Class ;
+                rdfs:subClassOf :ArchBridge ;
+                rdfs:label "Tied-arch Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Ties
+:Ties rdf:type owl:Class ;
+      rdfs:subClassOf :LongSpanStructures ;
+      rdfs:label "Ties"@en .
+
+
+###  https://w3id.org/mbdo#TiltBridge
+:TiltBridge rdf:type owl:Class ;
+            rdfs:subClassOf :MovableBridge ;
+            rdfs:label "Tilt Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Timber
+:Timber rdf:type owl:Class ;
+        rdfs:subClassOf <https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material> ;
+        rdfs:label "Timber"@en .
+
+
+###  https://w3id.org/mbdo#TimberBridge
+:TimberBridge rdf:type owl:Class ;
+              rdfs:subClassOf :BridgesByConstructionMaterial ;
+              rdfs:label "Timber Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Tower
+:Tower rdf:type owl:Class ;
+       rdfs:subClassOf :Substructure ;
+       rdfs:label "Tower"@en .
+
+
+###  https://w3id.org/mbdo#TownLatticeTrussBridge
+:TownLatticeTrussBridge rdf:type owl:Class ;
+                        rdfs:subClassOf :TrussBridge ;
+                        rdfs:label "Town Lattice Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TrafficProtection
+:TrafficProtection rdf:type owl:Class ;
+                   rdfs:subClassOf :Protection ;
+                   rdfs:label "Traffic Protection"@en .
+
+
+###  https://w3id.org/mbdo#TrapezoidalBridge
+:TrapezoidalBridge rdf:type owl:Class ;
+                   rdfs:subClassOf :VariableWidthBridge ;
+                   rdfs:label "Trapezoidal Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TrestleBridge
+:TrestleBridge rdf:type owl:Class ;
+               rdfs:subClassOf :BridgeByLongitudinalSystem ;
+               rdfs:label "Trestle Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TriLevelBridge
+:TriLevelBridge rdf:type owl:Class ;
+                rdfs:subClassOf :BridgesByElevation ;
+                rdfs:label "Tri-level Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TripleGirderBridge
+:TripleGirderBridge rdf:type owl:Class ;
+                    rdfs:subClassOf :GirderBridge ;
+                    rdfs:label "Triple Girder Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TripleSuspensionBridge
+:TripleSuspensionBridge rdf:type owl:Class ;
+                        rdfs:subClassOf :SuspensionBridge ;
+                        rdfs:label "Triple Suspension Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TripleTSectionGirderBridge
+:TripleTSectionGirderBridge rdf:type owl:Class ;
+                            rdfs:subClassOf :TSectionGirderBridge ;
+                            rdfs:label "Triple T-Section Girder Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TruesdellTypeTrussBridge
+:TruesdellTypeTrussBridge rdf:type owl:Class ;
+                          rdfs:subClassOf :TrussBridge ;
+                          rdfs:label "Truesdell Type Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TrussArchBridge
+:TrussArchBridge rdf:type owl:Class ;
+                 rdfs:subClassOf :ArchBridge ;
+                 rdfs:label "Truss Arch Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TrussBridge
+:TrussBridge rdf:type owl:Class ;
+             rdfs:subClassOf :BridgeByStructure ;
+             rdfs:label "Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TrussBridgeWithSuspendedDeck
+:TrussBridgeWithSuspendedDeck rdf:type owl:Class ;
+                              rdfs:subClassOf :TrussBridge ;
+                              rdfs:label "Truss Bridge with Suspended Deck"@en .
+
+
+###  https://w3id.org/mbdo#TrussLegBedsteadBridge
+:TrussLegBedsteadBridge rdf:type owl:Class ;
+                        rdfs:subClassOf :TrussBridge ;
+                        rdfs:label "Truss Leg Bedstead Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TrussMembers
+:TrussMembers rdf:type owl:Class ;
+              rdfs:subClassOf :LongSpanStructures ;
+              rdfs:label "Truss Members"@en .
+
+
+###  https://w3id.org/mbdo#TubularBridge
+:TubularBridge rdf:type owl:Class ;
+               rdfs:subClassOf :SingleCellBoxGirderBridge ;
+               rdfs:label "Tubular Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TwinGirderBridge
+:TwinGirderBridge rdf:type owl:Class ;
+                  rdfs:subClassOf :GirderBridge ;
+                  rdfs:label "Twin Girder Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TwoHingedArchBridge
+:TwoHingedArchBridge rdf:type owl:Class ;
+                     rdfs:subClassOf :ArchBridge ;
+                     rdfs:label "Two-hinged Arch Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TwoHingedRigidFrameBridge
+:TwoHingedRigidFrameBridge rdf:type owl:Class ;
+                           rdfs:subClassOf :RigidFrameBridge ;
+                           rdfs:label "Two-hinged Rigid Frame Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TwoHingedRigidFrameBridgeWithInclinedLegs
+:TwoHingedRigidFrameBridgeWithInclinedLegs rdf:type owl:Class ;
+                                           rdfs:subClassOf :RigidFrameBridgeWithInclinedLegs ;
+                                           rdfs:label "Two-hinged Rigid Frame Bridge with Inclined Legs"@en .
+
+
+###  https://w3id.org/mbdo#TwoSpanCableStayedBridge
+:TwoSpanCableStayedBridge rdf:type owl:Class ;
+                          rdfs:subClassOf :CableStayedBridge ;
+                          rdfs:label "Two-span Cable-stayed Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TwoSpanContinuousGirderBridge
+:TwoSpanContinuousGirderBridge rdf:type owl:Class ;
+                               rdfs:subClassOf :GirderBridge ;
+                               rdfs:label "Two-span Continuous Girder Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TwoSpanExtradosedBridge
+:TwoSpanExtradosedBridge rdf:type owl:Class ;
+                         rdfs:subClassOf :ExtradosedBridge ;
+                         rdfs:label "Two-span Extradosed Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TwoSpanSinglePylonCableStayedBridge
+:TwoSpanSinglePylonCableStayedBridge rdf:type owl:Class ;
+                                     rdfs:subClassOf :TwoSpanCableStayedBridge ;
+                                     rdfs:label "Two-span Single-pylon Cable-stayed Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TwoSpanSingleTowerSuspensionBridge
+:TwoSpanSingleTowerSuspensionBridge rdf:type owl:Class ;
+                                    rdfs:subClassOf :TwoSpanSuspensionBridge ;
+                                    rdfs:label "Two-span Single-Tower Suspension Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TwoSpanSuspensionBridge
+:TwoSpanSuspensionBridge rdf:type owl:Class ;
+                         rdfs:subClassOf :SuspensionBridge ;
+                         rdfs:label "Two-span Suspension Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TwoSpanThreePylonCableStayedBridge
+:TwoSpanThreePylonCableStayedBridge rdf:type owl:Class ;
+                                    rdfs:subClassOf :TwoSpanCableStayedBridge ;
+                                    rdfs:label "Two-span Three-pylon Cable-stayed Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TwoSpanThreeTowerSuspensionBridge
+:TwoSpanThreeTowerSuspensionBridge rdf:type owl:Class ;
+                                   rdfs:subClassOf :TwoSpanSuspensionBridge ;
+                                   rdfs:label "Two-span Three-Tower Suspension Bridge"@en .
+
+
+###  https://w3id.org/mbdo#TwoSpanTwoTowerSuspensionBridge
+:TwoSpanTwoTowerSuspensionBridge rdf:type owl:Class ;
+                                 rdfs:subClassOf :TwoSpanSuspensionBridge ;
+                                 rdfs:label "Two-span Two-Tower Suspension Bridge"@en .
+
+
+###  https://w3id.org/mbdo#UShapedBridge
+:UShapedBridge rdf:type owl:Class ;
+               rdfs:subClassOf :PartiallyCurvedBridge ;
+               rdfs:label "U-shaped Bridge"@en .
+
+
+###  https://w3id.org/mbdo#UShapedGirderBridge
+:UShapedGirderBridge rdf:type owl:Class ;
+                     rdfs:subClassOf :GirderBridge ;
+                     rdfs:label "U-shaped Girder Bridge"@en .
+
+
+###  https://w3id.org/mbdo#UnderslungGirderBridge
+:UnderslungGirderBridge rdf:type owl:Class ;
+                        rdfs:subClassOf :GirderBridge ;
+                        rdfs:label "Underslung Girder Bridge"@en .
+
+
+###  https://w3id.org/mbdo#UnderslungTrussBridge
+:UnderslungTrussBridge rdf:type owl:Class ;
+                       rdfs:subClassOf :TrussBridge ;
+                       rdfs:label "Underslung Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#UnderspannedCableStayedBridge
+:UnderspannedCableStayedBridge rdf:type owl:Class ;
+                               rdfs:subClassOf :CableStayedBridge ;
+                               rdfs:label "Underspanned Cable-stayed Bridge"@en .
+
+
+###  https://w3id.org/mbdo#UnderspannedSuspensionBridge
+:UnderspannedSuspensionBridge rdf:type owl:Class ;
+                              rdfs:subClassOf :SuspensionBridge ;
+                              rdfs:label "Underspanned Suspension Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Valley
+:Valley rdf:type owl:Class ;
+        rdfs:subClassOf :ObstacleCrossed ;
+        rdfs:label "Valley"@en .
+
+
+###  https://w3id.org/mbdo#VariableWidthBridge
+:VariableWidthBridge rdf:type owl:Class ;
+                     rdfs:subClassOf :BridgeByCrossSection ;
+                     rdfs:label "Variable Width Bridge"@en .
+
+
+###  https://w3id.org/mbdo#VaultedArchBridge
+:VaultedArchBridge rdf:type owl:Class ;
+                   rdfs:subClassOf :ArchBridge ;
+                   rdfs:label "Vaulted Arch Bridge"@en .
+
+
+###  https://w3id.org/mbdo#VerticalLiftBridge
+:VerticalLiftBridge rdf:type owl:Class ;
+                    rdfs:subClassOf :MovableBridge ;
+                    rdfs:label "Vertical Lift Bridge"@en .
+
+
+###  https://w3id.org/mbdo#VierendeelArchTrussBridge
+:VierendeelArchTrussBridge rdf:type owl:Class ;
+                           rdfs:subClassOf :StructuralHybridBridge ;
+                           rdfs:label "Vierendeel Arch Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#VierendeelTrussBridge
+:VierendeelTrussBridge rdf:type owl:Class ;
+                       rdfs:subClassOf :TrussBridge ;
+                       rdfs:label "Vierendeel Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Wall
+:Wall rdf:type owl:Class ;
+      rdfs:subClassOf :Tower ;
+      rdfs:label "Wall"@en .
+
+
+###  https://w3id.org/mbdo#Walls
+:Walls rdf:type owl:Class ;
+       rdfs:subClassOf :Pier ;
+       rdfs:label "Walls"@en .
+
+
+###  https://w3id.org/mbdo#WarrenTypeTrussBridge
+:WarrenTypeTrussBridge rdf:type owl:Class ;
+                       rdfs:subClassOf :TrussBridge ;
+                       rdfs:label "Warren Type Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#WearingSurface
+:WearingSurface rdf:type owl:Class ;
+                rdfs:subClassOf :Deck ;
+                rdfs:label "Wearing Surface"@en .
+
+
+###  https://w3id.org/mbdo#WheelerTrussBridge
+:WheelerTrussBridge rdf:type owl:Class ;
+                    rdfs:subClassOf :TrussBridge ;
+                    rdfs:label "Wheeler Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#WhippleTypeTrussBridge
+:WhippleTypeTrussBridge rdf:type owl:Class ;
+                        rdfs:subClassOf :TrussBridge ;
+                        rdfs:label "Whipple Type Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#WichertTrussBridge
+:WichertTrussBridge rdf:type owl:Class ;
+                    rdfs:subClassOf :NonParallelChordTrussBridge ;
+                    rdfs:label "Wichert Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#WingWall
+:WingWall rdf:type owl:Class ;
+          rdfs:subClassOf :Abutment ;
+          rdfs:label "Wing Wall"@en .
+
+
+###  https://w3id.org/mbdo#ZigzagBridge
+:ZigzagBridge rdf:type owl:Class ;
+              rdfs:subClassOf :KinkedBridge ;
+              rdfs:label "Zigzag Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Axial(single)TrussBridge
+<https://w3id.org/mbdo#Axial(single)TrussBridge> rdf:type owl:Class ;
+                                                 rdfs:subClassOf :TrussBridge ;
+                                                 rdfs:label "Axial(single) Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#PedestrianBridge(footbridge)
+<https://w3id.org/mbdo#PedestrianBridge(footbridge)> rdf:type owl:Class ;
+                                                     rdfs:subClassOf :BridgeByFunction ;
+                                                     rdfs:label "Pedestrian Bridge(footbridge)"@en .
+
+
+###  https://w3id.org/mbdo#Pennsylvania(petit)TrussBridge
+<https://w3id.org/mbdo#Pennsylvania(petit)TrussBridge> rdf:type owl:Class ;
+                                                       rdfs:subClassOf :TrussBridge ;
+                                                       rdfs:label "Pennsylvania(petit) Truss Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Railroad(railway)Bridge
+<https://w3id.org/mbdo#Railroad(railway)Bridge> rdf:type owl:Class ;
+                                                rdfs:subClassOf :BridgeByFunction ;
+                                                rdfs:label "Railroad(railway) Bridge"@en .
+
+
+###  https://w3id.org/mbdo#RetractileBridge(RetractileDrawBridge)
+<https://w3id.org/mbdo#RetractileBridge(RetractileDrawBridge)> rdf:type owl:Class ;
+                                                               rdfs:subClassOf :MovableBridge ;
+                                                               rdfs:label "Retractile Bridge(retractile draw bridge)"@en .
+
+
+###  https://w3id.org/mbdo#Simple(primitive)SuspensionBridge
+<https://w3id.org/mbdo#Simple(primitive)SuspensionBridge> rdf:type owl:Class ;
+                                                          rdfs:subClassOf :SuspensionBridge ;
+                                                          rdfs:label "Simple(primitive) Suspension Bridge"@en .
+
+
+###  https://w3id.org/mbdo#Waddell‘a’TrussBridge
+<https://w3id.org/mbdo#Waddell‘a’TrussBridge> rdf:type owl:Class ;
+                                              rdfs:subClassOf :TrussBridge ;
+                                              rdfs:label "Waddell‘a’ Truss Bridge"@en .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

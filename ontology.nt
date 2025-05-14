@@ -1,0 +1,2242 @@
+<https://w3id.org/mbdo#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/mbdo#> <http://purl.org/dc/terms/created> "2025-04-22" .
+<https://w3id.org/mbdo#> <http://purl.org/dc/terms/creator> "samar.aqlan" .
+<https://w3id.org/mbdo#> <http://purl.org/dc/terms/description> "The Managing Bridge Data Ontology (MBDO) provides a semantic framework for representing structural, spatial, and material information about bridges." .
+<https://w3id.org/mbdo#> <http://purl.org/dc/terms/hasVersion> "1.0" .
+<https://w3id.org/mbdo#> <http://www.w3.org/2000/01/rdf-schema#label> "Managing Bridge Data Ontology" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/hasVersion
+<http://purl.org/dc/terms/hasVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.co-ode.org/ontologies/ont.owl#containszone
+<http://www.co-ode.org/ontologies/ont.owl#containszone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.co-ode.org/ontologies/ont.owl#containszone> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.co-ode.org/ontologies/ont.owl#containszone> <http://www.w3.org/2000/01/rdf-schema#label> "Contains Zone" .
+# 
+# http://www.co-ode.org/ontologies/ont.owl#is_contained_in
+<http://www.co-ode.org/ontologies/ont.owl#is_contained_in> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.co-ode.org/ontologies/ont.owl#is_contained_in> <http://www.w3.org/2000/01/rdf-schema#label> "Is Contained in" .
+# 
+# https://w3id.org/mbdo#CrossedBy
+<https://w3id.org/mbdo#CrossedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mbdo#CrossedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/mbdo#CrossedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/mbdo#Crossing> .
+<https://w3id.org/mbdo#CrossedBy> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mbdo#ObstacleCrossed> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#CrossedBy> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#CrossedBy> <http://www.w3.org/2000/01/rdf-schema#range> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/brot#Bridge> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#CrossedBy> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#CrossedBy> <http://www.w3.org/2000/01/rdf-schema#label> "Crossed by"@en .
+# 
+# https://w3id.org/mbdo#Crossing
+<https://w3id.org/mbdo#Crossing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mbdo#Crossing> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/mbdo#Crossing> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/brot#Bridge> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#Crossing> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#Crossing> <http://www.w3.org/2000/01/rdf-schema#range> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mbdo#ObstacleCrossed> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#Crossing> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#Crossing> <http://www.w3.org/2000/01/rdf-schema#label> "Crossing"@en .
+# 
+# https://w3id.org/mbdo#HasBridge
+<https://w3id.org/mbdo#HasBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mbdo#HasBridge> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/mbdo#HasBridge> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/mbdo#LocatedIn> .
+<https://w3id.org/mbdo#HasBridge> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/brot#SpatialZone> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#HasBridge> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#HasBridge> <http://www.w3.org/2000/01/rdf-schema#range> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/brot#Bridge> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#HasBridge> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#HasBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Has Bridge"@en .
+# 
+# https://w3id.org/mbdo#HasComponent
+<https://w3id.org/mbdo#HasComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mbdo#HasComponent> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/mbdo#IsComponentOf> .
+<https://w3id.org/mbdo#HasComponent> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/brot#Bridge> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#HasComponent> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#HasComponent> <http://www.w3.org/2000/01/rdf-schema#range> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/brot#Component> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#HasComponent> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#HasComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Has Component"@en .
+# 
+# https://w3id.org/mbdo#HasImage
+<https://w3id.org/mbdo#HasImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mbdo#HasImage> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/mbdo#ImageOf> .
+<https://w3id.org/mbdo#HasImage> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/brot#Bridge> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#HasImage> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#HasImage> <http://www.w3.org/2000/01/rdf-schema#range> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mbdo#Image> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#HasImage> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#HasImage> <http://www.w3.org/2000/01/rdf-schema#label> "Has Image"@en .
+# 
+# https://w3id.org/mbdo#HasMaterial
+<https://w3id.org/mbdo#HasMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mbdo#HasMaterial> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/mbdo#MaterialOf> .
+<https://w3id.org/mbdo#HasMaterial> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/brot#Bridge> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#HasMaterial> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#HasMaterial> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/brot#Component> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#HasMaterial> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#HasMaterial> <http://www.w3.org/2000/01/rdf-schema#range> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#HasMaterial> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#HasMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Has Material"@en .
+# 
+# https://w3id.org/mbdo#HasParticipant
+<https://w3id.org/mbdo#HasParticipant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mbdo#HasParticipant> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/mbdo#InvolvedWith> .
+<https://w3id.org/mbdo#HasParticipant> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/brot#Bridge> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#HasParticipant> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#HasParticipant> <http://www.w3.org/2000/01/rdf-schema#range> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mbdo#Participants> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#HasParticipant> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#HasParticipant> <http://www.w3.org/2000/01/rdf-schema#label> "Has Participant"@en .
+# 
+# https://w3id.org/mbdo#ImageOf
+<https://w3id.org/mbdo#ImageOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mbdo#ImageOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mbdo#Image> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#ImageOf> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#ImageOf> <http://www.w3.org/2000/01/rdf-schema#range> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/brot#Bridge> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#ImageOf> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#ImageOf> <http://www.w3.org/2000/01/rdf-schema#label> "Image of"@en .
+# 
+# https://w3id.org/mbdo#InvolvedWith
+<https://w3id.org/mbdo#InvolvedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mbdo#InvolvedWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/mbdo#InvolvedWith> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mbdo#Participants> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#InvolvedWith> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#InvolvedWith> <http://www.w3.org/2000/01/rdf-schema#range> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/brot#Bridge> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#InvolvedWith> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#InvolvedWith> <http://www.w3.org/2000/01/rdf-schema#label> "Involved with"@en .
+# 
+# https://w3id.org/mbdo#IsComponentOf
+<https://w3id.org/mbdo#IsComponentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mbdo#IsComponentOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/brot#Component> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#IsComponentOf> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#IsComponentOf> <http://www.w3.org/2000/01/rdf-schema#range> _:genid21 .
+_:genid21 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/brot#Bridge> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#IsComponentOf> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#IsComponentOf> <http://www.w3.org/2000/01/rdf-schema#label> "Is Component of"@en .
+# 
+# https://w3id.org/mbdo#LocatedIn
+<https://w3id.org/mbdo#LocatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mbdo#LocatedIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/mbdo#LocatedIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/brot#Bridge> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#LocatedIn> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#LocatedIn> <http://www.w3.org/2000/01/rdf-schema#range> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/brot#SpatialZone> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#LocatedIn> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#LocatedIn> <http://www.w3.org/2000/01/rdf-schema#label> "Located in"@en .
+# 
+# https://w3id.org/mbdo#MaterialOf
+<https://w3id.org/mbdo#MaterialOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mbdo#MaterialOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/mbdo#MaterialOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#MaterialOf> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#MaterialOf> <http://www.w3.org/2000/01/rdf-schema#range> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/brot#Bridge> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#MaterialOf> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#MaterialOf> <http://www.w3.org/2000/01/rdf-schema#range> _:genid26 .
+_:genid26 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/brot#Component> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mbdo#MaterialOf> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mbdo#MaterialOf> <http://www.w3.org/2000/01/rdf-schema#label> "Material of"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/mbdo#AbutmentNumber
+<https://w3id.org/mbdo#AbutmentNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#AbutmentNumber> <http://www.w3.org/2000/01/rdf-schema#label> "Abutment Number"@en .
+# 
+# https://w3id.org/mbdo#AestheticImportance
+<https://w3id.org/mbdo#AestheticImportance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#AestheticImportance> <http://www.w3.org/2000/01/rdf-schema#label> "Aesthetic Importance"@en .
+# 
+# https://w3id.org/mbdo#AlignmentToFglMax
+<https://w3id.org/mbdo#AlignmentToFglMax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#AlignmentToFglMax> <http://www.w3.org/2000/01/rdf-schema#label> "Alignment To FGL Max"@en .
+# 
+# https://w3id.org/mbdo#AlignmentType
+<https://w3id.org/mbdo#AlignmentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#AlignmentType> <http://www.w3.org/2000/01/rdf-schema#label> "Alignment Type"@en .
+# 
+# https://w3id.org/mbdo#BearingType
+<https://w3id.org/mbdo#BearingType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#BearingType> <http://www.w3.org/2000/01/rdf-schema#label> "Bearing Type"@en .
+# 
+# https://w3id.org/mbdo#BridgeSurface
+<https://w3id.org/mbdo#BridgeSurface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#BridgeSurface> <http://www.w3.org/2000/01/rdf-schema#label> "Bridge Surface"@en .
+# 
+# https://w3id.org/mbdo#BridgeType
+<https://w3id.org/mbdo#BridgeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#BridgeType> <http://www.w3.org/2000/01/rdf-schema#label> "Bridge Type"@en .
+# 
+# https://w3id.org/mbdo#CablePlanes
+<https://w3id.org/mbdo#CablePlanes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#CablePlanes> <http://www.w3.org/2000/01/rdf-schema#label> "Cable Planes"@en .
+# 
+# https://w3id.org/mbdo#CaptionHeadlineDe
+<https://w3id.org/mbdo#CaptionHeadlineDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#CaptionHeadlineDe> <http://www.w3.org/2000/01/rdf-schema#label> "Caption Headline DE"@en .
+# 
+# https://w3id.org/mbdo#CaptionHeadlineEn
+<https://w3id.org/mbdo#CaptionHeadlineEn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#CaptionHeadlineEn> <http://www.w3.org/2000/01/rdf-schema#label> "Caption Headline EN"@en .
+# 
+# https://w3id.org/mbdo#ConcreteVolume
+<https://w3id.org/mbdo#ConcreteVolume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#ConcreteVolume> <http://www.w3.org/2000/01/rdf-schema#label> "Concrete Volume"@en .
+# 
+# https://w3id.org/mbdo#ConstructionDurationMonths
+<https://w3id.org/mbdo#ConstructionDurationMonths> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#ConstructionDurationMonths> <http://www.w3.org/2000/01/rdf-schema#label> "Construction Duration Months"@en .
+# 
+# https://w3id.org/mbdo#ConstructionFrom
+<https://w3id.org/mbdo#ConstructionFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#ConstructionFrom> <http://www.w3.org/2000/01/rdf-schema#label> "Construction from"@en .
+# 
+# https://w3id.org/mbdo#ConstructionTo
+<https://w3id.org/mbdo#ConstructionTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#ConstructionTo> <http://www.w3.org/2000/01/rdf-schema#label> "Construction to"@en .
+# 
+# https://w3id.org/mbdo#Coordinates
+<https://w3id.org/mbdo#Coordinates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#Coordinates> <http://www.w3.org/2000/01/rdf-schema#label> "Coordinates"@en .
+# 
+# https://w3id.org/mbdo#Copyrightnotice
+<https://w3id.org/mbdo#Copyrightnotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#Copyrightnotice> <http://www.w3.org/2000/01/rdf-schema#label> "Copyrightnotice"@en .
+# 
+# https://w3id.org/mbdo#CopyrightnoticeUrl
+<https://w3id.org/mbdo#CopyrightnoticeUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#CopyrightnoticeUrl> <http://www.w3.org/2000/01/rdf-schema#label> "Copyrightnotice URL"@en .
+# 
+# https://w3id.org/mbdo#CreditLine
+<https://w3id.org/mbdo#CreditLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#CreditLine> <http://www.w3.org/2000/01/rdf-schema#label> "Credit Line"@en .
+# 
+# https://w3id.org/mbdo#DateDay
+<https://w3id.org/mbdo#DateDay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#DateDay> <http://www.w3.org/2000/01/rdf-schema#label> "Date Day"@en .
+# 
+# https://w3id.org/mbdo#DateMonth
+<https://w3id.org/mbdo#DateMonth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#DateMonth> <http://www.w3.org/2000/01/rdf-schema#label> "Date Month"@en .
+# 
+# https://w3id.org/mbdo#DateYear
+<https://w3id.org/mbdo#DateYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#DateYear> <http://www.w3.org/2000/01/rdf-schema#label> "Date Year"@en .
+# 
+# https://w3id.org/mbdo#DeckConstructionMethod
+<https://w3id.org/mbdo#DeckConstructionMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#DeckConstructionMethod> <http://www.w3.org/2000/01/rdf-schema#label> "Deck Construction Method"@en .
+# 
+# https://w3id.org/mbdo#DeckDepthRange
+<https://w3id.org/mbdo#DeckDepthRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#DeckDepthRange> <http://www.w3.org/2000/01/rdf-schema#label> "Deck Depth Range"@en .
+# 
+# https://w3id.org/mbdo#DeckDepthTypeConstVar
+<https://w3id.org/mbdo#DeckDepthTypeConstVar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#DeckDepthTypeConstVar> <http://www.w3.org/2000/01/rdf-schema#label> "Deck Depth Type Const Var"@en .
+# 
+# https://w3id.org/mbdo#DeckPostTensioned
+<https://w3id.org/mbdo#DeckPostTensioned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#DeckPostTensioned> <http://www.w3.org/2000/01/rdf-schema#label> "Deck Post Tensioned"@en .
+# 
+# https://w3id.org/mbdo#DeckStrSteelSummary
+<https://w3id.org/mbdo#DeckStrSteelSummary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#DeckStrSteelSummary> <http://www.w3.org/2000/01/rdf-schema#label> "Deck Str Steel Summary"@en .
+# 
+# https://w3id.org/mbdo#DeckType
+<https://w3id.org/mbdo#DeckType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#DeckType> <http://www.w3.org/2000/01/rdf-schema#label> "Deck Type"@en .
+# 
+# https://w3id.org/mbdo#DeckWidth
+<https://w3id.org/mbdo#DeckWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#DeckWidth> <http://www.w3.org/2000/01/rdf-schema#label> "Deck Width"@en .
+# 
+# https://w3id.org/mbdo#DesignCode
+<https://w3id.org/mbdo#DesignCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#DesignCode> <http://www.w3.org/2000/01/rdf-schema#label> "Design Code"@en .
+# 
+# https://w3id.org/mbdo#Entered
+<https://w3id.org/mbdo#Entered> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#Entered> <http://www.w3.org/2000/01/rdf-schema#label> "Entered"@en .
+# 
+# https://w3id.org/mbdo#ExpansionJointType
+<https://w3id.org/mbdo#ExpansionJointType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#ExpansionJointType> <http://www.w3.org/2000/01/rdf-schema#label> "Expansion Joint Type"@en .
+# 
+# https://w3id.org/mbdo#FunctionalSectionWidthRoad
+<https://w3id.org/mbdo#FunctionalSectionWidthRoad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#FunctionalSectionWidthRoad> <http://www.w3.org/2000/01/rdf-schema#label> "Functional Section Width Road"@en .
+# 
+# https://w3id.org/mbdo#FunctionalSectionWidthWalk
+<https://w3id.org/mbdo#FunctionalSectionWidthWalk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#FunctionalSectionWidthWalk> <http://www.w3.org/2000/01/rdf-schema#label> "Functional Section Width Walk"@en .
+# 
+# https://w3id.org/mbdo#HorizontalAlignmentType
+<https://w3id.org/mbdo#HorizontalAlignmentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#HorizontalAlignmentType> <http://www.w3.org/2000/01/rdf-schema#label> "Horizontal Alignment Type"@en .
+# 
+# https://w3id.org/mbdo#Id
+<https://w3id.org/mbdo#Id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#Id> <http://www.w3.org/2000/01/rdf-schema#label> "ID"@en .
+# 
+# https://w3id.org/mbdo#ImagePath
+<https://w3id.org/mbdo#ImagePath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#ImagePath> <http://www.w3.org/2000/01/rdf-schema#label> "Image Path"@en .
+# 
+# https://w3id.org/mbdo#MainSpan
+<https://w3id.org/mbdo#MainSpan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#MainSpan> <http://www.w3.org/2000/01/rdf-schema#label> "Main Span"@en .
+# 
+# https://w3id.org/mbdo#MediaType
+<https://w3id.org/mbdo#MediaType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#MediaType> <http://www.w3.org/2000/01/rdf-schema#label> "Media Type"@en .
+# 
+# https://w3id.org/mbdo#Mediaid
+<https://w3id.org/mbdo#Mediaid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#Mediaid> <http://www.w3.org/2000/01/rdf-schema#label> "Mediaid"@en .
+# 
+# https://w3id.org/mbdo#MeduaUrl
+<https://w3id.org/mbdo#MeduaUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#MeduaUrl> <http://www.w3.org/2000/01/rdf-schema#label> "Medua URL"@en .
+# 
+# https://w3id.org/mbdo#Name
+<https://w3id.org/mbdo#Name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#Name> <http://www.w3.org/2000/01/rdf-schema#label> "Name"@en .
+# 
+# https://w3id.org/mbdo#NumberOfGirdersCells
+<https://w3id.org/mbdo#NumberOfGirdersCells> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#NumberOfGirdersCells> <http://www.w3.org/2000/01/rdf-schema#label> "Number of Girders Cells"@en .
+# 
+# https://w3id.org/mbdo#NumberOfLanes
+<https://w3id.org/mbdo#NumberOfLanes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#NumberOfLanes> <http://www.w3.org/2000/01/rdf-schema#label> "Number of Lanes"@en .
+# 
+# https://w3id.org/mbdo#NumberOfTracks
+<https://w3id.org/mbdo#NumberOfTracks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#NumberOfTracks> <http://www.w3.org/2000/01/rdf-schema#label> "Number of Tracks"@en .
+# 
+# https://w3id.org/mbdo#Photographer
+<https://w3id.org/mbdo#Photographer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#Photographer> <http://www.w3.org/2000/01/rdf-schema#label> "Photographer"@en .
+# 
+# https://w3id.org/mbdo#PierHeight
+<https://w3id.org/mbdo#PierHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#PierHeight> <http://www.w3.org/2000/01/rdf-schema#label> "Pier Height"@en .
+# 
+# https://w3id.org/mbdo#PierType
+<https://w3id.org/mbdo#PierType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#PierType> <http://www.w3.org/2000/01/rdf-schema#label> "Pier Type"@en .
+# 
+# https://w3id.org/mbdo#PiersNumber
+<https://w3id.org/mbdo#PiersNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#PiersNumber> <http://www.w3.org/2000/01/rdf-schema#label> "Piers Number"@en .
+# 
+# https://w3id.org/mbdo#PileLengthSummary
+<https://w3id.org/mbdo#PileLengthSummary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#PileLengthSummary> <http://www.w3.org/2000/01/rdf-schema#label> "Pile Length Summary"@en .
+# 
+# https://w3id.org/mbdo#PixelHeight
+<https://w3id.org/mbdo#PixelHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#PixelHeight> <http://www.w3.org/2000/01/rdf-schema#label> "Pixel Height"@en .
+# 
+# https://w3id.org/mbdo#PixelWidth
+<https://w3id.org/mbdo#PixelWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#PixelWidth> <http://www.w3.org/2000/01/rdf-schema#label> "Pixel Width"@en .
+# 
+# https://w3id.org/mbdo#Prestressing
+<https://w3id.org/mbdo#Prestressing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#Prestressing> <http://www.w3.org/2000/01/rdf-schema#label> "Prestressing"@en .
+# 
+# https://w3id.org/mbdo#ProjectValueCostType
+<https://w3id.org/mbdo#ProjectValueCostType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#ProjectValueCostType> <http://www.w3.org/2000/01/rdf-schema#label> "Project Value Cost Type"@en .
+# 
+# https://w3id.org/mbdo#ProjectValueValue
+<https://w3id.org/mbdo#ProjectValueValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#ProjectValueValue> <http://www.w3.org/2000/01/rdf-schema#label> "Project Value Value"@en .
+# 
+# https://w3id.org/mbdo#PylonHeight
+<https://w3id.org/mbdo#PylonHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#PylonHeight> <http://www.w3.org/2000/01/rdf-schema#label> "Pylon Height"@en .
+# 
+# https://w3id.org/mbdo#PylonMaterial
+<https://w3id.org/mbdo#PylonMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#PylonMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Pylon Material"@en .
+# 
+# https://w3id.org/mbdo#PylonNumber
+<https://w3id.org/mbdo#PylonNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#PylonNumber> <http://www.w3.org/2000/01/rdf-schema#label> "Pylon Number"@en .
+# 
+# https://w3id.org/mbdo#PylonType
+<https://w3id.org/mbdo#PylonType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#PylonType> <http://www.w3.org/2000/01/rdf-schema#label> "Pylon Type"@en .
+# 
+# https://w3id.org/mbdo#Reinforcement
+<https://w3id.org/mbdo#Reinforcement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#Reinforcement> <http://www.w3.org/2000/01/rdf-schema#label> "Reinforcement"@en .
+# 
+# https://w3id.org/mbdo#SourceExternalUrl
+<https://w3id.org/mbdo#SourceExternalUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#SourceExternalUrl> <http://www.w3.org/2000/01/rdf-schema#label> "Source External URL"@en .
+# 
+# https://w3id.org/mbdo#SpanArrangmentDataApproaches
+<https://w3id.org/mbdo#SpanArrangmentDataApproaches> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#SpanArrangmentDataApproaches> <http://www.w3.org/2000/01/rdf-schema#label> "Span Arrangment Data Approaches"@en .
+# 
+# https://w3id.org/mbdo#SpanArrangmentDataMain
+<https://w3id.org/mbdo#SpanArrangmentDataMain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#SpanArrangmentDataMain> <http://www.w3.org/2000/01/rdf-schema#label> "Span Arrangment Data Main"@en .
+# 
+# https://w3id.org/mbdo#SpanArrangmentDataOverall
+<https://w3id.org/mbdo#SpanArrangmentDataOverall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#SpanArrangmentDataOverall> <http://www.w3.org/2000/01/rdf-schema#label> "Span Arrangment Data Overall"@en .
+# 
+# https://w3id.org/mbdo#SpanNumber
+<https://w3id.org/mbdo#SpanNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#SpanNumber> <http://www.w3.org/2000/01/rdf-schema#label> "Span Number"@en .
+# 
+# https://w3id.org/mbdo#SpecialDevices
+<https://w3id.org/mbdo#SpecialDevices> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#SpecialDevices> <http://www.w3.org/2000/01/rdf-schema#label> "Special Devices"@en .
+# 
+# https://w3id.org/mbdo#SpecialEquipment
+<https://w3id.org/mbdo#SpecialEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#SpecialEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "Special Equipment"@en .
+# 
+# https://w3id.org/mbdo#Status
+<https://w3id.org/mbdo#Status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#Status> <http://www.w3.org/2000/01/rdf-schema#label> "Status"@en .
+# 
+# https://w3id.org/mbdo#StructuralSteel
+<https://w3id.org/mbdo#StructuralSteel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#StructuralSteel> <http://www.w3.org/2000/01/rdf-schema#label> "Structural Steel"@en .
+# 
+# https://w3id.org/mbdo#StructuralSteelIronAluminium
+<https://w3id.org/mbdo#StructuralSteelIronAluminium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#StructuralSteelIronAluminium> <http://www.w3.org/2000/01/rdf-schema#label> "Structural Steel Iron Aluminium"@en .
+# 
+# https://w3id.org/mbdo#StructureUrl
+<https://w3id.org/mbdo#StructureUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#StructureUrl> <http://www.w3.org/2000/01/rdf-schema#label> "Structure URL"@en .
+# 
+# https://w3id.org/mbdo#Structureid
+<https://w3id.org/mbdo#Structureid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#Structureid> <http://www.w3.org/2000/01/rdf-schema#label> "Structureid"@en .
+# 
+# https://w3id.org/mbdo#TotalLengthApproaches
+<https://w3id.org/mbdo#TotalLengthApproaches> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#TotalLengthApproaches> <http://www.w3.org/2000/01/rdf-schema#label> "Total Length Approaches"@en .
+# 
+# https://w3id.org/mbdo#TotalLengthMain
+<https://w3id.org/mbdo#TotalLengthMain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#TotalLengthMain> <http://www.w3.org/2000/01/rdf-schema#label> "Total Length Main"@en .
+# 
+# https://w3id.org/mbdo#TotalLengthOverall
+<https://w3id.org/mbdo#TotalLengthOverall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#TotalLengthOverall> <http://www.w3.org/2000/01/rdf-schema#label> "Total Length Overall"@en .
+# 
+# https://w3id.org/mbdo#TypeOfSuspension
+<https://w3id.org/mbdo#TypeOfSuspension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#TypeOfSuspension> <http://www.w3.org/2000/01/rdf-schema#label> "Type of Suspension"@en .
+# 
+# https://w3id.org/mbdo#Updated
+<https://w3id.org/mbdo#Updated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#Updated> <http://www.w3.org/2000/01/rdf-schema#label> "Updated"@en .
+# 
+# https://w3id.org/mbdo#VerticalAlignmentType
+<https://w3id.org/mbdo#VerticalAlignmentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mbdo#VerticalAlignmentType> <http://www.w3.org/2000/01/rdf-schema#label> "Vertical Alignment Type"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.co-ode.org/ontologies/ont.owl#Crack
+<http://www.co-ode.org/ontologies/ont.owl#Crack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.co-ode.org/ontologies/ont.owl#Crack> <http://www.w3.org/2000/01/rdf-schema#label> "Crack" .
+# 
+# https://w3id.org/brot#Bridge
+<https://w3id.org/brot#Bridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/brot#Bridge> <http://www.w3.org/2000/01/rdf-schema#comment> "An engineering structure which guides traffic routes (such as roads, railway lines, footpaths and cycle paths, waterways, taxiways for aircraft) or supply facilities (such as pipelines, cable routes, conveyor belts) on an elevated, suspended or free-floating structure over obstacles or over the surface of the terrain in such a way that there is a distance between the route and the surface of the terrain and thus often a possibility of undercrossing by another traffic or supply route is made possible. Bridges can be cantilevered between two abutments (single span bridge) or rest between them on several supports (multi span bridge). However, they can also be suspended from pylons by using ropes."@en .
+<https://w3id.org/brot#Bridge> <http://www.w3.org/2000/01/rdf-schema#label> "Bridge" .
+# 
+# https://w3id.org/brot#BridgeType
+<https://w3id.org/brot#BridgeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/brot#BridgeType> <http://www.w3.org/2000/01/rdf-schema#label> "Bridge Type" .
+# 
+# https://w3id.org/brot#Component
+<https://w3id.org/brot#Component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/brot#Component> <http://www.w3.org/2000/01/rdf-schema#label> "Bridge Component" .
+# 
+# https://w3id.org/brot#SpatialZone
+<https://w3id.org/brot#SpatialZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/brot#SpatialZone> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial Zone" .
+# 
+# https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Concrete
+<https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Concrete> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Concrete> <http://www.w3.org/2000/01/rdf-schema#label> "Concrete" .
+# 
+# https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material
+<https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material> <http://www.w3.org/2000/01/rdf-schema#label> "Buidling Material"@en .
+# 
+# https://w3id.org/mbdo#Abutment
+<https://w3id.org/mbdo#Abutment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Abutment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Substructure> .
+<https://w3id.org/mbdo#Abutment> <http://www.w3.org/2000/01/rdf-schema#label> "Abutment"@en .
+# 
+# https://w3id.org/mbdo#AllanTrussBridge
+<https://w3id.org/mbdo#AllanTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#AllanTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#AllanTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Allan Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#Aluminum
+<https://w3id.org/mbdo#Aluminum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Aluminum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material> .
+<https://w3id.org/mbdo#Aluminum> <http://www.w3.org/2000/01/rdf-schema#label> "Aluminum"@en .
+# 
+# https://w3id.org/mbdo#AluminumBridge
+<https://w3id.org/mbdo#AluminumBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#AluminumBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#MetalBridge> .
+<https://w3id.org/mbdo#AluminumBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Aluminum Bridge"@en .
+# 
+# https://w3id.org/mbdo#AnnularBridge
+<https://w3id.org/mbdo#AnnularBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#AnnularBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#CurvedBridge> .
+<https://w3id.org/mbdo#AnnularBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Annular Bridge"@en .
+# 
+# https://w3id.org/mbdo#ApproachSlab
+<https://w3id.org/mbdo#ApproachSlab> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ApproachSlab> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Abutment> .
+<https://w3id.org/mbdo#ApproachSlab> <http://www.w3.org/2000/01/rdf-schema#label> "Approach Slab"@en .
+# 
+# https://w3id.org/mbdo#Arch
+<https://w3id.org/mbdo#Arch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Arch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Ribs> .
+<https://w3id.org/mbdo#Arch> <http://www.w3.org/2000/01/rdf-schema#label> "Arch"@en .
+# 
+# https://w3id.org/mbdo#ArchBridge
+<https://w3id.org/mbdo#ArchBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ArchBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeByStructure> .
+<https://w3id.org/mbdo#ArchBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Arch Bridge"@en .
+# 
+# https://w3id.org/mbdo#AssetOwner
+<https://w3id.org/mbdo#AssetOwner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#AssetOwner> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Participants> .
+<https://w3id.org/mbdo#AssetOwner> <http://www.w3.org/2000/01/rdf-schema#label> "Asset Owner"@en .
+# 
+# https://w3id.org/mbdo#BaileyBridge
+<https://w3id.org/mbdo#BaileyBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#BaileyBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#BaileyBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Bailey Bridge"@en .
+# 
+# https://w3id.org/mbdo#BaltimoreTrussBridge
+<https://w3id.org/mbdo#BaltimoreTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#BaltimoreTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#BaltimoreTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Baltimore Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#Barriers
+<https://w3id.org/mbdo#Barriers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Barriers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrafficProtection> .
+<https://w3id.org/mbdo#Barriers> <http://www.w3.org/2000/01/rdf-schema#label> "Barriers"@en .
+# 
+# https://w3id.org/mbdo#BasculeBridge
+<https://w3id.org/mbdo#BasculeBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#BasculeBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#MovableBridge> .
+<https://w3id.org/mbdo#BasculeBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Bascule Bridge"@en .
+# 
+# https://w3id.org/mbdo#Bay
+<https://w3id.org/mbdo#Bay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Bay> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ObstacleCrossed> .
+<https://w3id.org/mbdo#Bay> <http://www.w3.org/2000/01/rdf-schema#label> "Bay"@en .
+# 
+# https://w3id.org/mbdo#Beam
+<https://w3id.org/mbdo#Beam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Beam> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Deck> .
+<https://w3id.org/mbdo#Beam> <http://www.w3.org/2000/01/rdf-schema#label> "Beam"@en .
+# 
+# https://w3id.org/mbdo#Bearings
+<https://w3id.org/mbdo#Bearings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Bearings> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ShortSpanStructure> .
+<https://w3id.org/mbdo#Bearings> <http://www.w3.org/2000/01/rdf-schema#label> "Bearings"@en .
+# 
+# https://w3id.org/mbdo#BiLevelBridge
+<https://w3id.org/mbdo#BiLevelBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#BiLevelBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesByElevation> .
+<https://w3id.org/mbdo#BiLevelBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Bi-level Bridge"@en .
+# 
+# https://w3id.org/mbdo#BiLevelBridgeWithIntersectingLevels
+<https://w3id.org/mbdo#BiLevelBridgeWithIntersectingLevels> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#BiLevelBridgeWithIntersectingLevels> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TriLevelBridge> .
+<https://w3id.org/mbdo#BiLevelBridgeWithIntersectingLevels> <http://www.w3.org/2000/01/rdf-schema#label> "Bi-level Bridge with Intersecting Levels"@en .
+# 
+# https://w3id.org/mbdo#BiLevelBridgeWithOffsetLevels
+<https://w3id.org/mbdo#BiLevelBridgeWithOffsetLevels> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#BiLevelBridgeWithOffsetLevels> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TriLevelBridge> .
+<https://w3id.org/mbdo#BiLevelBridgeWithOffsetLevels> <http://www.w3.org/2000/01/rdf-schema#label> "Bi-level Bridge with Offset Levels"@en .
+# 
+# https://w3id.org/mbdo#BiLevelBridgeWithSuperposedLevels
+<https://w3id.org/mbdo#BiLevelBridgeWithSuperposedLevels> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#BiLevelBridgeWithSuperposedLevels> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TriLevelBridge> .
+<https://w3id.org/mbdo#BiLevelBridgeWithSuperposedLevels> <http://www.w3.org/2000/01/rdf-schema#label> "Bi-level Bridge with Superposed Levels"@en .
+# 
+# https://w3id.org/mbdo#BollmannTrussBridge
+<https://w3id.org/mbdo#BollmannTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#BollmannTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#BollmannTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Bollmann Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#BowstringArchTrussBridge
+<https://w3id.org/mbdo#BowstringArchTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#BowstringArchTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#NonParallelChordTrussBridge> .
+<https://w3id.org/mbdo#BowstringArchTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Bowstring Arch Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#BoxGirderBridge
+<https://w3id.org/mbdo#BoxGirderBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#BoxGirderBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#GirderBridge> .
+<https://w3id.org/mbdo#BoxGirderBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Box Girder Bridge"@en .
+# 
+# https://w3id.org/mbdo#Bracings
+<https://w3id.org/mbdo#Bracings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Bracings> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ShortSpanStructure> .
+<https://w3id.org/mbdo#Bracings> <http://www.w3.org/2000/01/rdf-schema#label> "Bracings"@en .
+# 
+# https://w3id.org/mbdo#BridgeByCrossSection
+<https://w3id.org/mbdo#BridgeByCrossSection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#BridgeByCrossSection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesByAlignment> .
+<https://w3id.org/mbdo#BridgeByCrossSection> <http://www.w3.org/2000/01/rdf-schema#label> "Bridge by Cross Section"@en .
+# 
+# https://w3id.org/mbdo#BridgeByFunction
+<https://w3id.org/mbdo#BridgeByFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#BridgeByFunction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeClassification> .
+<https://w3id.org/mbdo#BridgeByFunction> <http://www.w3.org/2000/01/rdf-schema#label> "Bridge by Function"@en .
+# 
+# https://w3id.org/mbdo#BridgeByLongitudinalSystem
+<https://w3id.org/mbdo#BridgeByLongitudinalSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#BridgeByLongitudinalSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeClassification> .
+<https://w3id.org/mbdo#BridgeByLongitudinalSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Bridge by Longitudinal System"@en .
+# 
+# https://w3id.org/mbdo#BridgeByStructure
+<https://w3id.org/mbdo#BridgeByStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#BridgeByStructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeClassification> .
+<https://w3id.org/mbdo#BridgeByStructure> <http://www.w3.org/2000/01/rdf-schema#label> "Bridge by Structure"@en .
+# 
+# https://w3id.org/mbdo#BridgeClassification
+<https://w3id.org/mbdo#BridgeClassification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#BridgeClassification> <http://www.w3.org/2000/01/rdf-schema#label> "Bridge Classification"@en .
+# 
+# https://w3id.org/mbdo#BridgesByAlignment
+<https://w3id.org/mbdo#BridgesByAlignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#BridgesByAlignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeClassification> .
+<https://w3id.org/mbdo#BridgesByAlignment> <http://www.w3.org/2000/01/rdf-schema#label> "Bridges by Alignment"@en .
+# 
+# https://w3id.org/mbdo#BridgesByConstructionMaterial
+<https://w3id.org/mbdo#BridgesByConstructionMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#BridgesByConstructionMaterial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeClassification> .
+<https://w3id.org/mbdo#BridgesByConstructionMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Bridges by Construction Material"@en .
+# 
+# https://w3id.org/mbdo#BridgesByElevation
+<https://w3id.org/mbdo#BridgesByElevation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#BridgesByElevation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeClassification> .
+<https://w3id.org/mbdo#BridgesByElevation> <http://www.w3.org/2000/01/rdf-schema#label> "Bridges by Elevation"@en .
+# 
+# https://w3id.org/mbdo#BridgesByHorizontalAlighnment
+<https://w3id.org/mbdo#BridgesByHorizontalAlighnment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#BridgesByHorizontalAlighnment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesByAlignment> .
+<https://w3id.org/mbdo#BridgesByHorizontalAlighnment> <http://www.w3.org/2000/01/rdf-schema#label> "Bridges by Horizontal Alighnment"@en .
+# 
+# https://w3id.org/mbdo#BridgesBySupportConditions
+<https://w3id.org/mbdo#BridgesBySupportConditions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#BridgesBySupportConditions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeClassification> .
+<https://w3id.org/mbdo#BridgesBySupportConditions> <http://www.w3.org/2000/01/rdf-schema#label> "Bridges by Support Conditions"@en .
+# 
+# https://w3id.org/mbdo#BridgesByVerticalAlignment
+<https://w3id.org/mbdo#BridgesByVerticalAlignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#BridgesByVerticalAlignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesByAlignment> .
+<https://w3id.org/mbdo#BridgesByVerticalAlignment> <http://www.w3.org/2000/01/rdf-schema#label> "Bridges by Vertical Alignment"@en .
+# 
+# https://w3id.org/mbdo#BrownTrussBridge
+<https://w3id.org/mbdo#BrownTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#BrownTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#BrownTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Brown Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#BurrArchTypeTrussBridge
+<https://w3id.org/mbdo#BurrArchTypeTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#BurrArchTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#BurrArchTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Burr Arch Type Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#CableNetBridge
+<https://w3id.org/mbdo#CableNetBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#CableNetBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeByLongitudinalSystem> .
+<https://w3id.org/mbdo#CableNetBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Cable Net Bridge"@en .
+# 
+# https://w3id.org/mbdo#CableStayedBridge
+<https://w3id.org/mbdo#CableStayedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#CableStayedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeByLongitudinalSystem> .
+<https://w3id.org/mbdo#CableStayedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Cable-stayed Bridge"@en .
+# 
+# https://w3id.org/mbdo#CableStayedBridgeWithCurvedDeck
+<https://w3id.org/mbdo#CableStayedBridgeWithCurvedDeck> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#CableStayedBridgeWithCurvedDeck> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#CableStayedBridge> .
+<https://w3id.org/mbdo#CableStayedBridgeWithCurvedDeck> <http://www.w3.org/2000/01/rdf-schema#label> "Cable-stayed Bridge with Curved Deck"@en .
+# 
+# https://w3id.org/mbdo#CableStayedBridgeWithFanSystem
+<https://w3id.org/mbdo#CableStayedBridgeWithFanSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#CableStayedBridgeWithFanSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#CableStayedBridge> .
+<https://w3id.org/mbdo#CableStayedBridgeWithFanSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Cable-stayed Bridge with Fan System"@en .
+# 
+# https://w3id.org/mbdo#CableStayedBridgeWithHarpSystem
+<https://w3id.org/mbdo#CableStayedBridgeWithHarpSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#CableStayedBridgeWithHarpSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#CableStayedBridge> .
+<https://w3id.org/mbdo#CableStayedBridgeWithHarpSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Cable-stayed Bridge with Harp System"@en .
+# 
+# https://w3id.org/mbdo#CableStayedBridgeWithSemiFanSystem
+<https://w3id.org/mbdo#CableStayedBridgeWithSemiFanSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#CableStayedBridgeWithSemiFanSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#CableStayedBridge> .
+<https://w3id.org/mbdo#CableStayedBridgeWithSemiFanSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Cable-stayed Bridge with Semi-fan System"@en .
+# 
+# https://w3id.org/mbdo#CableStayedBridgeWithoutBackstays
+<https://w3id.org/mbdo#CableStayedBridgeWithoutBackstays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#CableStayedBridgeWithoutBackstays> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#CableStayedBridge> .
+<https://w3id.org/mbdo#CableStayedBridgeWithoutBackstays> <http://www.w3.org/2000/01/rdf-schema#label> "Cable-stayed Bridge without Backstays"@en .
+# 
+# https://w3id.org/mbdo#Cables
+<https://w3id.org/mbdo#Cables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Cables> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#LongSpanStructures> .
+<https://w3id.org/mbdo#Cables> <http://www.w3.org/2000/01/rdf-schema#label> "Cables"@en .
+# 
+# https://w3id.org/mbdo#CallenderHamiltonBridge
+<https://w3id.org/mbdo#CallenderHamiltonBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#CallenderHamiltonBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#CallenderHamiltonBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Callender Hamilton Bridge"@en .
+# 
+# https://w3id.org/mbdo#CamelbackTrussBridge
+<https://w3id.org/mbdo#CamelbackTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#CamelbackTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ParkerTypeTrussBridge> .
+<https://w3id.org/mbdo#CamelbackTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Camelback Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#Canal
+<https://w3id.org/mbdo#Canal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Canal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ObstacleCrossed> .
+<https://w3id.org/mbdo#Canal> <http://www.w3.org/2000/01/rdf-schema#label> "Canal"@en .
+# 
+# https://w3id.org/mbdo#CanalBridge
+<https://w3id.org/mbdo#CanalBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#CanalBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeByFunction> .
+<https://w3id.org/mbdo#CanalBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Canal Bridge"@en .
+# 
+# https://w3id.org/mbdo#CantileverTrussBridge
+<https://w3id.org/mbdo#CantileverTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#CantileverTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#CantileverTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Cantilever Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#CapBeam
+<https://w3id.org/mbdo#CapBeam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#CapBeam> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Tower> .
+<https://w3id.org/mbdo#CapBeam> <http://www.w3.org/2000/01/rdf-schema#label> "Cap Beam"@en .
+# 
+# https://w3id.org/mbdo#CapBeams
+<https://w3id.org/mbdo#CapBeams> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#CapBeams> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Pier> .
+<https://w3id.org/mbdo#CapBeams> <http://www.w3.org/2000/01/rdf-schema#label> "Cap Beams"@en .
+# 
+# https://w3id.org/mbdo#ChainSuspensionBridge
+<https://w3id.org/mbdo#ChainSuspensionBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ChainSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SuspensionBridge> .
+<https://w3id.org/mbdo#ChainSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Chain Suspension Bridge"@en .
+# 
+# https://w3id.org/mbdo#City
+<https://w3id.org/mbdo#City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/brot#SpatialZone> .
+<https://w3id.org/mbdo#City> <http://www.w3.org/2000/01/rdf-schema#label> "City"@en .
+# 
+# https://w3id.org/mbdo#Column
+<https://w3id.org/mbdo#Column> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Column> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Tower> .
+<https://w3id.org/mbdo#Column> <http://www.w3.org/2000/01/rdf-schema#label> "Column"@en .
+# 
+# https://w3id.org/mbdo#Columns
+<https://w3id.org/mbdo#Columns> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Columns> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Pier> .
+<https://w3id.org/mbdo#Columns> <http://www.w3.org/2000/01/rdf-schema#label> "Columns"@en .
+# 
+# https://w3id.org/mbdo#CompositeBridge
+<https://w3id.org/mbdo#CompositeBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#CompositeBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesByConstructionMaterial> .
+<https://w3id.org/mbdo#CompositeBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Composite Bridge"@en .
+# 
+# https://w3id.org/mbdo#CompositeMaterial
+<https://w3id.org/mbdo#CompositeMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#CompositeMaterial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material> .
+<https://w3id.org/mbdo#CompositeMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Composite Material"@en .
+# 
+# https://w3id.org/mbdo#ConcaveConvexBridge
+<https://w3id.org/mbdo#ConcaveConvexBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ConcaveConvexBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#VariableWidthBridge> .
+<https://w3id.org/mbdo#ConcaveConvexBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Concave Convex Bridge"@en .
+# 
+# https://w3id.org/mbdo#Concrete
+<https://w3id.org/mbdo#Concrete> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Concrete> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material> .
+<https://w3id.org/mbdo#Concrete> <http://www.w3.org/2000/01/rdf-schema#label> "Concrete"@en .
+# 
+# https://w3id.org/mbdo#ConcreteBridge
+<https://w3id.org/mbdo#ConcreteBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ConcreteBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesByConstructionMaterial> .
+<https://w3id.org/mbdo#ConcreteBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Concrete Bridge"@en .
+# 
+# https://w3id.org/mbdo#ConstantWidthBridge
+<https://w3id.org/mbdo#ConstantWidthBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ConstantWidthBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeByCrossSection> .
+<https://w3id.org/mbdo#ConstantWidthBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Constant Width Bridge"@en .
+# 
+# https://w3id.org/mbdo#ConstantlyCurvedBridge
+<https://w3id.org/mbdo#ConstantlyCurvedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ConstantlyCurvedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#CurvedBridge> .
+<https://w3id.org/mbdo#ConstantlyCurvedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Constantly Curved Bridge"@en .
+# 
+# https://w3id.org/mbdo#ContinuousTrussBridge
+<https://w3id.org/mbdo#ContinuousTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ContinuousTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#ContinuousTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Continuous Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#Contractor
+<https://w3id.org/mbdo#Contractor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Contractor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Participants> .
+<https://w3id.org/mbdo#Contractor> <http://www.w3.org/2000/01/rdf-schema#label> "Contractor"@en .
+# 
+# https://w3id.org/mbdo#ConventiallySupportedBridge
+<https://w3id.org/mbdo#ConventiallySupportedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ConventiallySupportedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesBySupportConditions> .
+<https://w3id.org/mbdo#ConventiallySupportedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Conventially Supported Bridge"@en .
+# 
+# https://w3id.org/mbdo#ConvexConcaveBridge
+<https://w3id.org/mbdo#ConvexConcaveBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ConvexConcaveBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#VariableWidthBridge> .
+<https://w3id.org/mbdo#ConvexConcaveBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Convex Concave Bridge"@en .
+# 
+# https://w3id.org/mbdo#CorbelArchBridge
+<https://w3id.org/mbdo#CorbelArchBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#CorbelArchBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ArchBridge> .
+<https://w3id.org/mbdo#CorbelArchBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Corbel Arch Bridge"@en .
+# 
+# https://w3id.org/mbdo#Country
+<https://w3id.org/mbdo#Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Country> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/brot#SpatialZone> .
+<https://w3id.org/mbdo#Country> <http://www.w3.org/2000/01/rdf-schema#label> "Country"@en .
+# 
+# https://w3id.org/mbdo#CoveredBridge
+<https://w3id.org/mbdo#CoveredBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#CoveredBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeByLongitudinalSystem> .
+<https://w3id.org/mbdo#CoveredBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Covered Bridge"@en .
+# 
+# https://w3id.org/mbdo#Creek
+<https://w3id.org/mbdo#Creek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Creek> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ObstacleCrossed> .
+<https://w3id.org/mbdo#Creek> <http://www.w3.org/2000/01/rdf-schema#label> "Creek"@en .
+# 
+# https://w3id.org/mbdo#CurvedBridge
+<https://w3id.org/mbdo#CurvedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#CurvedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesByVerticalAlignment> .
+<https://w3id.org/mbdo#CurvedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Curved Bridge"@en .
+# 
+# https://w3id.org/mbdo#DareTypeTrussBridge
+<https://w3id.org/mbdo#DareTypeTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#DareTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#DareTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Dare Type Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#DeburghTypeTrussBridge
+<https://w3id.org/mbdo#DeburghTypeTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#DeburghTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#DeburghTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Deburgh Type Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#Deck
+<https://w3id.org/mbdo#Deck> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Deck> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Superstructure> .
+<https://w3id.org/mbdo#Deck> <http://www.w3.org/2000/01/rdf-schema#label> "Deck"@en .
+# 
+# https://w3id.org/mbdo#DeckArchBridge
+<https://w3id.org/mbdo#DeckArchBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#DeckArchBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ArchBridge> .
+<https://w3id.org/mbdo#DeckArchBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Deck Arch Bridge"@en .
+# 
+# https://w3id.org/mbdo#DeckTrussBridge
+<https://w3id.org/mbdo#DeckTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#DeckTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#DeckTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Deck Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#DesignOrPlanning
+<https://w3id.org/mbdo#DesignOrPlanning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#DesignOrPlanning> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Participants> .
+<https://w3id.org/mbdo#DesignOrPlanning> <http://www.w3.org/2000/01/rdf-schema#label> "Design or Planning"@en .
+# 
+# https://w3id.org/mbdo#Diaphragms
+<https://w3id.org/mbdo#Diaphragms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Diaphragms> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ShortSpanStructure> .
+<https://w3id.org/mbdo#Diaphragms> <http://www.w3.org/2000/01/rdf-schema#label> "Diaphragms"@en .
+# 
+# https://w3id.org/mbdo#DoubleCellBoxGriderBridge
+<https://w3id.org/mbdo#DoubleCellBoxGriderBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#DoubleCellBoxGriderBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BoxGirderBridge> .
+<https://w3id.org/mbdo#DoubleCellBoxGriderBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Double-cell Box Grider Bridge"@en .
+# 
+# https://w3id.org/mbdo#DoubleConcaveBridge
+<https://w3id.org/mbdo#DoubleConcaveBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#DoubleConcaveBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#VariableWidthBridge> .
+<https://w3id.org/mbdo#DoubleConcaveBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Double Concave Bridge"@en .
+# 
+# https://w3id.org/mbdo#DoubleConvexBridge
+<https://w3id.org/mbdo#DoubleConvexBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#DoubleConvexBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#VariableWidthBridge> .
+<https://w3id.org/mbdo#DoubleConvexBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Double Convex Bridge"@en .
+# 
+# https://w3id.org/mbdo#DoubleIntersectionWarrenTrussBridge
+<https://w3id.org/mbdo#DoubleIntersectionWarrenTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#DoubleIntersectionWarrenTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#WarrenTypeTrussBridge> .
+<https://w3id.org/mbdo#DoubleIntersectionWarrenTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Double Intersection Warren Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#DoubleTSectionGirderBridge
+<https://w3id.org/mbdo#DoubleTSectionGirderBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#DoubleTSectionGirderBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TSectionGirderBridge> .
+<https://w3id.org/mbdo#DoubleTSectionGirderBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Double T-Section Girder Bridge"@en .
+# 
+# https://w3id.org/mbdo#DoubleThreeSpanSuspensionBridge
+<https://w3id.org/mbdo#DoubleThreeSpanSuspensionBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#DoubleThreeSpanSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SuspensionBridge> .
+<https://w3id.org/mbdo#DoubleThreeSpanSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Double Three-span Suspension Bridge"@en .
+# 
+# https://w3id.org/mbdo#DrawBridge
+<https://w3id.org/mbdo#DrawBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#DrawBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#MovableBridge> .
+<https://w3id.org/mbdo#DrawBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Draw Bridge"@en .
+# 
+# https://w3id.org/mbdo#DrilledShafts
+<https://w3id.org/mbdo#DrilledShafts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#DrilledShafts> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Foundations> .
+<https://w3id.org/mbdo#DrilledShafts> <http://www.w3.org/2000/01/rdf-schema#label> "Drilled Shafts"@en .
+# 
+# https://w3id.org/mbdo#EngesserTrussBridge
+<https://w3id.org/mbdo#EngesserTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#EngesserTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#EngesserTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Engesser Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#ExpansionJoints
+<https://w3id.org/mbdo#ExpansionJoints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ExpansionJoints> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#StructureProtection> .
+<https://w3id.org/mbdo#ExpansionJoints> <http://www.w3.org/2000/01/rdf-schema#label> "Expansion Joints"@en .
+# 
+# https://w3id.org/mbdo#ExtradosedBridge
+<https://w3id.org/mbdo#ExtradosedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ExtradosedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#CableStayedBridge> .
+<https://w3id.org/mbdo#ExtradosedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Extradosed Bridge"@en .
+# 
+# https://w3id.org/mbdo#FiberReinforcedConcreteBridge
+<https://w3id.org/mbdo#FiberReinforcedConcreteBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#FiberReinforcedConcreteBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ConcreteBridge> .
+<https://w3id.org/mbdo#FiberReinforcedConcreteBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Fiber Reinforced Concrete Bridge"@en .
+# 
+# https://w3id.org/mbdo#FinkTypeTrussBridge
+<https://w3id.org/mbdo#FinkTypeTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#FinkTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#FinkTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Fink Type Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#FlexuralMembers
+<https://w3id.org/mbdo#FlexuralMembers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#FlexuralMembers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ShortSpanStructure> .
+<https://w3id.org/mbdo#FlexuralMembers> <http://www.w3.org/2000/01/rdf-schema#label> "Flexural Members"@en .
+# 
+# https://w3id.org/mbdo#FoldableBridge
+<https://w3id.org/mbdo#FoldableBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#FoldableBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#MovableBridge> .
+<https://w3id.org/mbdo#FoldableBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Foldable Bridge"@en .
+# 
+# https://w3id.org/mbdo#Foundation
+<https://w3id.org/mbdo#Foundation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Foundation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Abutment> .
+<https://w3id.org/mbdo#Foundation> <http://www.w3.org/2000/01/rdf-schema#label> "Foundation"@en .
+# 
+# https://w3id.org/mbdo#Foundations
+<https://w3id.org/mbdo#Foundations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Foundations> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Pier> .
+<https://w3id.org/mbdo#Foundations> <http://www.w3.org/2000/01/rdf-schema#label> "Foundations"@en .
+# 
+# https://w3id.org/mbdo#FourHingedArchBridge
+<https://w3id.org/mbdo#FourHingedArchBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#FourHingedArchBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ArchBridge> .
+<https://w3id.org/mbdo#FourHingedArchBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Four-hinged Arch Bridge"@en .
+# 
+# https://w3id.org/mbdo#FourSpanExtradosedBridge
+<https://w3id.org/mbdo#FourSpanExtradosedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#FourSpanExtradosedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ExtradosedBridge> .
+<https://w3id.org/mbdo#FourSpanExtradosedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Four-span Extradosed Bridge"@en .
+# 
+# https://w3id.org/mbdo#FourWayBridge
+<https://w3id.org/mbdo#FourWayBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#FourWayBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesByHorizontalAlighnment> .
+<https://w3id.org/mbdo#FourWayBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Four-way Bridge"@en .
+# 
+# https://w3id.org/mbdo#FreeCantileverGirderBridge
+<https://w3id.org/mbdo#FreeCantileverGirderBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#FreeCantileverGirderBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#GirderBridge> .
+<https://w3id.org/mbdo#FreeCantileverGirderBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Free Cantilever Girder Bridge"@en .
+# 
+# https://w3id.org/mbdo#GerberTrussBridge
+<https://w3id.org/mbdo#GerberTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#GerberTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#CantileverTrussBridge> .
+<https://w3id.org/mbdo#GerberTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Gerber Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#Girder
+<https://w3id.org/mbdo#Girder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Girder> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Deck> .
+<https://w3id.org/mbdo#Girder> <http://www.w3.org/2000/01/rdf-schema#label> "Girder"@en .
+# 
+# https://w3id.org/mbdo#GirderBridge
+<https://w3id.org/mbdo#GirderBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#GirderBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeByStructure> .
+<https://w3id.org/mbdo#GirderBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Girder Bridge"@en .
+# 
+# https://w3id.org/mbdo#GirderBridgeWithSuspendedDeck
+<https://w3id.org/mbdo#GirderBridgeWithSuspendedDeck> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#GirderBridgeWithSuspendedDeck> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#GirderBridge> .
+<https://w3id.org/mbdo#GirderBridgeWithSuspendedDeck> <http://www.w3.org/2000/01/rdf-schema#label> "Girder Bridge With Suspended Deck"@en .
+# 
+# https://w3id.org/mbdo#GisclardBridge
+<https://w3id.org/mbdo#GisclardBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#GisclardBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#CableStayedBridge> .
+<https://w3id.org/mbdo#GisclardBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Gisclard Bridge"@en .
+# 
+# https://w3id.org/mbdo#GlassBridge
+<https://w3id.org/mbdo#GlassBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#GlassBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesByConstructionMaterial> .
+<https://w3id.org/mbdo#GlassBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Glass Bridge"@en .
+# 
+# https://w3id.org/mbdo#GreinerTrussBridge
+<https://w3id.org/mbdo#GreinerTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#GreinerTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#GreinerTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Greiner Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#Guardrails
+<https://w3id.org/mbdo#Guardrails> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Guardrails> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Barriers> .
+<https://w3id.org/mbdo#Guardrails> <http://www.w3.org/2000/01/rdf-schema#label> "Guardrails"@en .
+# 
+# https://w3id.org/mbdo#HalfThroughArchBridge
+<https://w3id.org/mbdo#HalfThroughArchBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#HalfThroughArchBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ArchBridge> .
+<https://w3id.org/mbdo#HalfThroughArchBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Half-through Arch Bridge"@en .
+# 
+# https://w3id.org/mbdo#HalfThroughTrussBridge
+<https://w3id.org/mbdo#HalfThroughTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#HalfThroughTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#HalfThroughTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Half Through Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#Hangers
+<https://w3id.org/mbdo#Hangers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Hangers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#LongSpanStructures> .
+<https://w3id.org/mbdo#Hangers> <http://www.w3.org/2000/01/rdf-schema#label> "Hangers"@en .
+# 
+# https://w3id.org/mbdo#HaunchedGirderBridge
+<https://w3id.org/mbdo#HaunchedGirderBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#HaunchedGirderBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#GirderBridge> .
+<https://w3id.org/mbdo#HaunchedGirderBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Haunched Girder Bridge"@en .
+# 
+# https://w3id.org/mbdo#HauptTypeTrussBridge
+<https://w3id.org/mbdo#HauptTypeTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#HauptTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#HauptTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Haupt Type Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#HelicalBridge
+<https://w3id.org/mbdo#HelicalBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#HelicalBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#HelicalBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Helical Bridge"@en .
+# 
+# https://w3id.org/mbdo#HoweTypeTrussBridge
+<https://w3id.org/mbdo#HoweTypeTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#HoweTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#HoweTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Howe Type Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#HybridSimpleSuspensionBridge
+<https://w3id.org/mbdo#HybridSimpleSuspensionBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#HybridSimpleSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SuspensionBridge> .
+<https://w3id.org/mbdo#HybridSimpleSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Hybrid Simple Suspension Bridge"@en .
+# 
+# https://w3id.org/mbdo#HydraulicBridge
+<https://w3id.org/mbdo#HydraulicBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#HydraulicBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#MovableBridge> .
+<https://w3id.org/mbdo#HydraulicBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Hydraulic Bridge"@en .
+# 
+# https://w3id.org/mbdo#HyperbolicBridge
+<https://w3id.org/mbdo#HyperbolicBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#HyperbolicBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeByLongitudinalSystem> .
+<https://w3id.org/mbdo#HyperbolicBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Hyperbolic Bridge"@en .
+# 
+# https://w3id.org/mbdo#Image
+<https://w3id.org/mbdo#Image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Image> <http://www.w3.org/2000/01/rdf-schema#label> "Image"@en .
+# 
+# https://w3id.org/mbdo#IntegralBridge
+<https://w3id.org/mbdo#IntegralBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#IntegralBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesBySupportConditions> .
+<https://w3id.org/mbdo#IntegralBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Integral Bridge"@en .
+# 
+# https://w3id.org/mbdo#IntersectingLevelsBridge
+<https://w3id.org/mbdo#IntersectingLevelsBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#IntersectingLevelsBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BiLevelBridge> .
+<https://w3id.org/mbdo#IntersectingLevelsBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Intersecting Levels Bridge"@en .
+# 
+# https://w3id.org/mbdo#InvertedFinkTrussBridge
+<https://w3id.org/mbdo#InvertedFinkTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#InvertedFinkTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#CableStayedBridge> .
+<https://w3id.org/mbdo#InvertedFinkTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Inverted Fink Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#Iron
+<https://w3id.org/mbdo#Iron> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Iron> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material> .
+<https://w3id.org/mbdo#Iron> <http://www.w3.org/2000/01/rdf-schema#label> "Iron"@en .
+# 
+# https://w3id.org/mbdo#IronBridge
+<https://w3id.org/mbdo#IronBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#IronBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#MetalBridge> .
+<https://w3id.org/mbdo#IronBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Iron Bridge"@en .
+# 
+# https://w3id.org/mbdo#IronConcreteComposite
+<https://w3id.org/mbdo#IronConcreteComposite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#IronConcreteComposite> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#CompositeMaterial> .
+<https://w3id.org/mbdo#IronConcreteComposite> <http://www.w3.org/2000/01/rdf-schema#label> "Iron Concrete Composite"@en .
+# 
+# https://w3id.org/mbdo#KTrussBridge
+<https://w3id.org/mbdo#KTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#KTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#KTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "KTruss Bridge"@en .
+# 
+# https://w3id.org/mbdo#KelloggTrussBridge
+<https://w3id.org/mbdo#KelloggTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#KelloggTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#KelloggTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Kellogg Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#KingpostTrussBridge
+<https://w3id.org/mbdo#KingpostTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#KingpostTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#KingpostTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Kingpost Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#KinkedBridge
+<https://w3id.org/mbdo#KinkedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#KinkedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeByCrossSection> .
+<https://w3id.org/mbdo#KinkedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Kinked Bridge"@en .
+# 
+# https://w3id.org/mbdo#LShapedBridge
+<https://w3id.org/mbdo#LShapedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#LShapedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#KinkedBridge> .
+<https://w3id.org/mbdo#LShapedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "L-shaped Bridge"@en .
+# 
+# https://w3id.org/mbdo#Lakes
+<https://w3id.org/mbdo#Lakes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Lakes> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ObstacleCrossed> .
+<https://w3id.org/mbdo#Lakes> <http://www.w3.org/2000/01/rdf-schema#label> "Lakes"@en .
+# 
+# https://w3id.org/mbdo#LaneTrussBridge
+<https://w3id.org/mbdo#LaneTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#LaneTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#LaneTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Lane Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#LatticeTrussBridge
+<https://w3id.org/mbdo#LatticeTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#LatticeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#LatticeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Lattice Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#LenticularBridge
+<https://w3id.org/mbdo#LenticularBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#LenticularBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#NonParallelChordTrussBridge> .
+<https://w3id.org/mbdo#LenticularBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Lenticular Bridge"@en .
+# 
+# https://w3id.org/mbdo#LenticularTrussBridgeWithPenticularWeb
+<https://w3id.org/mbdo#LenticularTrussBridgeWithPenticularWeb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#LenticularTrussBridgeWithPenticularWeb> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#LenticularBridge> .
+<https://w3id.org/mbdo#LenticularTrussBridgeWithPenticularWeb> <http://www.w3.org/2000/01/rdf-schema#label> "Lenticular Truss Bridge with Penticular Web"@en .
+# 
+# https://w3id.org/mbdo#LightweightConcreteBridge
+<https://w3id.org/mbdo#LightweightConcreteBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#LightweightConcreteBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ConcreteBridge> .
+<https://w3id.org/mbdo#LightweightConcreteBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Lightweight Concrete Bridge"@en .
+# 
+# https://w3id.org/mbdo#LongSpanStructures
+<https://w3id.org/mbdo#LongSpanStructures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#LongSpanStructures> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Superstructure> .
+<https://w3id.org/mbdo#LongSpanStructures> <http://www.w3.org/2000/01/rdf-schema#label> "Long Span Structures"@en .
+# 
+# https://w3id.org/mbdo#LongTypeTrussBridge
+<https://w3id.org/mbdo#LongTypeTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#LongTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#LongTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Long Type Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#Masonary
+<https://w3id.org/mbdo#Masonary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Masonary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material> .
+<https://w3id.org/mbdo#Masonary> <http://www.w3.org/2000/01/rdf-schema#label> "Masonary"@en .
+# 
+# https://w3id.org/mbdo#MasonryBridge
+<https://w3id.org/mbdo#MasonryBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#MasonryBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesByConstructionMaterial> .
+<https://w3id.org/mbdo#MasonryBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Masonry Bridge"@en .
+# 
+# https://w3id.org/mbdo#MccallumTrussBridge
+<https://w3id.org/mbdo#MccallumTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#MccallumTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#MccallumTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Mccallum Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#McdonaldTrussBridge
+<https://w3id.org/mbdo#McdonaldTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#McdonaldTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#McdonaldTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Mcdonald Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#Metal
+<https://w3id.org/mbdo#Metal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Metal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material> .
+<https://w3id.org/mbdo#Metal> <http://www.w3.org/2000/01/rdf-schema#label> "Metal"@en .
+# 
+# https://w3id.org/mbdo#MetalBridge
+<https://w3id.org/mbdo#MetalBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#MetalBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesByConstructionMaterial> .
+<https://w3id.org/mbdo#MetalBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Metal Bridge"@en .
+# 
+# https://w3id.org/mbdo#MohniéLatticeTrussBridge
+<https://w3id.org/mbdo#MohniéLatticeTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#MohniéLatticeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#MohniéLatticeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Mohnié Lattice Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#MonoCableSuspensionBridge
+<https://w3id.org/mbdo#MonoCableSuspensionBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#MonoCableSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SuspensionBridge> .
+<https://w3id.org/mbdo#MonoCableSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Mono-cable Suspension Bridge"@en .
+# 
+# https://w3id.org/mbdo#MoonBridge
+<https://w3id.org/mbdo#MoonBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#MoonBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ArchBridge> .
+<https://w3id.org/mbdo#MoonBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Moon Bridge"@en .
+# 
+# https://w3id.org/mbdo#MovableBridge
+<https://w3id.org/mbdo#MovableBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#MovableBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeByLongitudinalSystem> .
+<https://w3id.org/mbdo#MovableBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Movable Bridge"@en .
+# 
+# https://w3id.org/mbdo#MultiSpanContinuousGirderBridge
+<https://w3id.org/mbdo#MultiSpanContinuousGirderBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#MultiSpanContinuousGirderBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#GirderBridge> .
+<https://w3id.org/mbdo#MultiSpanContinuousGirderBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Multi-span Continuous Girder Bridge"@en .
+# 
+# https://w3id.org/mbdo#MultiSpanExtradosedBridge
+<https://w3id.org/mbdo#MultiSpanExtradosedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#MultiSpanExtradosedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ExtradosedBridge> .
+<https://w3id.org/mbdo#MultiSpanExtradosedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Multi-span Extradosed Bridge"@en .
+# 
+# https://w3id.org/mbdo#MultiSpanSuspensionBridge
+<https://w3id.org/mbdo#MultiSpanSuspensionBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#MultiSpanSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SuspensionBridge> .
+<https://w3id.org/mbdo#MultiSpanSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Multi-span Suspension Bridge"@en .
+# 
+# https://w3id.org/mbdo#MultipleGirderBridge
+<https://w3id.org/mbdo#MultipleGirderBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#MultipleGirderBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#GirderBridge> .
+<https://w3id.org/mbdo#MultipleGirderBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Multiple Girder Bridge"@en .
+# 
+# https://w3id.org/mbdo#MultipleKingpostTrussBridge
+<https://w3id.org/mbdo#MultipleKingpostTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#MultipleKingpostTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#KingpostTrussBridge> .
+<https://w3id.org/mbdo#MultipleKingpostTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Multiple Kingpost Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#MultipleSpanCableStayedBridge
+<https://w3id.org/mbdo#MultipleSpanCableStayedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#MultipleSpanCableStayedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#CableStayedBridge> .
+<https://w3id.org/mbdo#MultipleSpanCableStayedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Multiple-span Cable-stayed Bridge"@en .
+# 
+# https://w3id.org/mbdo#MultipleTSectionGirderBridge
+<https://w3id.org/mbdo#MultipleTSectionGirderBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#MultipleTSectionGirderBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TSectionGirderBridge> .
+<https://w3id.org/mbdo#MultipleTSectionGirderBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Multiple T-Section Girder Bridge"@en .
+# 
+# https://w3id.org/mbdo#MultiwayBridge
+<https://w3id.org/mbdo#MultiwayBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#MultiwayBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesByHorizontalAlighnment> .
+<https://w3id.org/mbdo#MultiwayBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Multiway Bridge"@en .
+# 
+# https://w3id.org/mbdo#NonParallelChordTrussBridge
+<https://w3id.org/mbdo#NonParallelChordTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#NonParallelChordTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#NonParallelChordTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Non Parallel Chord Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#ObliqueBridge
+<https://w3id.org/mbdo#ObliqueBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ObliqueBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesBySupportConditions> .
+<https://w3id.org/mbdo#ObliqueBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Oblique Bridge"@en .
+# 
+# https://w3id.org/mbdo#ObstacleCrossed
+<https://w3id.org/mbdo#ObstacleCrossed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ObstacleCrossed> <http://www.w3.org/2000/01/rdf-schema#label> "Obstacle Crossed"@en .
+# 
+# https://w3id.org/mbdo#OffsetLevelsBridge
+<https://w3id.org/mbdo#OffsetLevelsBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#OffsetLevelsBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BiLevelBridge> .
+<https://w3id.org/mbdo#OffsetLevelsBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Offset Levels Bridge"@en .
+# 
+# https://w3id.org/mbdo#PaddlefordTypeTrussBridge
+<https://w3id.org/mbdo#PaddlefordTypeTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#PaddlefordTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#PaddlefordTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Paddleford Type Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#ParallelChordTrussBridge
+<https://w3id.org/mbdo#ParallelChordTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ParallelChordTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#ParallelChordTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Parallel Chord Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#Parapets
+<https://w3id.org/mbdo#Parapets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Parapets> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#StructureProtection> .
+<https://w3id.org/mbdo#Parapets> <http://www.w3.org/2000/01/rdf-schema#label> "Parapets"@en .
+# 
+# https://w3id.org/mbdo#ParkerTypeTrussBridge
+<https://w3id.org/mbdo#ParkerTypeTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ParkerTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#NonParallelChordTrussBridge> .
+<https://w3id.org/mbdo#ParkerTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Parker Type Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#PartiallyCurvedBridge
+<https://w3id.org/mbdo#PartiallyCurvedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#PartiallyCurvedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesByVerticalAlignment> .
+<https://w3id.org/mbdo#PartiallyCurvedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Partially Curved Bridge"@en .
+# 
+# https://w3id.org/mbdo#PartiallyObliqueBridge
+<https://w3id.org/mbdo#PartiallyObliqueBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#PartiallyObliqueBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesBySupportConditions> .
+<https://w3id.org/mbdo#PartiallyObliqueBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Partially Oblique Bridge"@en .
+# 
+# https://w3id.org/mbdo#Participants
+<https://w3id.org/mbdo#Participants> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Participants> <http://www.w3.org/2000/01/rdf-schema#label> "Participants"@en .
+# 
+# https://w3id.org/mbdo#PauliTrussBridge
+<https://w3id.org/mbdo#PauliTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#PauliTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#LenticularBridge> .
+<https://w3id.org/mbdo#PauliTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Pauli Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#PegramTrussBridge
+<https://w3id.org/mbdo#PegramTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#PegramTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#NonParallelChordTrussBridge> .
+<https://w3id.org/mbdo#PegramTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Pegram Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#PendulumBridge
+<https://w3id.org/mbdo#PendulumBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#PendulumBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#MovableBridge> .
+<https://w3id.org/mbdo#PendulumBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Pendulum Bridge"@en .
+# 
+# https://w3id.org/mbdo#Pier
+<https://w3id.org/mbdo#Pier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Pier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Substructure> .
+<https://w3id.org/mbdo#Pier> <http://www.w3.org/2000/01/rdf-schema#label> "Pier"@en .
+# 
+# https://w3id.org/mbdo#PileBridge
+<https://w3id.org/mbdo#PileBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#PileBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeByLongitudinalSystem> .
+<https://w3id.org/mbdo#PileBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Pile Bridge"@en .
+# 
+# https://w3id.org/mbdo#Piles
+<https://w3id.org/mbdo#Piles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Piles> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Foundations> .
+<https://w3id.org/mbdo#Piles> <http://www.w3.org/2000/01/rdf-schema#label> "Piles"@en .
+# 
+# https://w3id.org/mbdo#PinConnectedPrattTrussBridge
+<https://w3id.org/mbdo#PinConnectedPrattTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#PinConnectedPrattTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#PrattTypeTrussBridge> .
+<https://w3id.org/mbdo#PinConnectedPrattTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Pin Connected Pratt Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#PistonStayedBridge
+<https://w3id.org/mbdo#PistonStayedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#PistonStayedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#MovableBridge> .
+<https://w3id.org/mbdo#PistonStayedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Piston Stayed Bridge"@en .
+# 
+# https://w3id.org/mbdo#PlanoConcaveBridge
+<https://w3id.org/mbdo#PlanoConcaveBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#PlanoConcaveBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#VariableWidthBridge> .
+<https://w3id.org/mbdo#PlanoConcaveBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Plano Concave Bridge"@en .
+# 
+# https://w3id.org/mbdo#PlanoConvexBridge
+<https://w3id.org/mbdo#PlanoConvexBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#PlanoConvexBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#VariableWidthBridge> .
+<https://w3id.org/mbdo#PlanoConvexBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Plano Convex Bridge"@en .
+# 
+# https://w3id.org/mbdo#PlateGirderBridge
+<https://w3id.org/mbdo#PlateGirderBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#PlateGirderBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#GirderBridge> .
+<https://w3id.org/mbdo#PlateGirderBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Plate Girder Bridge"@en .
+# 
+# https://w3id.org/mbdo#PolygonalTrussBridge
+<https://w3id.org/mbdo#PolygonalTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#PolygonalTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#NonParallelChordTrussBridge> .
+<https://w3id.org/mbdo#PolygonalTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Polygonal Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#PontoonBridge
+<https://w3id.org/mbdo#PontoonBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#PontoonBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeByLongitudinalSystem> .
+<https://w3id.org/mbdo#PontoonBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Pontoon Bridge"@en .
+# 
+# https://w3id.org/mbdo#PonyTrussBridge
+<https://w3id.org/mbdo#PonyTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#PonyTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#PonyTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Pony Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#PostTypeTrussBridge
+<https://w3id.org/mbdo#PostTypeTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#PostTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#PostTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Post Type Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#PrattTypeTrussBridge
+<https://w3id.org/mbdo#PrattTypeTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#PrattTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#PrattTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Pratt Type Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#PrestressedConcreteBridge
+<https://w3id.org/mbdo#PrestressedConcreteBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#PrestressedConcreteBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ConcreteBridge> .
+<https://w3id.org/mbdo#PrestressedConcreteBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Prestressed Concrete Bridge"@en .
+# 
+# https://w3id.org/mbdo#Protection
+<https://w3id.org/mbdo#Protection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Protection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/brot#Component> .
+<https://w3id.org/mbdo#Protection> <http://www.w3.org/2000/01/rdf-schema#label> "Protection"@en .
+# 
+# https://w3id.org/mbdo#Pylon
+<https://w3id.org/mbdo#Pylon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Pylon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Tower> .
+<https://w3id.org/mbdo#Pylon> <http://www.w3.org/2000/01/rdf-schema#label> "Pylon"@en .
+# 
+# https://w3id.org/mbdo#QuadrupleGirderBridge
+<https://w3id.org/mbdo#QuadrupleGirderBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#QuadrupleGirderBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#GirderBridge> .
+<https://w3id.org/mbdo#QuadrupleGirderBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Quadruple Girder Bridge"@en .
+# 
+# https://w3id.org/mbdo#QuadrupleTSectionGirderBridge
+<https://w3id.org/mbdo#QuadrupleTSectionGirderBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#QuadrupleTSectionGirderBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TSectionGirderBridge> .
+<https://w3id.org/mbdo#QuadrupleTSectionGirderBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Quadruple T-Section Girder Bridge"@en .
+# 
+# https://w3id.org/mbdo#QueenpostTrussBridge
+<https://w3id.org/mbdo#QueenpostTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#QueenpostTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#QueenpostTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Queenpost Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#Region
+<https://w3id.org/mbdo#Region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/brot#SpatialZone> .
+<https://w3id.org/mbdo#Region> <http://www.w3.org/2000/01/rdf-schema#label> "Region"@en .
+# 
+# https://w3id.org/mbdo#ReinforcedConcrete
+<https://w3id.org/mbdo#ReinforcedConcrete> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ReinforcedConcrete> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#CompositeMaterial> .
+<https://w3id.org/mbdo#ReinforcedConcrete> <http://www.w3.org/2000/01/rdf-schema#label> "Reinforced Concrete"@en .
+# 
+# https://w3id.org/mbdo#ReinforcedConcreteBridge
+<https://w3id.org/mbdo#ReinforcedConcreteBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ReinforcedConcreteBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ConcreteBridge> .
+<https://w3id.org/mbdo#ReinforcedConcreteBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Reinforced Concrete Bridge"@en .
+# 
+# https://w3id.org/mbdo#RetractableBridge
+<https://w3id.org/mbdo#RetractableBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#RetractableBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#MovableBridge> .
+<https://w3id.org/mbdo#RetractableBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Retractable Bridge"@en .
+# 
+# https://w3id.org/mbdo#Ribs
+<https://w3id.org/mbdo#Ribs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Ribs> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#LongSpanStructures> .
+<https://w3id.org/mbdo#Ribs> <http://www.w3.org/2000/01/rdf-schema#label> "Ribs"@en .
+# 
+# https://w3id.org/mbdo#RigidFrameBridge
+<https://w3id.org/mbdo#RigidFrameBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#RigidFrameBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeByLongitudinalSystem> .
+<https://w3id.org/mbdo#RigidFrameBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Rigid Frame Bridge"@en .
+# 
+# https://w3id.org/mbdo#RigidFrameBridgeWithInclinedLegs
+<https://w3id.org/mbdo#RigidFrameBridgeWithInclinedLegs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#RigidFrameBridgeWithInclinedLegs> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#RigidFrameBridge> .
+<https://w3id.org/mbdo#RigidFrameBridgeWithInclinedLegs> <http://www.w3.org/2000/01/rdf-schema#label> "Rigid Frame Bridge with Inclined Legs"@en .
+# 
+# https://w3id.org/mbdo#RigidFrameBridgeWithTreeShapedLegs
+<https://w3id.org/mbdo#RigidFrameBridgeWithTreeShapedLegs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#RigidFrameBridgeWithTreeShapedLegs> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#RigidFrameBridge> .
+<https://w3id.org/mbdo#RigidFrameBridgeWithTreeShapedLegs> <http://www.w3.org/2000/01/rdf-schema#label> "Rigid Frame Bridge with Tree-shaped Legs"@en .
+# 
+# https://w3id.org/mbdo#RigidFrameBridgeWithUnderslungMainSpan
+<https://w3id.org/mbdo#RigidFrameBridgeWithUnderslungMainSpan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#RigidFrameBridgeWithUnderslungMainSpan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#RigidFrameBridge> .
+<https://w3id.org/mbdo#RigidFrameBridgeWithUnderslungMainSpan> <http://www.w3.org/2000/01/rdf-schema#label> "Rigid Frame Bridge with Underslung Main Span"@en .
+# 
+# https://w3id.org/mbdo#RigidFrameBridgeWithVShapedLegs
+<https://w3id.org/mbdo#RigidFrameBridgeWithVShapedLegs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#RigidFrameBridgeWithVShapedLegs> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#RigidFrameBridge> .
+<https://w3id.org/mbdo#RigidFrameBridgeWithVShapedLegs> <http://www.w3.org/2000/01/rdf-schema#label> "Rigid Frame Bridge with V-shaped Legs"@en .
+# 
+# https://w3id.org/mbdo#RigidHalfFrameBridge
+<https://w3id.org/mbdo#RigidHalfFrameBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#RigidHalfFrameBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#RigidFrameBridge> .
+<https://w3id.org/mbdo#RigidHalfFrameBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Rigid Half Frame Bridge"@en .
+# 
+# https://w3id.org/mbdo#River
+<https://w3id.org/mbdo#River> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#River> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ObstacleCrossed> .
+<https://w3id.org/mbdo#River> <http://www.w3.org/2000/01/rdf-schema#label> "River"@en .
+# 
+# https://w3id.org/mbdo#Road
+<https://w3id.org/mbdo#Road> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Road> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ObstacleCrossed> .
+<https://w3id.org/mbdo#Road> <http://www.w3.org/2000/01/rdf-schema#label> "Road"@en .
+# 
+# https://w3id.org/mbdo#RoadBridge
+<https://w3id.org/mbdo#RoadBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#RoadBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeByFunction> .
+<https://w3id.org/mbdo#RoadBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Road Bridge"@en .
+# 
+# https://w3id.org/mbdo#SCurvedBridge
+<https://w3id.org/mbdo#SCurvedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SCurvedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#CurvedBridge> .
+<https://w3id.org/mbdo#SCurvedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "S-curved Bridge"@en .
+# 
+# https://w3id.org/mbdo#SchwedlerTrussBridge
+<https://w3id.org/mbdo#SchwedlerTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SchwedlerTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#NonParallelChordTrussBridge> .
+<https://w3id.org/mbdo#SchwedlerTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Schwedler Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#Sea
+<https://w3id.org/mbdo#Sea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Sea> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ObstacleCrossed> .
+<https://w3id.org/mbdo#Sea> <http://www.w3.org/2000/01/rdf-schema#label> "Sea"@en .
+# 
+# https://w3id.org/mbdo#SegmentalBoxGirders
+<https://w3id.org/mbdo#SegmentalBoxGirders> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SegmentalBoxGirders> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#LongSpanStructures> .
+<https://w3id.org/mbdo#SegmentalBoxGirders> <http://www.w3.org/2000/01/rdf-schema#label> "Segmental Box Girders"@en .
+# 
+# https://w3id.org/mbdo#SelfAnchoredMonoCableSuspensionBridge
+<https://w3id.org/mbdo#SelfAnchoredMonoCableSuspensionBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SelfAnchoredMonoCableSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SelfAnchoredSuspensionBridge> .
+<https://w3id.org/mbdo#SelfAnchoredMonoCableSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Self-anchored Mono Cable Suspension Bridge"@en .
+# 
+# https://w3id.org/mbdo#SelfAnchoredSuspensionBridge
+<https://w3id.org/mbdo#SelfAnchoredSuspensionBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SelfAnchoredSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SuspensionBridge> .
+<https://w3id.org/mbdo#SelfAnchoredSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Self-anchored Suspension Bridge"@en .
+# 
+# https://w3id.org/mbdo#SelfAnchoredSuspensionBridgeWithCableStays
+<https://w3id.org/mbdo#SelfAnchoredSuspensionBridgeWithCableStays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SelfAnchoredSuspensionBridgeWithCableStays> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SelfAnchoredSuspensionBridge> .
+<https://w3id.org/mbdo#SelfAnchoredSuspensionBridgeWithCableStays> <http://www.w3.org/2000/01/rdf-schema#label> "Self-anchored Suspension Bridge With Cable Stays"@en .
+# 
+# https://w3id.org/mbdo#SelfAnchoredSuspensionBridgeWithDiscontinuousCables
+<https://w3id.org/mbdo#SelfAnchoredSuspensionBridgeWithDiscontinuousCables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SelfAnchoredSuspensionBridgeWithDiscontinuousCables> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SelfAnchoredSuspensionBridge> .
+<https://w3id.org/mbdo#SelfAnchoredSuspensionBridgeWithDiscontinuousCables> <http://www.w3.org/2000/01/rdf-schema#label> "Self-anchored Suspension Bridge With Discontinuous Cables"@en .
+# 
+# https://w3id.org/mbdo#SemiIntegralBridge
+<https://w3id.org/mbdo#SemiIntegralBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SemiIntegralBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesBySupportConditions> .
+<https://w3id.org/mbdo#SemiIntegralBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Semi Integral Bridge"@en .
+# 
+# https://w3id.org/mbdo#SemiSelfAnchoredSuspensionBridge
+<https://w3id.org/mbdo#SemiSelfAnchoredSuspensionBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SemiSelfAnchoredSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SuspensionBridge> .
+<https://w3id.org/mbdo#SemiSelfAnchoredSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Semi-self-anchored Suspension Bridge"@en .
+# 
+# https://w3id.org/mbdo#SepareteSuperstructuresBridge
+<https://w3id.org/mbdo#SepareteSuperstructuresBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SepareteSuperstructuresBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesByVerticalAlignment> .
+<https://w3id.org/mbdo#SepareteSuperstructuresBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Separete Superstructures Bridge"@en .
+# 
+# https://w3id.org/mbdo#ShortSpanStructure
+<https://w3id.org/mbdo#ShortSpanStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ShortSpanStructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Superstructure> .
+<https://w3id.org/mbdo#ShortSpanStructure> <http://www.w3.org/2000/01/rdf-schema#label> "Short Span Structure"@en .
+# 
+# https://w3id.org/mbdo#SimplySupportedBridge
+<https://w3id.org/mbdo#SimplySupportedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SimplySupportedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesBySupportConditions> .
+<https://w3id.org/mbdo#SimplySupportedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Simply Supported Bridge"@en .
+# 
+# https://w3id.org/mbdo#SingleCellBoxGirderBridge
+<https://w3id.org/mbdo#SingleCellBoxGirderBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SingleCellBoxGirderBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BoxGirderBridge> .
+<https://w3id.org/mbdo#SingleCellBoxGirderBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Single-cell Box Girder Bridge"@en .
+# 
+# https://w3id.org/mbdo#SingleLevelBridge
+<https://w3id.org/mbdo#SingleLevelBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SingleLevelBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesByElevation> .
+<https://w3id.org/mbdo#SingleLevelBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Single-level Bridge"@en .
+# 
+# https://w3id.org/mbdo#SingleSpanCableStayedBridge
+<https://w3id.org/mbdo#SingleSpanCableStayedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SingleSpanCableStayedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#CableStayedBridge> .
+<https://w3id.org/mbdo#SingleSpanCableStayedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Single-span Cable-stayed Bridge"@en .
+# 
+# https://w3id.org/mbdo#SingleSpanExtradosedBridge
+<https://w3id.org/mbdo#SingleSpanExtradosedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SingleSpanExtradosedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ExtradosedBridge> .
+<https://w3id.org/mbdo#SingleSpanExtradosedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Single-span Extradosed Bridge"@en .
+# 
+# https://w3id.org/mbdo#SingleSpanGirderBridge
+<https://w3id.org/mbdo#SingleSpanGirderBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SingleSpanGirderBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#GirderBridge> .
+<https://w3id.org/mbdo#SingleSpanGirderBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Single-span Girder Bridge"@en .
+# 
+# https://w3id.org/mbdo#SingleSpanSinglePylonCableStayedBridge
+<https://w3id.org/mbdo#SingleSpanSinglePylonCableStayedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SingleSpanSinglePylonCableStayedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SingleSpanCableStayedBridge> .
+<https://w3id.org/mbdo#SingleSpanSinglePylonCableStayedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Single-span Single-pylon Cable-stayed Bridge"@en .
+# 
+# https://w3id.org/mbdo#SingleSpanSingleTowerSemiSelfAnchoredSuspensionBridge
+<https://w3id.org/mbdo#SingleSpanSingleTowerSemiSelfAnchoredSuspensionBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SingleSpanSingleTowerSemiSelfAnchoredSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SemiSelfAnchoredSuspensionBridge> .
+<https://w3id.org/mbdo#SingleSpanSingleTowerSemiSelfAnchoredSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Single-span Single-tower Semi-self-anchored Suspension Bridge"@en .
+# 
+# https://w3id.org/mbdo#SingleSpanSingleTowerSuspensionBridge
+<https://w3id.org/mbdo#SingleSpanSingleTowerSuspensionBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SingleSpanSingleTowerSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SingleSpanSuspensionBridge> .
+<https://w3id.org/mbdo#SingleSpanSingleTowerSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Single-span Single-tower Suspension Bridge"@en .
+# 
+# https://w3id.org/mbdo#SingleSpanSuspensionBridge
+<https://w3id.org/mbdo#SingleSpanSuspensionBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SingleSpanSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SuspensionBridge> .
+<https://w3id.org/mbdo#SingleSpanSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Single-span Suspension Bridge"@en .
+# 
+# https://w3id.org/mbdo#SingleSpanTwoPylonCableStayedBridge
+<https://w3id.org/mbdo#SingleSpanTwoPylonCableStayedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SingleSpanTwoPylonCableStayedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SingleSpanCableStayedBridge> .
+<https://w3id.org/mbdo#SingleSpanTwoPylonCableStayedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Single-span Two-pylon Cable-stayed Bridge"@en .
+# 
+# https://w3id.org/mbdo#SingleSpanTwoTowerSuspensionBridge
+<https://w3id.org/mbdo#SingleSpanTwoTowerSuspensionBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SingleSpanTwoTowerSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SingleSpanSuspensionBridge> .
+<https://w3id.org/mbdo#SingleSpanTwoTowerSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Single-span Two-tower Suspension Bridge"@en .
+# 
+# https://w3id.org/mbdo#SingleSuperstructureBridge
+<https://w3id.org/mbdo#SingleSuperstructureBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SingleSuperstructureBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesByVerticalAlignment> .
+<https://w3id.org/mbdo#SingleSuperstructureBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Single Superstructure Bridge"@en .
+# 
+# https://w3id.org/mbdo#SingleTSectionGirderBridge
+<https://w3id.org/mbdo#SingleTSectionGirderBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SingleTSectionGirderBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TSectionGirderBridge> .
+<https://w3id.org/mbdo#SingleTSectionGirderBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Single T-Section Girder Bridge"@en .
+# 
+# https://w3id.org/mbdo#SingleTowerSelfAnchoredSuspensionBridge
+<https://w3id.org/mbdo#SingleTowerSelfAnchoredSuspensionBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SingleTowerSelfAnchoredSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SelfAnchoredSuspensionBridge> .
+<https://w3id.org/mbdo#SingleTowerSelfAnchoredSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Single-tower Self-anchored Suspension Bridge"@en .
+# 
+# https://w3id.org/mbdo#SinusoidalTrussBridge
+<https://w3id.org/mbdo#SinusoidalTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SinusoidalTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#NonParallelChordTrussBridge> .
+<https://w3id.org/mbdo#SinusoidalTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Sinusoidal Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#Slab
+<https://w3id.org/mbdo#Slab> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Slab> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#StructuralSurface> .
+<https://w3id.org/mbdo#Slab> <http://www.w3.org/2000/01/rdf-schema#label> "Slab"@en .
+# 
+# https://w3id.org/mbdo#SlabBridge
+<https://w3id.org/mbdo#SlabBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SlabBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeByStructure> .
+<https://w3id.org/mbdo#SlabBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#GirderBridge> .
+<https://w3id.org/mbdo#SlabBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Slab Bridge"@en .
+# 
+# https://w3id.org/mbdo#SlopeWalls
+<https://w3id.org/mbdo#SlopeWalls> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SlopeWalls> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#StructureProtection> .
+<https://w3id.org/mbdo#SlopeWalls> <http://www.w3.org/2000/01/rdf-schema#label> "Slope Walls"@en .
+# 
+# https://w3id.org/mbdo#SmithTypeTrussBridge
+<https://w3id.org/mbdo#SmithTypeTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SmithTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#SmithTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Smith Type Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#Spandrels
+<https://w3id.org/mbdo#Spandrels> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Spandrels> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#LongSpanStructures> .
+<https://w3id.org/mbdo#Spandrels> <http://www.w3.org/2000/01/rdf-schema#label> "Spandrels"@en .
+# 
+# https://w3id.org/mbdo#SpiralBridge
+<https://w3id.org/mbdo#SpiralBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SpiralBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#CurvedBridge> .
+<https://w3id.org/mbdo#SpiralBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Spiral Bridge"@en .
+# 
+# https://w3id.org/mbdo#SpreadFooting
+<https://w3id.org/mbdo#SpreadFooting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SpreadFooting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Foundations> .
+<https://w3id.org/mbdo#SpreadFooting> <http://www.w3.org/2000/01/rdf-schema#label> "Spread Footing"@en .
+# 
+# https://w3id.org/mbdo#StearnsTrussBridge
+<https://w3id.org/mbdo#StearnsTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#StearnsTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#StearnsTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Stearns Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#Steel
+<https://w3id.org/mbdo#Steel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Steel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material> .
+<https://w3id.org/mbdo#Steel> <http://www.w3.org/2000/01/rdf-schema#label> "Steel"@en .
+# 
+# https://w3id.org/mbdo#SteelBridge
+<https://w3id.org/mbdo#SteelBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SteelBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#MetalBridge> .
+<https://w3id.org/mbdo#SteelBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Steel Bridge"@en .
+# 
+# https://w3id.org/mbdo#SteelConcreteComposite
+<https://w3id.org/mbdo#SteelConcreteComposite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SteelConcreteComposite> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#CompositeMaterial> .
+<https://w3id.org/mbdo#SteelConcreteComposite> <http://www.w3.org/2000/01/rdf-schema#label> "Steel Concrete Composite"@en .
+# 
+# https://w3id.org/mbdo#Stem
+<https://w3id.org/mbdo#Stem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Stem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Abutment> .
+<https://w3id.org/mbdo#Stem> <http://www.w3.org/2000/01/rdf-schema#label> "Stem"@en .
+# 
+# https://w3id.org/mbdo#StraightBridge
+<https://w3id.org/mbdo#StraightBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#StraightBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesByVerticalAlignment> .
+<https://w3id.org/mbdo#StraightBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Straight Bridge"@en .
+# 
+# https://w3id.org/mbdo#Straits
+<https://w3id.org/mbdo#Straits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Straits> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ObstacleCrossed> .
+<https://w3id.org/mbdo#Straits> <http://www.w3.org/2000/01/rdf-schema#label> "Straits"@en .
+# 
+# https://w3id.org/mbdo#StressedRibbonBridge
+<https://w3id.org/mbdo#StressedRibbonBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#StressedRibbonBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeByLongitudinalSystem> .
+<https://w3id.org/mbdo#StressedRibbonBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Stressed Ribbon Bridge"@en .
+# 
+# https://w3id.org/mbdo#StructuralHybridBridge
+<https://w3id.org/mbdo#StructuralHybridBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#StructuralHybridBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeByStructure> .
+<https://w3id.org/mbdo#StructuralHybridBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Structural Hybrid Bridge"@en .
+# 
+# https://w3id.org/mbdo#StructuralSurface
+<https://w3id.org/mbdo#StructuralSurface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#StructuralSurface> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Deck> .
+<https://w3id.org/mbdo#StructuralSurface> <http://www.w3.org/2000/01/rdf-schema#label> "Structural Surface"@en .
+# 
+# https://w3id.org/mbdo#StructureProtection
+<https://w3id.org/mbdo#StructureProtection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#StructureProtection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Protection> .
+<https://w3id.org/mbdo#StructureProtection> <http://www.w3.org/2000/01/rdf-schema#label> "Structure Protection"@en .
+# 
+# https://w3id.org/mbdo#SubdividedWarrenTrussBridge
+<https://w3id.org/mbdo#SubdividedWarrenTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SubdividedWarrenTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#WarrenTypeTrussBridge> .
+<https://w3id.org/mbdo#SubdividedWarrenTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Subdivided Warren Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#SubmersibleBridge
+<https://w3id.org/mbdo#SubmersibleBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SubmersibleBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#MovableBridge> .
+<https://w3id.org/mbdo#SubmersibleBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Submersible Bridge"@en .
+# 
+# https://w3id.org/mbdo#Substructure
+<https://w3id.org/mbdo#Substructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Substructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/brot#Component> .
+<https://w3id.org/mbdo#Substructure> <http://www.w3.org/2000/01/rdf-schema#label> "Substructure"@en .
+# 
+# https://w3id.org/mbdo#SuperposedLevelsBridge
+<https://w3id.org/mbdo#SuperposedLevelsBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SuperposedLevelsBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BiLevelBridge> .
+<https://w3id.org/mbdo#SuperposedLevelsBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Superposed Levels Bridge"@en .
+# 
+# https://w3id.org/mbdo#Superstructure
+<https://w3id.org/mbdo#Superstructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Superstructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/brot#Component> .
+<https://w3id.org/mbdo#Superstructure> <http://www.w3.org/2000/01/rdf-schema#label> "Superstructure"@en .
+# 
+# https://w3id.org/mbdo#SuspensionBridge
+<https://w3id.org/mbdo#SuspensionBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeByStructure> .
+<https://w3id.org/mbdo#SuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Suspension Bridge"@en .
+# 
+# https://w3id.org/mbdo#SuspensionBridgeWithCableStays
+<https://w3id.org/mbdo#SuspensionBridgeWithCableStays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SuspensionBridgeWithCableStays> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SuspensionBridge> .
+<https://w3id.org/mbdo#SuspensionBridgeWithCableStays> <http://www.w3.org/2000/01/rdf-schema#label> "Suspension Bridge With Cable Stays"@en .
+# 
+# https://w3id.org/mbdo#SuspensionBridgeWithDiagonalHangers
+<https://w3id.org/mbdo#SuspensionBridgeWithDiagonalHangers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SuspensionBridgeWithDiagonalHangers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SuspensionBridge> .
+<https://w3id.org/mbdo#SuspensionBridgeWithDiagonalHangers> <http://www.w3.org/2000/01/rdf-schema#label> "Suspension Bridge With Diagonal Hangers"@en .
+# 
+# https://w3id.org/mbdo#SwingBridge
+<https://w3id.org/mbdo#SwingBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#SwingBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#MovableBridge> .
+<https://w3id.org/mbdo#SwingBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Swing Bridge"@en .
+# 
+# https://w3id.org/mbdo#TSectionGirderBridge
+<https://w3id.org/mbdo#TSectionGirderBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TSectionGirderBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#GirderBridge> .
+<https://w3id.org/mbdo#TSectionGirderBridge> <http://www.w3.org/2000/01/rdf-schema#label> "T-section Girder Bridge"@en .
+# 
+# https://w3id.org/mbdo#TensegrityBridge
+<https://w3id.org/mbdo#TensegrityBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TensegrityBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#CableStayedBridge> .
+<https://w3id.org/mbdo#TensegrityBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Tensegrity Bridge"@en .
+# 
+# https://w3id.org/mbdo#TextileReinforcedConcreteBridge
+<https://w3id.org/mbdo#TextileReinforcedConcreteBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TextileReinforcedConcreteBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ConcreteBridge> .
+<https://w3id.org/mbdo#TextileReinforcedConcreteBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Textile Reinforced Concrete Bridge"@en .
+# 
+# https://w3id.org/mbdo#ThacherTypeTrussBridge
+<https://w3id.org/mbdo#ThacherTypeTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ThacherTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#ThacherTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Thacher Type Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#ThreeHingedArchBridge
+<https://w3id.org/mbdo#ThreeHingedArchBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ThreeHingedArchBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ArchBridge> .
+<https://w3id.org/mbdo#ThreeHingedArchBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Three-hinged Arch Bridge"@en .
+# 
+# https://w3id.org/mbdo#ThreeHingedRigidFrameBridgeWithInclinedLegs
+<https://w3id.org/mbdo#ThreeHingedRigidFrameBridgeWithInclinedLegs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ThreeHingedRigidFrameBridgeWithInclinedLegs> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#RigidFrameBridgeWithInclinedLegs> .
+<https://w3id.org/mbdo#ThreeHingedRigidFrameBridgeWithInclinedLegs> <http://www.w3.org/2000/01/rdf-schema#label> "Three-hinged Rigid Frame Bridge with Inclined Legs"@en .
+# 
+# https://w3id.org/mbdo#ThreeSpanCableStayedBridge
+<https://w3id.org/mbdo#ThreeSpanCableStayedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ThreeSpanCableStayedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#CableStayedBridge> .
+<https://w3id.org/mbdo#ThreeSpanCableStayedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Three-span Cable-stayed Bridge"@en .
+# 
+# https://w3id.org/mbdo#ThreeSpanContinuousGirderBridge
+<https://w3id.org/mbdo#ThreeSpanContinuousGirderBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ThreeSpanContinuousGirderBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#GirderBridge> .
+<https://w3id.org/mbdo#ThreeSpanContinuousGirderBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Three-span Continuous Girder Bridge"@en .
+# 
+# https://w3id.org/mbdo#ThreeSpanExtradosedBridge
+<https://w3id.org/mbdo#ThreeSpanExtradosedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ThreeSpanExtradosedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ExtradosedBridge> .
+<https://w3id.org/mbdo#ThreeSpanExtradosedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Three-span Extradosed Bridge"@en .
+# 
+# https://w3id.org/mbdo#ThreeSpanSemiSelfAnchoredSuspensionBridge
+<https://w3id.org/mbdo#ThreeSpanSemiSelfAnchoredSuspensionBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ThreeSpanSemiSelfAnchoredSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SemiSelfAnchoredSuspensionBridge> .
+<https://w3id.org/mbdo#ThreeSpanSemiSelfAnchoredSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Three-span Semi-self-anchored Suspension Bridge"@en .
+# 
+# https://w3id.org/mbdo#ThreeSpanSuspensionBridge
+<https://w3id.org/mbdo#ThreeSpanSuspensionBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ThreeSpanSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SuspensionBridge> .
+<https://w3id.org/mbdo#ThreeSpanSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Three-span Suspension Bridge"@en .
+# 
+# https://w3id.org/mbdo#ThreeWayBridge
+<https://w3id.org/mbdo#ThreeWayBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ThreeWayBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesByHorizontalAlighnment> .
+<https://w3id.org/mbdo#ThreeWayBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Three-way Bridge"@en .
+# 
+# https://w3id.org/mbdo#ThroughArchBridge
+<https://w3id.org/mbdo#ThroughArchBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ThroughArchBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ArchBridge> .
+<https://w3id.org/mbdo#ThroughArchBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Through Arch Bridge"@en .
+# 
+# https://w3id.org/mbdo#ThroughRigidFrameBridgeWithInclinedLegs
+<https://w3id.org/mbdo#ThroughRigidFrameBridgeWithInclinedLegs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ThroughRigidFrameBridgeWithInclinedLegs> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#RigidFrameBridgeWithInclinedLegs> .
+<https://w3id.org/mbdo#ThroughRigidFrameBridgeWithInclinedLegs> <http://www.w3.org/2000/01/rdf-schema#label> "Through Rigid Frame Bridge with Inclined Legs"@en .
+# 
+# https://w3id.org/mbdo#ThroughRigidFrameBridgeWithTreeShapedLegs
+<https://w3id.org/mbdo#ThroughRigidFrameBridgeWithTreeShapedLegs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ThroughRigidFrameBridgeWithTreeShapedLegs> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#RigidFrameBridgeWithTreeShapedLegs> .
+<https://w3id.org/mbdo#ThroughRigidFrameBridgeWithTreeShapedLegs> <http://www.w3.org/2000/01/rdf-schema#label> "Through Rigid Frame Bridge with Tree-shaped Legs"@en .
+# 
+# https://w3id.org/mbdo#ThroughTrussBridge
+<https://w3id.org/mbdo#ThroughTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ThroughTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#ThroughTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Through Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#TiedArchBridge
+<https://w3id.org/mbdo#TiedArchBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TiedArchBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ArchBridge> .
+<https://w3id.org/mbdo#TiedArchBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Tied-arch Bridge"@en .
+# 
+# https://w3id.org/mbdo#Ties
+<https://w3id.org/mbdo#Ties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Ties> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#LongSpanStructures> .
+<https://w3id.org/mbdo#Ties> <http://www.w3.org/2000/01/rdf-schema#label> "Ties"@en .
+# 
+# https://w3id.org/mbdo#TiltBridge
+<https://w3id.org/mbdo#TiltBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TiltBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#MovableBridge> .
+<https://w3id.org/mbdo#TiltBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Tilt Bridge"@en .
+# 
+# https://w3id.org/mbdo#Timber
+<https://w3id.org/mbdo#Timber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Timber> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material> .
+<https://w3id.org/mbdo#Timber> <http://www.w3.org/2000/01/rdf-schema#label> "Timber"@en .
+# 
+# https://w3id.org/mbdo#TimberBridge
+<https://w3id.org/mbdo#TimberBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TimberBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesByConstructionMaterial> .
+<https://w3id.org/mbdo#TimberBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Timber Bridge"@en .
+# 
+# https://w3id.org/mbdo#Tower
+<https://w3id.org/mbdo#Tower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Tower> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Substructure> .
+<https://w3id.org/mbdo#Tower> <http://www.w3.org/2000/01/rdf-schema#label> "Tower"@en .
+# 
+# https://w3id.org/mbdo#TownLatticeTrussBridge
+<https://w3id.org/mbdo#TownLatticeTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TownLatticeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#TownLatticeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Town Lattice Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#TrafficProtection
+<https://w3id.org/mbdo#TrafficProtection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TrafficProtection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Protection> .
+<https://w3id.org/mbdo#TrafficProtection> <http://www.w3.org/2000/01/rdf-schema#label> "Traffic Protection"@en .
+# 
+# https://w3id.org/mbdo#TrapezoidalBridge
+<https://w3id.org/mbdo#TrapezoidalBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TrapezoidalBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#VariableWidthBridge> .
+<https://w3id.org/mbdo#TrapezoidalBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Trapezoidal Bridge"@en .
+# 
+# https://w3id.org/mbdo#TrestleBridge
+<https://w3id.org/mbdo#TrestleBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TrestleBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeByLongitudinalSystem> .
+<https://w3id.org/mbdo#TrestleBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Trestle Bridge"@en .
+# 
+# https://w3id.org/mbdo#TriLevelBridge
+<https://w3id.org/mbdo#TriLevelBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TriLevelBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgesByElevation> .
+<https://w3id.org/mbdo#TriLevelBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Tri-level Bridge"@en .
+# 
+# https://w3id.org/mbdo#TripleGirderBridge
+<https://w3id.org/mbdo#TripleGirderBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TripleGirderBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#GirderBridge> .
+<https://w3id.org/mbdo#TripleGirderBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Triple Girder Bridge"@en .
+# 
+# https://w3id.org/mbdo#TripleSuspensionBridge
+<https://w3id.org/mbdo#TripleSuspensionBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TripleSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SuspensionBridge> .
+<https://w3id.org/mbdo#TripleSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Triple Suspension Bridge"@en .
+# 
+# https://w3id.org/mbdo#TripleTSectionGirderBridge
+<https://w3id.org/mbdo#TripleTSectionGirderBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TripleTSectionGirderBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TSectionGirderBridge> .
+<https://w3id.org/mbdo#TripleTSectionGirderBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Triple T-Section Girder Bridge"@en .
+# 
+# https://w3id.org/mbdo#TruesdellTypeTrussBridge
+<https://w3id.org/mbdo#TruesdellTypeTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TruesdellTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#TruesdellTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Truesdell Type Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#TrussArchBridge
+<https://w3id.org/mbdo#TrussArchBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TrussArchBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ArchBridge> .
+<https://w3id.org/mbdo#TrussArchBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Truss Arch Bridge"@en .
+# 
+# https://w3id.org/mbdo#TrussBridge
+<https://w3id.org/mbdo#TrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeByStructure> .
+<https://w3id.org/mbdo#TrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#TrussBridgeWithSuspendedDeck
+<https://w3id.org/mbdo#TrussBridgeWithSuspendedDeck> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TrussBridgeWithSuspendedDeck> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#TrussBridgeWithSuspendedDeck> <http://www.w3.org/2000/01/rdf-schema#label> "Truss Bridge with Suspended Deck"@en .
+# 
+# https://w3id.org/mbdo#TrussLegBedsteadBridge
+<https://w3id.org/mbdo#TrussLegBedsteadBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TrussLegBedsteadBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#TrussLegBedsteadBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Truss Leg Bedstead Bridge"@en .
+# 
+# https://w3id.org/mbdo#TrussMembers
+<https://w3id.org/mbdo#TrussMembers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TrussMembers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#LongSpanStructures> .
+<https://w3id.org/mbdo#TrussMembers> <http://www.w3.org/2000/01/rdf-schema#label> "Truss Members"@en .
+# 
+# https://w3id.org/mbdo#TubularBridge
+<https://w3id.org/mbdo#TubularBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TubularBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SingleCellBoxGirderBridge> .
+<https://w3id.org/mbdo#TubularBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Tubular Bridge"@en .
+# 
+# https://w3id.org/mbdo#TwinGirderBridge
+<https://w3id.org/mbdo#TwinGirderBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TwinGirderBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#GirderBridge> .
+<https://w3id.org/mbdo#TwinGirderBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Twin Girder Bridge"@en .
+# 
+# https://w3id.org/mbdo#TwoHingedArchBridge
+<https://w3id.org/mbdo#TwoHingedArchBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TwoHingedArchBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ArchBridge> .
+<https://w3id.org/mbdo#TwoHingedArchBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Two-hinged Arch Bridge"@en .
+# 
+# https://w3id.org/mbdo#TwoHingedRigidFrameBridge
+<https://w3id.org/mbdo#TwoHingedRigidFrameBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TwoHingedRigidFrameBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#RigidFrameBridge> .
+<https://w3id.org/mbdo#TwoHingedRigidFrameBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Two-hinged Rigid Frame Bridge"@en .
+# 
+# https://w3id.org/mbdo#TwoHingedRigidFrameBridgeWithInclinedLegs
+<https://w3id.org/mbdo#TwoHingedRigidFrameBridgeWithInclinedLegs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TwoHingedRigidFrameBridgeWithInclinedLegs> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#RigidFrameBridgeWithInclinedLegs> .
+<https://w3id.org/mbdo#TwoHingedRigidFrameBridgeWithInclinedLegs> <http://www.w3.org/2000/01/rdf-schema#label> "Two-hinged Rigid Frame Bridge with Inclined Legs"@en .
+# 
+# https://w3id.org/mbdo#TwoSpanCableStayedBridge
+<https://w3id.org/mbdo#TwoSpanCableStayedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TwoSpanCableStayedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#CableStayedBridge> .
+<https://w3id.org/mbdo#TwoSpanCableStayedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Two-span Cable-stayed Bridge"@en .
+# 
+# https://w3id.org/mbdo#TwoSpanContinuousGirderBridge
+<https://w3id.org/mbdo#TwoSpanContinuousGirderBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TwoSpanContinuousGirderBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#GirderBridge> .
+<https://w3id.org/mbdo#TwoSpanContinuousGirderBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Two-span Continuous Girder Bridge"@en .
+# 
+# https://w3id.org/mbdo#TwoSpanExtradosedBridge
+<https://w3id.org/mbdo#TwoSpanExtradosedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TwoSpanExtradosedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ExtradosedBridge> .
+<https://w3id.org/mbdo#TwoSpanExtradosedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Two-span Extradosed Bridge"@en .
+# 
+# https://w3id.org/mbdo#TwoSpanSinglePylonCableStayedBridge
+<https://w3id.org/mbdo#TwoSpanSinglePylonCableStayedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TwoSpanSinglePylonCableStayedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TwoSpanCableStayedBridge> .
+<https://w3id.org/mbdo#TwoSpanSinglePylonCableStayedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Two-span Single-pylon Cable-stayed Bridge"@en .
+# 
+# https://w3id.org/mbdo#TwoSpanSingleTowerSuspensionBridge
+<https://w3id.org/mbdo#TwoSpanSingleTowerSuspensionBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TwoSpanSingleTowerSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TwoSpanSuspensionBridge> .
+<https://w3id.org/mbdo#TwoSpanSingleTowerSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Two-span Single-Tower Suspension Bridge"@en .
+# 
+# https://w3id.org/mbdo#TwoSpanSuspensionBridge
+<https://w3id.org/mbdo#TwoSpanSuspensionBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TwoSpanSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SuspensionBridge> .
+<https://w3id.org/mbdo#TwoSpanSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Two-span Suspension Bridge"@en .
+# 
+# https://w3id.org/mbdo#TwoSpanThreePylonCableStayedBridge
+<https://w3id.org/mbdo#TwoSpanThreePylonCableStayedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TwoSpanThreePylonCableStayedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TwoSpanCableStayedBridge> .
+<https://w3id.org/mbdo#TwoSpanThreePylonCableStayedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Two-span Three-pylon Cable-stayed Bridge"@en .
+# 
+# https://w3id.org/mbdo#TwoSpanThreeTowerSuspensionBridge
+<https://w3id.org/mbdo#TwoSpanThreeTowerSuspensionBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TwoSpanThreeTowerSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TwoSpanSuspensionBridge> .
+<https://w3id.org/mbdo#TwoSpanThreeTowerSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Two-span Three-Tower Suspension Bridge"@en .
+# 
+# https://w3id.org/mbdo#TwoSpanTwoTowerSuspensionBridge
+<https://w3id.org/mbdo#TwoSpanTwoTowerSuspensionBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#TwoSpanTwoTowerSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TwoSpanSuspensionBridge> .
+<https://w3id.org/mbdo#TwoSpanTwoTowerSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Two-span Two-Tower Suspension Bridge"@en .
+# 
+# https://w3id.org/mbdo#UShapedBridge
+<https://w3id.org/mbdo#UShapedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#UShapedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#PartiallyCurvedBridge> .
+<https://w3id.org/mbdo#UShapedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "U-shaped Bridge"@en .
+# 
+# https://w3id.org/mbdo#UShapedGirderBridge
+<https://w3id.org/mbdo#UShapedGirderBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#UShapedGirderBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#GirderBridge> .
+<https://w3id.org/mbdo#UShapedGirderBridge> <http://www.w3.org/2000/01/rdf-schema#label> "U-shaped Girder Bridge"@en .
+# 
+# https://w3id.org/mbdo#UnderslungGirderBridge
+<https://w3id.org/mbdo#UnderslungGirderBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#UnderslungGirderBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#GirderBridge> .
+<https://w3id.org/mbdo#UnderslungGirderBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Underslung Girder Bridge"@en .
+# 
+# https://w3id.org/mbdo#UnderslungTrussBridge
+<https://w3id.org/mbdo#UnderslungTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#UnderslungTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#UnderslungTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Underslung Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#UnderspannedCableStayedBridge
+<https://w3id.org/mbdo#UnderspannedCableStayedBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#UnderspannedCableStayedBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#CableStayedBridge> .
+<https://w3id.org/mbdo#UnderspannedCableStayedBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Underspanned Cable-stayed Bridge"@en .
+# 
+# https://w3id.org/mbdo#UnderspannedSuspensionBridge
+<https://w3id.org/mbdo#UnderspannedSuspensionBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#UnderspannedSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SuspensionBridge> .
+<https://w3id.org/mbdo#UnderspannedSuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Underspanned Suspension Bridge"@en .
+# 
+# https://w3id.org/mbdo#Valley
+<https://w3id.org/mbdo#Valley> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Valley> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ObstacleCrossed> .
+<https://w3id.org/mbdo#Valley> <http://www.w3.org/2000/01/rdf-schema#label> "Valley"@en .
+# 
+# https://w3id.org/mbdo#VariableWidthBridge
+<https://w3id.org/mbdo#VariableWidthBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#VariableWidthBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeByCrossSection> .
+<https://w3id.org/mbdo#VariableWidthBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Variable Width Bridge"@en .
+# 
+# https://w3id.org/mbdo#VaultedArchBridge
+<https://w3id.org/mbdo#VaultedArchBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#VaultedArchBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#ArchBridge> .
+<https://w3id.org/mbdo#VaultedArchBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Vaulted Arch Bridge"@en .
+# 
+# https://w3id.org/mbdo#VerticalLiftBridge
+<https://w3id.org/mbdo#VerticalLiftBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#VerticalLiftBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#MovableBridge> .
+<https://w3id.org/mbdo#VerticalLiftBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Vertical Lift Bridge"@en .
+# 
+# https://w3id.org/mbdo#VierendeelArchTrussBridge
+<https://w3id.org/mbdo#VierendeelArchTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#VierendeelArchTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#StructuralHybridBridge> .
+<https://w3id.org/mbdo#VierendeelArchTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Vierendeel Arch Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#VierendeelTrussBridge
+<https://w3id.org/mbdo#VierendeelTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#VierendeelTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#VierendeelTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Vierendeel Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#Wall
+<https://w3id.org/mbdo#Wall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Wall> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Tower> .
+<https://w3id.org/mbdo#Wall> <http://www.w3.org/2000/01/rdf-schema#label> "Wall"@en .
+# 
+# https://w3id.org/mbdo#Walls
+<https://w3id.org/mbdo#Walls> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Walls> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Pier> .
+<https://w3id.org/mbdo#Walls> <http://www.w3.org/2000/01/rdf-schema#label> "Walls"@en .
+# 
+# https://w3id.org/mbdo#WarrenTypeTrussBridge
+<https://w3id.org/mbdo#WarrenTypeTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#WarrenTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#WarrenTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Warren Type Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#WearingSurface
+<https://w3id.org/mbdo#WearingSurface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#WearingSurface> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Deck> .
+<https://w3id.org/mbdo#WearingSurface> <http://www.w3.org/2000/01/rdf-schema#label> "Wearing Surface"@en .
+# 
+# https://w3id.org/mbdo#WheelerTrussBridge
+<https://w3id.org/mbdo#WheelerTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#WheelerTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#WheelerTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Wheeler Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#WhippleTypeTrussBridge
+<https://w3id.org/mbdo#WhippleTypeTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#WhippleTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#WhippleTypeTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Whipple Type Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#WichertTrussBridge
+<https://w3id.org/mbdo#WichertTrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#WichertTrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#NonParallelChordTrussBridge> .
+<https://w3id.org/mbdo#WichertTrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Wichert Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#WingWall
+<https://w3id.org/mbdo#WingWall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#WingWall> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#Abutment> .
+<https://w3id.org/mbdo#WingWall> <http://www.w3.org/2000/01/rdf-schema#label> "Wing Wall"@en .
+# 
+# https://w3id.org/mbdo#ZigzagBridge
+<https://w3id.org/mbdo#ZigzagBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#ZigzagBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#KinkedBridge> .
+<https://w3id.org/mbdo#ZigzagBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Zigzag Bridge"@en .
+# 
+# https://w3id.org/mbdo#Axial(single)TrussBridge
+<https://w3id.org/mbdo#Axial(single)TrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Axial(single)TrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#Axial(single)TrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Axial(single) Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#PedestrianBridge(footbridge)
+<https://w3id.org/mbdo#PedestrianBridge(footbridge)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#PedestrianBridge(footbridge)> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeByFunction> .
+<https://w3id.org/mbdo#PedestrianBridge(footbridge)> <http://www.w3.org/2000/01/rdf-schema#label> "Pedestrian Bridge(footbridge)"@en .
+# 
+# https://w3id.org/mbdo#Pennsylvania(petit)TrussBridge
+<https://w3id.org/mbdo#Pennsylvania(petit)TrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Pennsylvania(petit)TrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#Pennsylvania(petit)TrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Pennsylvania(petit) Truss Bridge"@en .
+# 
+# https://w3id.org/mbdo#Railroad(railway)Bridge
+<https://w3id.org/mbdo#Railroad(railway)Bridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Railroad(railway)Bridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#BridgeByFunction> .
+<https://w3id.org/mbdo#Railroad(railway)Bridge> <http://www.w3.org/2000/01/rdf-schema#label> "Railroad(railway) Bridge"@en .
+# 
+# https://w3id.org/mbdo#RetractileBridge(RetractileDrawBridge)
+<https://w3id.org/mbdo#RetractileBridge(RetractileDrawBridge)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#RetractileBridge(RetractileDrawBridge)> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#MovableBridge> .
+<https://w3id.org/mbdo#RetractileBridge(RetractileDrawBridge)> <http://www.w3.org/2000/01/rdf-schema#label> "Retractile Bridge(retractile draw bridge)"@en .
+# 
+# https://w3id.org/mbdo#Simple(primitive)SuspensionBridge
+<https://w3id.org/mbdo#Simple(primitive)SuspensionBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Simple(primitive)SuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#SuspensionBridge> .
+<https://w3id.org/mbdo#Simple(primitive)SuspensionBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Simple(primitive) Suspension Bridge"@en .
+# 
+# https://w3id.org/mbdo#Waddell‘a’TrussBridge
+<https://w3id.org/mbdo#Waddell‘a’TrussBridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mbdo#Waddell‘a’TrussBridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mbdo#TrussBridge> .
+<https://w3id.org/mbdo#Waddell‘a’TrussBridge> <http://www.w3.org/2000/01/rdf-schema#label> "Waddell‘a’ Truss Bridge"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,4508 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/mbdo#"
+     xml:base="https://w3id.org/mbdo"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/mbdo#">
+        <terms:created>2025-04-22</terms:created>
+        <terms:creator>samar.aqlan</terms:creator>
+        <terms:description>The Managing Bridge Data Ontology (MBDO) provides a semantic framework for representing structural, spatial, and material information about bridges.</terms:description>
+        <terms:hasVersion>1.0</terms:hasVersion>
+        <rdfs:label>Managing Bridge Data Ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasVersion"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#containszone -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#containszone">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label>Contains Zone</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#is_contained_in -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#is_contained_in">
+        <rdfs:label>Is Contained in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#CrossedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mbdo#CrossedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/mbdo#Crossing"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#CrossedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/mbdo#ObstacleCrossed"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#CrossedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/brot#Bridge"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">Crossed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#Crossing -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mbdo#Crossing">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#Crossing"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/brot#Bridge"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#Crossing"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/mbdo#ObstacleCrossed"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">Crossing</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#HasBridge -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mbdo#HasBridge">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/mbdo#LocatedIn"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#HasBridge"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/brot#SpatialZone"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#HasBridge"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/brot#Bridge"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">Has Bridge</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#HasComponent -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mbdo#HasComponent">
+        <owl:inverseOf rdf:resource="https://w3id.org/mbdo#IsComponentOf"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#HasComponent"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/brot#Bridge"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#HasComponent"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/brot#Component"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">Has Component</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#HasImage -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mbdo#HasImage">
+        <owl:inverseOf rdf:resource="https://w3id.org/mbdo#ImageOf"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#HasImage"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/brot#Bridge"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#HasImage"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/mbdo#Image"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">Has Image</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#HasMaterial -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mbdo#HasMaterial">
+        <owl:inverseOf rdf:resource="https://w3id.org/mbdo#MaterialOf"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#HasMaterial"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/brot#Bridge"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#HasMaterial"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/brot#Component"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#HasMaterial"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">Has Material</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#HasParticipant -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mbdo#HasParticipant">
+        <owl:inverseOf rdf:resource="https://w3id.org/mbdo#InvolvedWith"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#HasParticipant"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/brot#Bridge"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#HasParticipant"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/mbdo#Participants"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">Has Participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#ImageOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mbdo#ImageOf">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#ImageOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/mbdo#Image"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#ImageOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/brot#Bridge"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">Image of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#InvolvedWith -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mbdo#InvolvedWith">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#InvolvedWith"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/mbdo#Participants"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#InvolvedWith"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/brot#Bridge"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">Involved with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#IsComponentOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mbdo#IsComponentOf">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#IsComponentOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/brot#Component"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#IsComponentOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/brot#Bridge"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">Is Component of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#LocatedIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mbdo#LocatedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#LocatedIn"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/brot#Bridge"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#LocatedIn"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/brot#SpatialZone"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">Located in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#MaterialOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mbdo#MaterialOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#MaterialOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#MaterialOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/brot#Bridge"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/mbdo#MaterialOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/brot#Component"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">Material of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/mbdo#AbutmentNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#AbutmentNumber">
+        <rdfs:label xml:lang="en">Abutment Number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#AestheticImportance -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#AestheticImportance">
+        <rdfs:label xml:lang="en">Aesthetic Importance</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#AlignmentToFglMax -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#AlignmentToFglMax">
+        <rdfs:label xml:lang="en">Alignment To FGL Max</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#AlignmentType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#AlignmentType">
+        <rdfs:label xml:lang="en">Alignment Type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#BearingType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#BearingType">
+        <rdfs:label xml:lang="en">Bearing Type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#BridgeSurface -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#BridgeSurface">
+        <rdfs:label xml:lang="en">Bridge Surface</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#BridgeType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#BridgeType">
+        <rdfs:label xml:lang="en">Bridge Type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#CablePlanes -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#CablePlanes">
+        <rdfs:label xml:lang="en">Cable Planes</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#CaptionHeadlineDe -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#CaptionHeadlineDe">
+        <rdfs:label xml:lang="en">Caption Headline DE</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#CaptionHeadlineEn -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#CaptionHeadlineEn">
+        <rdfs:label xml:lang="en">Caption Headline EN</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#ConcreteVolume -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#ConcreteVolume">
+        <rdfs:label xml:lang="en">Concrete Volume</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#ConstructionDurationMonths -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#ConstructionDurationMonths">
+        <rdfs:label xml:lang="en">Construction Duration Months</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#ConstructionFrom -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#ConstructionFrom">
+        <rdfs:label xml:lang="en">Construction from</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#ConstructionTo -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#ConstructionTo">
+        <rdfs:label xml:lang="en">Construction to</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#Coordinates -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#Coordinates">
+        <rdfs:label xml:lang="en">Coordinates</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#Copyrightnotice -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#Copyrightnotice">
+        <rdfs:label xml:lang="en">Copyrightnotice</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#CopyrightnoticeUrl -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#CopyrightnoticeUrl">
+        <rdfs:label xml:lang="en">Copyrightnotice URL</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#CreditLine -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#CreditLine">
+        <rdfs:label xml:lang="en">Credit Line</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#DateDay -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#DateDay">
+        <rdfs:label xml:lang="en">Date Day</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#DateMonth -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#DateMonth">
+        <rdfs:label xml:lang="en">Date Month</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#DateYear -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#DateYear">
+        <rdfs:label xml:lang="en">Date Year</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#DeckConstructionMethod -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#DeckConstructionMethod">
+        <rdfs:label xml:lang="en">Deck Construction Method</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#DeckDepthRange -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#DeckDepthRange">
+        <rdfs:label xml:lang="en">Deck Depth Range</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#DeckDepthTypeConstVar -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#DeckDepthTypeConstVar">
+        <rdfs:label xml:lang="en">Deck Depth Type Const Var</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#DeckPostTensioned -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#DeckPostTensioned">
+        <rdfs:label xml:lang="en">Deck Post Tensioned</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#DeckStrSteelSummary -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#DeckStrSteelSummary">
+        <rdfs:label xml:lang="en">Deck Str Steel Summary</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#DeckType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#DeckType">
+        <rdfs:label xml:lang="en">Deck Type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#DeckWidth -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#DeckWidth">
+        <rdfs:label xml:lang="en">Deck Width</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#DesignCode -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#DesignCode">
+        <rdfs:label xml:lang="en">Design Code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#Entered -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#Entered">
+        <rdfs:label xml:lang="en">Entered</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#ExpansionJointType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#ExpansionJointType">
+        <rdfs:label xml:lang="en">Expansion Joint Type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#FunctionalSectionWidthRoad -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#FunctionalSectionWidthRoad">
+        <rdfs:label xml:lang="en">Functional Section Width Road</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#FunctionalSectionWidthWalk -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#FunctionalSectionWidthWalk">
+        <rdfs:label xml:lang="en">Functional Section Width Walk</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#HorizontalAlignmentType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#HorizontalAlignmentType">
+        <rdfs:label xml:lang="en">Horizontal Alignment Type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#Id -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#Id">
+        <rdfs:label xml:lang="en">ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#ImagePath -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#ImagePath">
+        <rdfs:label xml:lang="en">Image Path</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#MainSpan -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#MainSpan">
+        <rdfs:label xml:lang="en">Main Span</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#MediaType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#MediaType">
+        <rdfs:label xml:lang="en">Media Type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#Mediaid -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#Mediaid">
+        <rdfs:label xml:lang="en">Mediaid</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#MeduaUrl -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#MeduaUrl">
+        <rdfs:label xml:lang="en">Medua URL</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#Name -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#Name">
+        <rdfs:label xml:lang="en">Name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#NumberOfGirdersCells -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#NumberOfGirdersCells">
+        <rdfs:label xml:lang="en">Number of Girders Cells</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#NumberOfLanes -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#NumberOfLanes">
+        <rdfs:label xml:lang="en">Number of Lanes</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#NumberOfTracks -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#NumberOfTracks">
+        <rdfs:label xml:lang="en">Number of Tracks</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#Photographer -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#Photographer">
+        <rdfs:label xml:lang="en">Photographer</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#PierHeight -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#PierHeight">
+        <rdfs:label xml:lang="en">Pier Height</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#PierType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#PierType">
+        <rdfs:label xml:lang="en">Pier Type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#PiersNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#PiersNumber">
+        <rdfs:label xml:lang="en">Piers Number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#PileLengthSummary -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#PileLengthSummary">
+        <rdfs:label xml:lang="en">Pile Length Summary</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#PixelHeight -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#PixelHeight">
+        <rdfs:label xml:lang="en">Pixel Height</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#PixelWidth -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#PixelWidth">
+        <rdfs:label xml:lang="en">Pixel Width</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#Prestressing -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#Prestressing">
+        <rdfs:label xml:lang="en">Prestressing</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#ProjectValueCostType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#ProjectValueCostType">
+        <rdfs:label xml:lang="en">Project Value Cost Type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#ProjectValueValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#ProjectValueValue">
+        <rdfs:label xml:lang="en">Project Value Value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#PylonHeight -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#PylonHeight">
+        <rdfs:label xml:lang="en">Pylon Height</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#PylonMaterial -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#PylonMaterial">
+        <rdfs:label xml:lang="en">Pylon Material</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#PylonNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#PylonNumber">
+        <rdfs:label xml:lang="en">Pylon Number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#PylonType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#PylonType">
+        <rdfs:label xml:lang="en">Pylon Type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#Reinforcement -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#Reinforcement">
+        <rdfs:label xml:lang="en">Reinforcement</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#SourceExternalUrl -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#SourceExternalUrl">
+        <rdfs:label xml:lang="en">Source External URL</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#SpanArrangmentDataApproaches -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#SpanArrangmentDataApproaches">
+        <rdfs:label xml:lang="en">Span Arrangment Data Approaches</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#SpanArrangmentDataMain -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#SpanArrangmentDataMain">
+        <rdfs:label xml:lang="en">Span Arrangment Data Main</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#SpanArrangmentDataOverall -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#SpanArrangmentDataOverall">
+        <rdfs:label xml:lang="en">Span Arrangment Data Overall</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#SpanNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#SpanNumber">
+        <rdfs:label xml:lang="en">Span Number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#SpecialDevices -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#SpecialDevices">
+        <rdfs:label xml:lang="en">Special Devices</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#SpecialEquipment -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#SpecialEquipment">
+        <rdfs:label xml:lang="en">Special Equipment</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#Status -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#Status">
+        <rdfs:label xml:lang="en">Status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#StructuralSteel -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#StructuralSteel">
+        <rdfs:label xml:lang="en">Structural Steel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#StructuralSteelIronAluminium -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#StructuralSteelIronAluminium">
+        <rdfs:label xml:lang="en">Structural Steel Iron Aluminium</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#StructureUrl -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#StructureUrl">
+        <rdfs:label xml:lang="en">Structure URL</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#Structureid -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#Structureid">
+        <rdfs:label xml:lang="en">Structureid</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#TotalLengthApproaches -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#TotalLengthApproaches">
+        <rdfs:label xml:lang="en">Total Length Approaches</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#TotalLengthMain -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#TotalLengthMain">
+        <rdfs:label xml:lang="en">Total Length Main</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#TotalLengthOverall -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#TotalLengthOverall">
+        <rdfs:label xml:lang="en">Total Length Overall</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#TypeOfSuspension -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#TypeOfSuspension">
+        <rdfs:label xml:lang="en">Type of Suspension</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#Updated -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#Updated">
+        <rdfs:label xml:lang="en">Updated</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mbdo#VerticalAlignmentType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mbdo#VerticalAlignmentType">
+        <rdfs:label xml:lang="en">Vertical Alignment Type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Crack -->
+
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Crack">
+        <rdfs:label>Crack</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/brot#Bridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/brot#Bridge">
+        <rdfs:comment xml:lang="en">An engineering structure which guides traffic routes (such as roads, railway lines, footpaths and cycle paths, waterways, taxiways for aircraft) or supply facilities (such as pipelines, cable routes, conveyor belts) on an elevated, suspended or free-floating structure over obstacles or over the surface of the terrain in such a way that there is a distance between the route and the surface of the terrain and thus often a possibility of undercrossing by another traffic or supply route is made possible. Bridges can be cantilevered between two abutments (single span bridge) or rest between them on several supports (multi span bridge). However, they can also be suspended from pylons by using ropes.</rdfs:comment>
+        <rdfs:label>Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/brot#BridgeType -->
+
+
+    <owl:Class rdf:about="https://w3id.org/brot#BridgeType">
+        <rdfs:label>Bridge Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/brot#Component -->
+
+
+    <owl:Class rdf:about="https://w3id.org/brot#Component">
+        <rdfs:label>Bridge Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/brot#SpatialZone -->
+
+
+    <owl:Class rdf:about="https://w3id.org/brot#SpatialZone">
+        <rdfs:label>Spatial Zone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Concrete -->
+
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Concrete">
+        <rdfs:label>Concrete</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material -->
+
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material">
+        <rdfs:label xml:lang="en">Buidling Material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Abutment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Abutment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Substructure"/>
+        <rdfs:label xml:lang="en">Abutment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#AllanTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#AllanTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Allan Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Aluminum -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Aluminum">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material"/>
+        <rdfs:label xml:lang="en">Aluminum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#AluminumBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#AluminumBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#MetalBridge"/>
+        <rdfs:label xml:lang="en">Aluminum Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#AnnularBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#AnnularBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#CurvedBridge"/>
+        <rdfs:label xml:lang="en">Annular Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ApproachSlab -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ApproachSlab">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Abutment"/>
+        <rdfs:label xml:lang="en">Approach Slab</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Arch -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Arch">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Ribs"/>
+        <rdfs:label xml:lang="en">Arch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ArchBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ArchBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeByStructure"/>
+        <rdfs:label xml:lang="en">Arch Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#AssetOwner -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#AssetOwner">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Participants"/>
+        <rdfs:label xml:lang="en">Asset Owner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#BaileyBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#BaileyBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Bailey Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#BaltimoreTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#BaltimoreTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Baltimore Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Barriers -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Barriers">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrafficProtection"/>
+        <rdfs:label xml:lang="en">Barriers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#BasculeBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#BasculeBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#MovableBridge"/>
+        <rdfs:label xml:lang="en">Bascule Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Bay -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Bay">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ObstacleCrossed"/>
+        <rdfs:label xml:lang="en">Bay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Beam -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Beam">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Deck"/>
+        <rdfs:label xml:lang="en">Beam</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Bearings -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Bearings">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ShortSpanStructure"/>
+        <rdfs:label xml:lang="en">Bearings</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#BiLevelBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#BiLevelBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesByElevation"/>
+        <rdfs:label xml:lang="en">Bi-level Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#BiLevelBridgeWithIntersectingLevels -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#BiLevelBridgeWithIntersectingLevels">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TriLevelBridge"/>
+        <rdfs:label xml:lang="en">Bi-level Bridge with Intersecting Levels</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#BiLevelBridgeWithOffsetLevels -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#BiLevelBridgeWithOffsetLevels">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TriLevelBridge"/>
+        <rdfs:label xml:lang="en">Bi-level Bridge with Offset Levels</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#BiLevelBridgeWithSuperposedLevels -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#BiLevelBridgeWithSuperposedLevels">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TriLevelBridge"/>
+        <rdfs:label xml:lang="en">Bi-level Bridge with Superposed Levels</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#BollmannTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#BollmannTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Bollmann Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#BowstringArchTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#BowstringArchTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#NonParallelChordTrussBridge"/>
+        <rdfs:label xml:lang="en">Bowstring Arch Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#BoxGirderBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#BoxGirderBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#GirderBridge"/>
+        <rdfs:label xml:lang="en">Box Girder Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Bracings -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Bracings">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ShortSpanStructure"/>
+        <rdfs:label xml:lang="en">Bracings</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#BridgeByCrossSection -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#BridgeByCrossSection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesByAlignment"/>
+        <rdfs:label xml:lang="en">Bridge by Cross Section</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#BridgeByFunction -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#BridgeByFunction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeClassification"/>
+        <rdfs:label xml:lang="en">Bridge by Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#BridgeByLongitudinalSystem -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#BridgeByLongitudinalSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeClassification"/>
+        <rdfs:label xml:lang="en">Bridge by Longitudinal System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#BridgeByStructure -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#BridgeByStructure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeClassification"/>
+        <rdfs:label xml:lang="en">Bridge by Structure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#BridgeClassification -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#BridgeClassification">
+        <rdfs:label xml:lang="en">Bridge Classification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#BridgesByAlignment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#BridgesByAlignment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeClassification"/>
+        <rdfs:label xml:lang="en">Bridges by Alignment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#BridgesByConstructionMaterial -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#BridgesByConstructionMaterial">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeClassification"/>
+        <rdfs:label xml:lang="en">Bridges by Construction Material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#BridgesByElevation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#BridgesByElevation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeClassification"/>
+        <rdfs:label xml:lang="en">Bridges by Elevation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#BridgesByHorizontalAlighnment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#BridgesByHorizontalAlighnment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesByAlignment"/>
+        <rdfs:label xml:lang="en">Bridges by Horizontal Alighnment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#BridgesBySupportConditions -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#BridgesBySupportConditions">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeClassification"/>
+        <rdfs:label xml:lang="en">Bridges by Support Conditions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#BridgesByVerticalAlignment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#BridgesByVerticalAlignment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesByAlignment"/>
+        <rdfs:label xml:lang="en">Bridges by Vertical Alignment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#BrownTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#BrownTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Brown Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#BurrArchTypeTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#BurrArchTypeTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Burr Arch Type Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#CableNetBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#CableNetBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeByLongitudinalSystem"/>
+        <rdfs:label xml:lang="en">Cable Net Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#CableStayedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#CableStayedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeByLongitudinalSystem"/>
+        <rdfs:label xml:lang="en">Cable-stayed Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#CableStayedBridgeWithCurvedDeck -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#CableStayedBridgeWithCurvedDeck">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#CableStayedBridge"/>
+        <rdfs:label xml:lang="en">Cable-stayed Bridge with Curved Deck</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#CableStayedBridgeWithFanSystem -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#CableStayedBridgeWithFanSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#CableStayedBridge"/>
+        <rdfs:label xml:lang="en">Cable-stayed Bridge with Fan System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#CableStayedBridgeWithHarpSystem -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#CableStayedBridgeWithHarpSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#CableStayedBridge"/>
+        <rdfs:label xml:lang="en">Cable-stayed Bridge with Harp System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#CableStayedBridgeWithSemiFanSystem -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#CableStayedBridgeWithSemiFanSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#CableStayedBridge"/>
+        <rdfs:label xml:lang="en">Cable-stayed Bridge with Semi-fan System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#CableStayedBridgeWithoutBackstays -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#CableStayedBridgeWithoutBackstays">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#CableStayedBridge"/>
+        <rdfs:label xml:lang="en">Cable-stayed Bridge without Backstays</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Cables -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Cables">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#LongSpanStructures"/>
+        <rdfs:label xml:lang="en">Cables</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#CallenderHamiltonBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#CallenderHamiltonBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Callender Hamilton Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#CamelbackTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#CamelbackTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ParkerTypeTrussBridge"/>
+        <rdfs:label xml:lang="en">Camelback Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Canal -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Canal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ObstacleCrossed"/>
+        <rdfs:label xml:lang="en">Canal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#CanalBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#CanalBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeByFunction"/>
+        <rdfs:label xml:lang="en">Canal Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#CantileverTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#CantileverTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Cantilever Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#CapBeam -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#CapBeam">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Tower"/>
+        <rdfs:label xml:lang="en">Cap Beam</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#CapBeams -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#CapBeams">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Pier"/>
+        <rdfs:label xml:lang="en">Cap Beams</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ChainSuspensionBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ChainSuspensionBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SuspensionBridge"/>
+        <rdfs:label xml:lang="en">Chain Suspension Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#City -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#City">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/brot#SpatialZone"/>
+        <rdfs:label xml:lang="en">City</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Column -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Column">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Tower"/>
+        <rdfs:label xml:lang="en">Column</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Columns -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Columns">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Pier"/>
+        <rdfs:label xml:lang="en">Columns</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#CompositeBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#CompositeBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesByConstructionMaterial"/>
+        <rdfs:label xml:lang="en">Composite Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#CompositeMaterial -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#CompositeMaterial">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material"/>
+        <rdfs:label xml:lang="en">Composite Material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ConcaveConvexBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ConcaveConvexBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#VariableWidthBridge"/>
+        <rdfs:label xml:lang="en">Concave Convex Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Concrete -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Concrete">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material"/>
+        <rdfs:label xml:lang="en">Concrete</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ConcreteBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ConcreteBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesByConstructionMaterial"/>
+        <rdfs:label xml:lang="en">Concrete Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ConstantWidthBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ConstantWidthBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeByCrossSection"/>
+        <rdfs:label xml:lang="en">Constant Width Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ConstantlyCurvedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ConstantlyCurvedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#CurvedBridge"/>
+        <rdfs:label xml:lang="en">Constantly Curved Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ContinuousTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ContinuousTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Continuous Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Contractor -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Contractor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Participants"/>
+        <rdfs:label xml:lang="en">Contractor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ConventiallySupportedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ConventiallySupportedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesBySupportConditions"/>
+        <rdfs:label xml:lang="en">Conventially Supported Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ConvexConcaveBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ConvexConcaveBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#VariableWidthBridge"/>
+        <rdfs:label xml:lang="en">Convex Concave Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#CorbelArchBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#CorbelArchBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ArchBridge"/>
+        <rdfs:label xml:lang="en">Corbel Arch Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Country -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Country">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/brot#SpatialZone"/>
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#CoveredBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#CoveredBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeByLongitudinalSystem"/>
+        <rdfs:label xml:lang="en">Covered Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Creek -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Creek">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ObstacleCrossed"/>
+        <rdfs:label xml:lang="en">Creek</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#CurvedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#CurvedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesByVerticalAlignment"/>
+        <rdfs:label xml:lang="en">Curved Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#DareTypeTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#DareTypeTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Dare Type Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#DeburghTypeTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#DeburghTypeTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Deburgh Type Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Deck -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Deck">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Superstructure"/>
+        <rdfs:label xml:lang="en">Deck</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#DeckArchBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#DeckArchBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ArchBridge"/>
+        <rdfs:label xml:lang="en">Deck Arch Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#DeckTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#DeckTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Deck Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#DesignOrPlanning -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#DesignOrPlanning">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Participants"/>
+        <rdfs:label xml:lang="en">Design or Planning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Diaphragms -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Diaphragms">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ShortSpanStructure"/>
+        <rdfs:label xml:lang="en">Diaphragms</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#DoubleCellBoxGriderBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#DoubleCellBoxGriderBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BoxGirderBridge"/>
+        <rdfs:label xml:lang="en">Double-cell Box Grider Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#DoubleConcaveBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#DoubleConcaveBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#VariableWidthBridge"/>
+        <rdfs:label xml:lang="en">Double Concave Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#DoubleConvexBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#DoubleConvexBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#VariableWidthBridge"/>
+        <rdfs:label xml:lang="en">Double Convex Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#DoubleIntersectionWarrenTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#DoubleIntersectionWarrenTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#WarrenTypeTrussBridge"/>
+        <rdfs:label xml:lang="en">Double Intersection Warren Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#DoubleTSectionGirderBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#DoubleTSectionGirderBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TSectionGirderBridge"/>
+        <rdfs:label xml:lang="en">Double T-Section Girder Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#DoubleThreeSpanSuspensionBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#DoubleThreeSpanSuspensionBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SuspensionBridge"/>
+        <rdfs:label xml:lang="en">Double Three-span Suspension Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#DrawBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#DrawBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#MovableBridge"/>
+        <rdfs:label xml:lang="en">Draw Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#DrilledShafts -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#DrilledShafts">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Foundations"/>
+        <rdfs:label xml:lang="en">Drilled Shafts</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#EngesserTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#EngesserTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Engesser Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ExpansionJoints -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ExpansionJoints">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#StructureProtection"/>
+        <rdfs:label xml:lang="en">Expansion Joints</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ExtradosedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ExtradosedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#CableStayedBridge"/>
+        <rdfs:label xml:lang="en">Extradosed Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#FiberReinforcedConcreteBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#FiberReinforcedConcreteBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ConcreteBridge"/>
+        <rdfs:label xml:lang="en">Fiber Reinforced Concrete Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#FinkTypeTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#FinkTypeTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Fink Type Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#FlexuralMembers -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#FlexuralMembers">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ShortSpanStructure"/>
+        <rdfs:label xml:lang="en">Flexural Members</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#FoldableBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#FoldableBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#MovableBridge"/>
+        <rdfs:label xml:lang="en">Foldable Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Foundation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Foundation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Abutment"/>
+        <rdfs:label xml:lang="en">Foundation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Foundations -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Foundations">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Pier"/>
+        <rdfs:label xml:lang="en">Foundations</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#FourHingedArchBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#FourHingedArchBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ArchBridge"/>
+        <rdfs:label xml:lang="en">Four-hinged Arch Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#FourSpanExtradosedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#FourSpanExtradosedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ExtradosedBridge"/>
+        <rdfs:label xml:lang="en">Four-span Extradosed Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#FourWayBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#FourWayBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesByHorizontalAlighnment"/>
+        <rdfs:label xml:lang="en">Four-way Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#FreeCantileverGirderBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#FreeCantileverGirderBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#GirderBridge"/>
+        <rdfs:label xml:lang="en">Free Cantilever Girder Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#GerberTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#GerberTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#CantileverTrussBridge"/>
+        <rdfs:label xml:lang="en">Gerber Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Girder -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Girder">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Deck"/>
+        <rdfs:label xml:lang="en">Girder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#GirderBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#GirderBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeByStructure"/>
+        <rdfs:label xml:lang="en">Girder Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#GirderBridgeWithSuspendedDeck -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#GirderBridgeWithSuspendedDeck">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#GirderBridge"/>
+        <rdfs:label xml:lang="en">Girder Bridge With Suspended Deck</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#GisclardBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#GisclardBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#CableStayedBridge"/>
+        <rdfs:label xml:lang="en">Gisclard Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#GlassBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#GlassBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesByConstructionMaterial"/>
+        <rdfs:label xml:lang="en">Glass Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#GreinerTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#GreinerTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Greiner Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Guardrails -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Guardrails">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Barriers"/>
+        <rdfs:label xml:lang="en">Guardrails</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#HalfThroughArchBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#HalfThroughArchBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ArchBridge"/>
+        <rdfs:label xml:lang="en">Half-through Arch Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#HalfThroughTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#HalfThroughTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Half Through Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Hangers -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Hangers">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#LongSpanStructures"/>
+        <rdfs:label xml:lang="en">Hangers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#HaunchedGirderBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#HaunchedGirderBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#GirderBridge"/>
+        <rdfs:label xml:lang="en">Haunched Girder Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#HauptTypeTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#HauptTypeTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Haupt Type Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#HelicalBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#HelicalBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Helical Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#HoweTypeTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#HoweTypeTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Howe Type Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#HybridSimpleSuspensionBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#HybridSimpleSuspensionBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SuspensionBridge"/>
+        <rdfs:label xml:lang="en">Hybrid Simple Suspension Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#HydraulicBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#HydraulicBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#MovableBridge"/>
+        <rdfs:label xml:lang="en">Hydraulic Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#HyperbolicBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#HyperbolicBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeByLongitudinalSystem"/>
+        <rdfs:label xml:lang="en">Hyperbolic Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Image -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Image">
+        <rdfs:label xml:lang="en">Image</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#IntegralBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#IntegralBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesBySupportConditions"/>
+        <rdfs:label xml:lang="en">Integral Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#IntersectingLevelsBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#IntersectingLevelsBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BiLevelBridge"/>
+        <rdfs:label xml:lang="en">Intersecting Levels Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#InvertedFinkTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#InvertedFinkTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#CableStayedBridge"/>
+        <rdfs:label xml:lang="en">Inverted Fink Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Iron -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Iron">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material"/>
+        <rdfs:label xml:lang="en">Iron</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#IronBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#IronBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#MetalBridge"/>
+        <rdfs:label xml:lang="en">Iron Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#IronConcreteComposite -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#IronConcreteComposite">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#CompositeMaterial"/>
+        <rdfs:label xml:lang="en">Iron Concrete Composite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#KTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#KTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">KTruss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#KelloggTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#KelloggTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Kellogg Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#KingpostTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#KingpostTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Kingpost Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#KinkedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#KinkedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeByCrossSection"/>
+        <rdfs:label xml:lang="en">Kinked Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#LShapedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#LShapedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#KinkedBridge"/>
+        <rdfs:label xml:lang="en">L-shaped Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Lakes -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Lakes">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ObstacleCrossed"/>
+        <rdfs:label xml:lang="en">Lakes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#LaneTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#LaneTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Lane Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#LatticeTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#LatticeTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Lattice Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#LenticularBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#LenticularBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#NonParallelChordTrussBridge"/>
+        <rdfs:label xml:lang="en">Lenticular Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#LenticularTrussBridgeWithPenticularWeb -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#LenticularTrussBridgeWithPenticularWeb">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#LenticularBridge"/>
+        <rdfs:label xml:lang="en">Lenticular Truss Bridge with Penticular Web</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#LightweightConcreteBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#LightweightConcreteBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ConcreteBridge"/>
+        <rdfs:label xml:lang="en">Lightweight Concrete Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#LongSpanStructures -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#LongSpanStructures">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Superstructure"/>
+        <rdfs:label xml:lang="en">Long Span Structures</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#LongTypeTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#LongTypeTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Long Type Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Masonary -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Masonary">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material"/>
+        <rdfs:label xml:lang="en">Masonary</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#MasonryBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#MasonryBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesByConstructionMaterial"/>
+        <rdfs:label xml:lang="en">Masonry Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#MccallumTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#MccallumTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Mccallum Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#McdonaldTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#McdonaldTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Mcdonald Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Metal -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Metal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material"/>
+        <rdfs:label xml:lang="en">Metal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#MetalBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#MetalBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesByConstructionMaterial"/>
+        <rdfs:label xml:lang="en">Metal Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#MohniéLatticeTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#MohniéLatticeTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Mohnié Lattice Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#MonoCableSuspensionBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#MonoCableSuspensionBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SuspensionBridge"/>
+        <rdfs:label xml:lang="en">Mono-cable Suspension Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#MoonBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#MoonBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ArchBridge"/>
+        <rdfs:label xml:lang="en">Moon Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#MovableBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#MovableBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeByLongitudinalSystem"/>
+        <rdfs:label xml:lang="en">Movable Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#MultiSpanContinuousGirderBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#MultiSpanContinuousGirderBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#GirderBridge"/>
+        <rdfs:label xml:lang="en">Multi-span Continuous Girder Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#MultiSpanExtradosedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#MultiSpanExtradosedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ExtradosedBridge"/>
+        <rdfs:label xml:lang="en">Multi-span Extradosed Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#MultiSpanSuspensionBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#MultiSpanSuspensionBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SuspensionBridge"/>
+        <rdfs:label xml:lang="en">Multi-span Suspension Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#MultipleGirderBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#MultipleGirderBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#GirderBridge"/>
+        <rdfs:label xml:lang="en">Multiple Girder Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#MultipleKingpostTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#MultipleKingpostTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#KingpostTrussBridge"/>
+        <rdfs:label xml:lang="en">Multiple Kingpost Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#MultipleSpanCableStayedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#MultipleSpanCableStayedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#CableStayedBridge"/>
+        <rdfs:label xml:lang="en">Multiple-span Cable-stayed Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#MultipleTSectionGirderBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#MultipleTSectionGirderBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TSectionGirderBridge"/>
+        <rdfs:label xml:lang="en">Multiple T-Section Girder Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#MultiwayBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#MultiwayBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesByHorizontalAlighnment"/>
+        <rdfs:label xml:lang="en">Multiway Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#NonParallelChordTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#NonParallelChordTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Non Parallel Chord Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ObliqueBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ObliqueBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesBySupportConditions"/>
+        <rdfs:label xml:lang="en">Oblique Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ObstacleCrossed -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ObstacleCrossed">
+        <rdfs:label xml:lang="en">Obstacle Crossed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#OffsetLevelsBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#OffsetLevelsBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BiLevelBridge"/>
+        <rdfs:label xml:lang="en">Offset Levels Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#PaddlefordTypeTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#PaddlefordTypeTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Paddleford Type Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ParallelChordTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ParallelChordTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Parallel Chord Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Parapets -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Parapets">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#StructureProtection"/>
+        <rdfs:label xml:lang="en">Parapets</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ParkerTypeTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ParkerTypeTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#NonParallelChordTrussBridge"/>
+        <rdfs:label xml:lang="en">Parker Type Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#PartiallyCurvedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#PartiallyCurvedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesByVerticalAlignment"/>
+        <rdfs:label xml:lang="en">Partially Curved Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#PartiallyObliqueBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#PartiallyObliqueBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesBySupportConditions"/>
+        <rdfs:label xml:lang="en">Partially Oblique Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Participants -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Participants">
+        <rdfs:label xml:lang="en">Participants</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#PauliTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#PauliTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#LenticularBridge"/>
+        <rdfs:label xml:lang="en">Pauli Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#PegramTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#PegramTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#NonParallelChordTrussBridge"/>
+        <rdfs:label xml:lang="en">Pegram Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#PendulumBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#PendulumBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#MovableBridge"/>
+        <rdfs:label xml:lang="en">Pendulum Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Pier -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Pier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Substructure"/>
+        <rdfs:label xml:lang="en">Pier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#PileBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#PileBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeByLongitudinalSystem"/>
+        <rdfs:label xml:lang="en">Pile Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Piles -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Piles">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Foundations"/>
+        <rdfs:label xml:lang="en">Piles</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#PinConnectedPrattTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#PinConnectedPrattTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#PrattTypeTrussBridge"/>
+        <rdfs:label xml:lang="en">Pin Connected Pratt Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#PistonStayedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#PistonStayedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#MovableBridge"/>
+        <rdfs:label xml:lang="en">Piston Stayed Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#PlanoConcaveBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#PlanoConcaveBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#VariableWidthBridge"/>
+        <rdfs:label xml:lang="en">Plano Concave Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#PlanoConvexBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#PlanoConvexBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#VariableWidthBridge"/>
+        <rdfs:label xml:lang="en">Plano Convex Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#PlateGirderBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#PlateGirderBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#GirderBridge"/>
+        <rdfs:label xml:lang="en">Plate Girder Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#PolygonalTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#PolygonalTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#NonParallelChordTrussBridge"/>
+        <rdfs:label xml:lang="en">Polygonal Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#PontoonBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#PontoonBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeByLongitudinalSystem"/>
+        <rdfs:label xml:lang="en">Pontoon Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#PonyTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#PonyTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Pony Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#PostTypeTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#PostTypeTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Post Type Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#PrattTypeTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#PrattTypeTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Pratt Type Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#PrestressedConcreteBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#PrestressedConcreteBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ConcreteBridge"/>
+        <rdfs:label xml:lang="en">Prestressed Concrete Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Protection -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Protection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/brot#Component"/>
+        <rdfs:label xml:lang="en">Protection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Pylon -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Pylon">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Tower"/>
+        <rdfs:label xml:lang="en">Pylon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#QuadrupleGirderBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#QuadrupleGirderBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#GirderBridge"/>
+        <rdfs:label xml:lang="en">Quadruple Girder Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#QuadrupleTSectionGirderBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#QuadrupleTSectionGirderBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TSectionGirderBridge"/>
+        <rdfs:label xml:lang="en">Quadruple T-Section Girder Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#QueenpostTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#QueenpostTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Queenpost Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Region -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Region">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/brot#SpatialZone"/>
+        <rdfs:label xml:lang="en">Region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ReinforcedConcrete -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ReinforcedConcrete">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#CompositeMaterial"/>
+        <rdfs:label xml:lang="en">Reinforced Concrete</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ReinforcedConcreteBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ReinforcedConcreteBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ConcreteBridge"/>
+        <rdfs:label xml:lang="en">Reinforced Concrete Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#RetractableBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#RetractableBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#MovableBridge"/>
+        <rdfs:label xml:lang="en">Retractable Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Ribs -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Ribs">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#LongSpanStructures"/>
+        <rdfs:label xml:lang="en">Ribs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#RigidFrameBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#RigidFrameBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeByLongitudinalSystem"/>
+        <rdfs:label xml:lang="en">Rigid Frame Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#RigidFrameBridgeWithInclinedLegs -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#RigidFrameBridgeWithInclinedLegs">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#RigidFrameBridge"/>
+        <rdfs:label xml:lang="en">Rigid Frame Bridge with Inclined Legs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#RigidFrameBridgeWithTreeShapedLegs -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#RigidFrameBridgeWithTreeShapedLegs">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#RigidFrameBridge"/>
+        <rdfs:label xml:lang="en">Rigid Frame Bridge with Tree-shaped Legs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#RigidFrameBridgeWithUnderslungMainSpan -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#RigidFrameBridgeWithUnderslungMainSpan">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#RigidFrameBridge"/>
+        <rdfs:label xml:lang="en">Rigid Frame Bridge with Underslung Main Span</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#RigidFrameBridgeWithVShapedLegs -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#RigidFrameBridgeWithVShapedLegs">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#RigidFrameBridge"/>
+        <rdfs:label xml:lang="en">Rigid Frame Bridge with V-shaped Legs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#RigidHalfFrameBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#RigidHalfFrameBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#RigidFrameBridge"/>
+        <rdfs:label xml:lang="en">Rigid Half Frame Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#River -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#River">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ObstacleCrossed"/>
+        <rdfs:label xml:lang="en">River</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Road -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Road">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ObstacleCrossed"/>
+        <rdfs:label xml:lang="en">Road</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#RoadBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#RoadBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeByFunction"/>
+        <rdfs:label xml:lang="en">Road Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SCurvedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SCurvedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#CurvedBridge"/>
+        <rdfs:label xml:lang="en">S-curved Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SchwedlerTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SchwedlerTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#NonParallelChordTrussBridge"/>
+        <rdfs:label xml:lang="en">Schwedler Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Sea -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Sea">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ObstacleCrossed"/>
+        <rdfs:label xml:lang="en">Sea</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SegmentalBoxGirders -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SegmentalBoxGirders">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#LongSpanStructures"/>
+        <rdfs:label xml:lang="en">Segmental Box Girders</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SelfAnchoredMonoCableSuspensionBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SelfAnchoredMonoCableSuspensionBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SelfAnchoredSuspensionBridge"/>
+        <rdfs:label xml:lang="en">Self-anchored Mono Cable Suspension Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SelfAnchoredSuspensionBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SelfAnchoredSuspensionBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SuspensionBridge"/>
+        <rdfs:label xml:lang="en">Self-anchored Suspension Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SelfAnchoredSuspensionBridgeWithCableStays -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SelfAnchoredSuspensionBridgeWithCableStays">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SelfAnchoredSuspensionBridge"/>
+        <rdfs:label xml:lang="en">Self-anchored Suspension Bridge With Cable Stays</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SelfAnchoredSuspensionBridgeWithDiscontinuousCables -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SelfAnchoredSuspensionBridgeWithDiscontinuousCables">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SelfAnchoredSuspensionBridge"/>
+        <rdfs:label xml:lang="en">Self-anchored Suspension Bridge With Discontinuous Cables</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SemiIntegralBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SemiIntegralBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesBySupportConditions"/>
+        <rdfs:label xml:lang="en">Semi Integral Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SemiSelfAnchoredSuspensionBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SemiSelfAnchoredSuspensionBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SuspensionBridge"/>
+        <rdfs:label xml:lang="en">Semi-self-anchored Suspension Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SepareteSuperstructuresBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SepareteSuperstructuresBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesByVerticalAlignment"/>
+        <rdfs:label xml:lang="en">Separete Superstructures Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ShortSpanStructure -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ShortSpanStructure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Superstructure"/>
+        <rdfs:label xml:lang="en">Short Span Structure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SimplySupportedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SimplySupportedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesBySupportConditions"/>
+        <rdfs:label xml:lang="en">Simply Supported Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SingleCellBoxGirderBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SingleCellBoxGirderBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BoxGirderBridge"/>
+        <rdfs:label xml:lang="en">Single-cell Box Girder Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SingleLevelBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SingleLevelBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesByElevation"/>
+        <rdfs:label xml:lang="en">Single-level Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SingleSpanCableStayedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SingleSpanCableStayedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#CableStayedBridge"/>
+        <rdfs:label xml:lang="en">Single-span Cable-stayed Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SingleSpanExtradosedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SingleSpanExtradosedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ExtradosedBridge"/>
+        <rdfs:label xml:lang="en">Single-span Extradosed Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SingleSpanGirderBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SingleSpanGirderBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#GirderBridge"/>
+        <rdfs:label xml:lang="en">Single-span Girder Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SingleSpanSinglePylonCableStayedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SingleSpanSinglePylonCableStayedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SingleSpanCableStayedBridge"/>
+        <rdfs:label xml:lang="en">Single-span Single-pylon Cable-stayed Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SingleSpanSingleTowerSemiSelfAnchoredSuspensionBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SingleSpanSingleTowerSemiSelfAnchoredSuspensionBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SemiSelfAnchoredSuspensionBridge"/>
+        <rdfs:label xml:lang="en">Single-span Single-tower Semi-self-anchored Suspension Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SingleSpanSingleTowerSuspensionBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SingleSpanSingleTowerSuspensionBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SingleSpanSuspensionBridge"/>
+        <rdfs:label xml:lang="en">Single-span Single-tower Suspension Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SingleSpanSuspensionBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SingleSpanSuspensionBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SuspensionBridge"/>
+        <rdfs:label xml:lang="en">Single-span Suspension Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SingleSpanTwoPylonCableStayedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SingleSpanTwoPylonCableStayedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SingleSpanCableStayedBridge"/>
+        <rdfs:label xml:lang="en">Single-span Two-pylon Cable-stayed Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SingleSpanTwoTowerSuspensionBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SingleSpanTwoTowerSuspensionBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SingleSpanSuspensionBridge"/>
+        <rdfs:label xml:lang="en">Single-span Two-tower Suspension Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SingleSuperstructureBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SingleSuperstructureBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesByVerticalAlignment"/>
+        <rdfs:label xml:lang="en">Single Superstructure Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SingleTSectionGirderBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SingleTSectionGirderBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TSectionGirderBridge"/>
+        <rdfs:label xml:lang="en">Single T-Section Girder Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SingleTowerSelfAnchoredSuspensionBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SingleTowerSelfAnchoredSuspensionBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SelfAnchoredSuspensionBridge"/>
+        <rdfs:label xml:lang="en">Single-tower Self-anchored Suspension Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SinusoidalTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SinusoidalTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#NonParallelChordTrussBridge"/>
+        <rdfs:label xml:lang="en">Sinusoidal Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Slab -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Slab">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#StructuralSurface"/>
+        <rdfs:label xml:lang="en">Slab</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SlabBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SlabBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeByStructure"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#GirderBridge"/>
+        <rdfs:label xml:lang="en">Slab Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SlopeWalls -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SlopeWalls">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#StructureProtection"/>
+        <rdfs:label xml:lang="en">Slope Walls</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SmithTypeTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SmithTypeTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Smith Type Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Spandrels -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Spandrels">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#LongSpanStructures"/>
+        <rdfs:label xml:lang="en">Spandrels</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SpiralBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SpiralBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#CurvedBridge"/>
+        <rdfs:label xml:lang="en">Spiral Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SpreadFooting -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SpreadFooting">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Foundations"/>
+        <rdfs:label xml:lang="en">Spread Footing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#StearnsTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#StearnsTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Stearns Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Steel -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Steel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material"/>
+        <rdfs:label xml:lang="en">Steel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SteelBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SteelBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#MetalBridge"/>
+        <rdfs:label xml:lang="en">Steel Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SteelConcreteComposite -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SteelConcreteComposite">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#CompositeMaterial"/>
+        <rdfs:label xml:lang="en">Steel Concrete Composite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Stem -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Stem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Abutment"/>
+        <rdfs:label xml:lang="en">Stem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#StraightBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#StraightBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesByVerticalAlignment"/>
+        <rdfs:label xml:lang="en">Straight Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Straits -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Straits">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ObstacleCrossed"/>
+        <rdfs:label xml:lang="en">Straits</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#StressedRibbonBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#StressedRibbonBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeByLongitudinalSystem"/>
+        <rdfs:label xml:lang="en">Stressed Ribbon Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#StructuralHybridBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#StructuralHybridBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeByStructure"/>
+        <rdfs:label xml:lang="en">Structural Hybrid Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#StructuralSurface -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#StructuralSurface">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Deck"/>
+        <rdfs:label xml:lang="en">Structural Surface</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#StructureProtection -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#StructureProtection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Protection"/>
+        <rdfs:label xml:lang="en">Structure Protection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SubdividedWarrenTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SubdividedWarrenTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#WarrenTypeTrussBridge"/>
+        <rdfs:label xml:lang="en">Subdivided Warren Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SubmersibleBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SubmersibleBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#MovableBridge"/>
+        <rdfs:label xml:lang="en">Submersible Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Substructure -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Substructure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/brot#Component"/>
+        <rdfs:label xml:lang="en">Substructure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SuperposedLevelsBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SuperposedLevelsBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BiLevelBridge"/>
+        <rdfs:label xml:lang="en">Superposed Levels Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Superstructure -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Superstructure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/brot#Component"/>
+        <rdfs:label xml:lang="en">Superstructure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SuspensionBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SuspensionBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeByStructure"/>
+        <rdfs:label xml:lang="en">Suspension Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SuspensionBridgeWithCableStays -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SuspensionBridgeWithCableStays">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SuspensionBridge"/>
+        <rdfs:label xml:lang="en">Suspension Bridge With Cable Stays</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SuspensionBridgeWithDiagonalHangers -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SuspensionBridgeWithDiagonalHangers">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SuspensionBridge"/>
+        <rdfs:label xml:lang="en">Suspension Bridge With Diagonal Hangers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#SwingBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#SwingBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#MovableBridge"/>
+        <rdfs:label xml:lang="en">Swing Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TSectionGirderBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TSectionGirderBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#GirderBridge"/>
+        <rdfs:label xml:lang="en">T-section Girder Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TensegrityBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TensegrityBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#CableStayedBridge"/>
+        <rdfs:label xml:lang="en">Tensegrity Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TextileReinforcedConcreteBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TextileReinforcedConcreteBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ConcreteBridge"/>
+        <rdfs:label xml:lang="en">Textile Reinforced Concrete Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ThacherTypeTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ThacherTypeTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Thacher Type Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ThreeHingedArchBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ThreeHingedArchBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ArchBridge"/>
+        <rdfs:label xml:lang="en">Three-hinged Arch Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ThreeHingedRigidFrameBridgeWithInclinedLegs -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ThreeHingedRigidFrameBridgeWithInclinedLegs">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#RigidFrameBridgeWithInclinedLegs"/>
+        <rdfs:label xml:lang="en">Three-hinged Rigid Frame Bridge with Inclined Legs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ThreeSpanCableStayedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ThreeSpanCableStayedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#CableStayedBridge"/>
+        <rdfs:label xml:lang="en">Three-span Cable-stayed Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ThreeSpanContinuousGirderBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ThreeSpanContinuousGirderBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#GirderBridge"/>
+        <rdfs:label xml:lang="en">Three-span Continuous Girder Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ThreeSpanExtradosedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ThreeSpanExtradosedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ExtradosedBridge"/>
+        <rdfs:label xml:lang="en">Three-span Extradosed Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ThreeSpanSemiSelfAnchoredSuspensionBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ThreeSpanSemiSelfAnchoredSuspensionBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SemiSelfAnchoredSuspensionBridge"/>
+        <rdfs:label xml:lang="en">Three-span Semi-self-anchored Suspension Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ThreeSpanSuspensionBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ThreeSpanSuspensionBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SuspensionBridge"/>
+        <rdfs:label xml:lang="en">Three-span Suspension Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ThreeWayBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ThreeWayBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesByHorizontalAlighnment"/>
+        <rdfs:label xml:lang="en">Three-way Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ThroughArchBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ThroughArchBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ArchBridge"/>
+        <rdfs:label xml:lang="en">Through Arch Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ThroughRigidFrameBridgeWithInclinedLegs -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ThroughRigidFrameBridgeWithInclinedLegs">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#RigidFrameBridgeWithInclinedLegs"/>
+        <rdfs:label xml:lang="en">Through Rigid Frame Bridge with Inclined Legs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ThroughRigidFrameBridgeWithTreeShapedLegs -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ThroughRigidFrameBridgeWithTreeShapedLegs">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#RigidFrameBridgeWithTreeShapedLegs"/>
+        <rdfs:label xml:lang="en">Through Rigid Frame Bridge with Tree-shaped Legs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ThroughTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ThroughTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Through Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TiedArchBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TiedArchBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ArchBridge"/>
+        <rdfs:label xml:lang="en">Tied-arch Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Ties -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Ties">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#LongSpanStructures"/>
+        <rdfs:label xml:lang="en">Ties</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TiltBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TiltBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#MovableBridge"/>
+        <rdfs:label xml:lang="en">Tilt Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Timber -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Timber">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.3/BuildingMaterials#Material"/>
+        <rdfs:label xml:lang="en">Timber</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TimberBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TimberBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesByConstructionMaterial"/>
+        <rdfs:label xml:lang="en">Timber Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Tower -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Tower">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Substructure"/>
+        <rdfs:label xml:lang="en">Tower</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TownLatticeTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TownLatticeTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Town Lattice Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TrafficProtection -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TrafficProtection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Protection"/>
+        <rdfs:label xml:lang="en">Traffic Protection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TrapezoidalBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TrapezoidalBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#VariableWidthBridge"/>
+        <rdfs:label xml:lang="en">Trapezoidal Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TrestleBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TrestleBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeByLongitudinalSystem"/>
+        <rdfs:label xml:lang="en">Trestle Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TriLevelBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TriLevelBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgesByElevation"/>
+        <rdfs:label xml:lang="en">Tri-level Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TripleGirderBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TripleGirderBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#GirderBridge"/>
+        <rdfs:label xml:lang="en">Triple Girder Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TripleSuspensionBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TripleSuspensionBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SuspensionBridge"/>
+        <rdfs:label xml:lang="en">Triple Suspension Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TripleTSectionGirderBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TripleTSectionGirderBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TSectionGirderBridge"/>
+        <rdfs:label xml:lang="en">Triple T-Section Girder Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TruesdellTypeTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TruesdellTypeTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Truesdell Type Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TrussArchBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TrussArchBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ArchBridge"/>
+        <rdfs:label xml:lang="en">Truss Arch Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeByStructure"/>
+        <rdfs:label xml:lang="en">Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TrussBridgeWithSuspendedDeck -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TrussBridgeWithSuspendedDeck">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Truss Bridge with Suspended Deck</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TrussLegBedsteadBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TrussLegBedsteadBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Truss Leg Bedstead Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TrussMembers -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TrussMembers">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#LongSpanStructures"/>
+        <rdfs:label xml:lang="en">Truss Members</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TubularBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TubularBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SingleCellBoxGirderBridge"/>
+        <rdfs:label xml:lang="en">Tubular Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TwinGirderBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TwinGirderBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#GirderBridge"/>
+        <rdfs:label xml:lang="en">Twin Girder Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TwoHingedArchBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TwoHingedArchBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ArchBridge"/>
+        <rdfs:label xml:lang="en">Two-hinged Arch Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TwoHingedRigidFrameBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TwoHingedRigidFrameBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#RigidFrameBridge"/>
+        <rdfs:label xml:lang="en">Two-hinged Rigid Frame Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TwoHingedRigidFrameBridgeWithInclinedLegs -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TwoHingedRigidFrameBridgeWithInclinedLegs">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#RigidFrameBridgeWithInclinedLegs"/>
+        <rdfs:label xml:lang="en">Two-hinged Rigid Frame Bridge with Inclined Legs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TwoSpanCableStayedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TwoSpanCableStayedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#CableStayedBridge"/>
+        <rdfs:label xml:lang="en">Two-span Cable-stayed Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TwoSpanContinuousGirderBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TwoSpanContinuousGirderBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#GirderBridge"/>
+        <rdfs:label xml:lang="en">Two-span Continuous Girder Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TwoSpanExtradosedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TwoSpanExtradosedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ExtradosedBridge"/>
+        <rdfs:label xml:lang="en">Two-span Extradosed Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TwoSpanSinglePylonCableStayedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TwoSpanSinglePylonCableStayedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TwoSpanCableStayedBridge"/>
+        <rdfs:label xml:lang="en">Two-span Single-pylon Cable-stayed Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TwoSpanSingleTowerSuspensionBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TwoSpanSingleTowerSuspensionBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TwoSpanSuspensionBridge"/>
+        <rdfs:label xml:lang="en">Two-span Single-Tower Suspension Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TwoSpanSuspensionBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TwoSpanSuspensionBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SuspensionBridge"/>
+        <rdfs:label xml:lang="en">Two-span Suspension Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TwoSpanThreePylonCableStayedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TwoSpanThreePylonCableStayedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TwoSpanCableStayedBridge"/>
+        <rdfs:label xml:lang="en">Two-span Three-pylon Cable-stayed Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TwoSpanThreeTowerSuspensionBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TwoSpanThreeTowerSuspensionBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TwoSpanSuspensionBridge"/>
+        <rdfs:label xml:lang="en">Two-span Three-Tower Suspension Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#TwoSpanTwoTowerSuspensionBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#TwoSpanTwoTowerSuspensionBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TwoSpanSuspensionBridge"/>
+        <rdfs:label xml:lang="en">Two-span Two-Tower Suspension Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#UShapedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#UShapedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#PartiallyCurvedBridge"/>
+        <rdfs:label xml:lang="en">U-shaped Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#UShapedGirderBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#UShapedGirderBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#GirderBridge"/>
+        <rdfs:label xml:lang="en">U-shaped Girder Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#UnderslungGirderBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#UnderslungGirderBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#GirderBridge"/>
+        <rdfs:label xml:lang="en">Underslung Girder Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#UnderslungTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#UnderslungTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Underslung Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#UnderspannedCableStayedBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#UnderspannedCableStayedBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#CableStayedBridge"/>
+        <rdfs:label xml:lang="en">Underspanned Cable-stayed Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#UnderspannedSuspensionBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#UnderspannedSuspensionBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SuspensionBridge"/>
+        <rdfs:label xml:lang="en">Underspanned Suspension Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Valley -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Valley">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ObstacleCrossed"/>
+        <rdfs:label xml:lang="en">Valley</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#VariableWidthBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#VariableWidthBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeByCrossSection"/>
+        <rdfs:label xml:lang="en">Variable Width Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#VaultedArchBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#VaultedArchBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#ArchBridge"/>
+        <rdfs:label xml:lang="en">Vaulted Arch Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#VerticalLiftBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#VerticalLiftBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#MovableBridge"/>
+        <rdfs:label xml:lang="en">Vertical Lift Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#VierendeelArchTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#VierendeelArchTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#StructuralHybridBridge"/>
+        <rdfs:label xml:lang="en">Vierendeel Arch Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#VierendeelTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#VierendeelTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Vierendeel Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Wall -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Wall">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Tower"/>
+        <rdfs:label xml:lang="en">Wall</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Walls -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Walls">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Pier"/>
+        <rdfs:label xml:lang="en">Walls</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#WarrenTypeTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#WarrenTypeTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Warren Type Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#WearingSurface -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#WearingSurface">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Deck"/>
+        <rdfs:label xml:lang="en">Wearing Surface</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#WheelerTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#WheelerTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Wheeler Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#WhippleTypeTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#WhippleTypeTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Whipple Type Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#WichertTrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#WichertTrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#NonParallelChordTrussBridge"/>
+        <rdfs:label xml:lang="en">Wichert Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#WingWall -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#WingWall">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#Abutment"/>
+        <rdfs:label xml:lang="en">Wing Wall</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#ZigzagBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#ZigzagBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#KinkedBridge"/>
+        <rdfs:label xml:lang="en">Zigzag Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Axial(single)TrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Axial(single)TrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Axial(single) Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#PedestrianBridge(footbridge) -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#PedestrianBridge(footbridge)">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeByFunction"/>
+        <rdfs:label xml:lang="en">Pedestrian Bridge(footbridge)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Pennsylvania(petit)TrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Pennsylvania(petit)TrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Pennsylvania(petit) Truss Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Railroad(railway)Bridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Railroad(railway)Bridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#BridgeByFunction"/>
+        <rdfs:label xml:lang="en">Railroad(railway) Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#RetractileBridge(RetractileDrawBridge) -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#RetractileBridge(RetractileDrawBridge)">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#MovableBridge"/>
+        <rdfs:label xml:lang="en">Retractile Bridge(retractile draw bridge)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Simple(primitive)SuspensionBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Simple(primitive)SuspensionBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#SuspensionBridge"/>
+        <rdfs:label xml:lang="en">Simple(primitive) Suspension Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mbdo#Waddell‘a’TrussBridge -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mbdo#Waddell‘a’TrussBridge">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mbdo#TrussBridge"/>
+        <rdfs:label xml:lang="en">Waddell‘a’ Truss Bridge</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
